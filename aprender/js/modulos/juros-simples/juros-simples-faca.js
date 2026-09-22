@@ -844,7 +844,7 @@ function selecionarPeriodoGrafico(dados) {
 
                     if (modoCelular) {
                         // No celular: fixa o tooltip na faixa inferior do gráfico
-                        tooltipX = 355;
+                        tooltipX = (900 - larguraTooltip) / 2;
                         tooltipY = 170;
                     } else {
                         // No desktop: mantém o tooltip ao lado do ponto
