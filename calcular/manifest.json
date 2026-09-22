@@ -1,0 +1,15 @@
+﻿{
+  "name": "Ajuda nas Finanças",
+  "short_name": "Ajuda Finanças",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icone.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

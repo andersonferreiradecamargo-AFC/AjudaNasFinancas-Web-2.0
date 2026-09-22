@@ -1,0 +1,1907 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        linear-gradient(180deg, #f3f6f8 0%, #eef2f5 100%);
+    color: #1f2937;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho-projeto {
+    position: relative;
+    background:
+        radial-gradient(circle at 35% 25%, rgba(255,255,255,0.10), transparent 24%),
+        linear-gradient(120deg, #ff8a12 0%, #f79b20 48%, #ffad32 100%);
+    color: #ffffff;
+    padding: 14px 22px 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.cabecalho-decoracao span {
+    position: absolute;
+    color: rgba(255, 214, 122, 0.34);
+    font-weight: 900;
+    pointer-events: none;
+    user-select: none;
+}
+
+.decoracao-percentual {
+    left: 49.5%;
+    top: 28px;
+    font-size: 5.6rem;
+    transform: rotate(-7deg);
+    opacity: 0.34;
+}
+
+
+/* gráfico decorativo em barras */
+.decoracao-grafico {
+    position: absolute;
+    left: 61.8%;
+    top: 68px;
+    width: 112px;
+    height: 78px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    opacity: 0.42;
+    transform: rotate(-1deg);
+}
+
+.decoracao-grafico::after {
+    display: none;
+}
+
+.decoracao-grafico .barra {
+    display: block;
+    width: 17px;
+    border: none;
+    border-radius: 3px 3px 1px 1px;
+    background: rgba(255, 220, 138, 0.72);
+}
+
+.decoracao-grafico .barra-1 { height: 28px; }
+.decoracao-grafico .barra-2 { height: 44px; }
+.decoracao-grafico .barra-3 { height: 62px; }
+.decoracao-grafico .barra-4 { height: 78px; }
+
+/* três moedas empilhadas */
+.decoracao-moedas {
+    position: absolute;
+    left: 74.4%;
+    top: 76px;
+    width: 104px;
+    height: 78px;
+    opacity: 0.58;
+    transform: rotate(1deg);
+}
+
+.decoracao-moedas .moeda {
+    position: absolute;
+    left: 7px;
+    width: 66px;
+    height: 23px;
+    border: 3px solid rgba(255, 220, 138, 0.92);
+    border-radius: 50%;
+    background: rgba(255, 220, 138, 0.16);
+    box-shadow:
+        inset 0 -4px 0 rgba(255, 220, 138, 0.16),
+        0 3px 0 rgba(255, 220, 138, 0.36);
+}
+
+.decoracao-moedas .moeda::after {
+    content: "$";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -54%);
+    color: rgba(255, 220, 138, 0.94);
+    font-size: 0.78rem;
+    font-weight: 900;
+}
+
+.decoracao-moedas .moeda-1 { top: 0; left: 17px; }
+.decoracao-moedas .moeda-2 { top: 19px; left: 11px; }
+.decoracao-moedas .moeda-3 { top: 38px; left: 2px; }
+
+
+
+.cabecalho-conteudo {
+    position: relative;
+    z-index: 2;
+    width: 95%;
+    max-width: 1450px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(620px, 1fr) auto 210px;
+    align-items: start;
+    gap: 16px;
+}
+
+.marca-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+}
+
+.calculadora-marca {
+    flex: 0 0 auto;
+    width: 84px;
+    height: 102px;
+    padding: 10px;
+    background: linear-gradient(180deg, #0a6aa6 0%, #075b8d 100%);
+    border-radius: 14px;
+    transform: rotate(-9deg);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+.calc-tela {
+    height: 20px;
+    margin-bottom: 7px;
+    background: linear-gradient(180deg, #dff2ff 0%, #cce6f5 100%);
+    border-radius: 5px;
+    border: 2px solid rgba(0,0,0,0.08);
+}
+
+.calc-teclas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+.calc-teclas span {
+    position: static;
+    height: 10px;
+    background: #ffc842;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.08);
+}
+
+.cabecalho-identidade {
+    min-width: 0;
+}
+
+.cabecalho-identidade h1 {
+    margin: 0;
+    white-space: nowrap;
+    font-size: clamp(2.1rem, 2.75vw, 3rem);
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.cabecalho-identidade p {
+    margin: 5px 0 0;
+    font-size: clamp(0.94rem, 1.15vw, 1.12rem);
+    opacity: 0.98;
+}
+
+.cabecalho-slogan {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 18px;
+    border-radius: 999px;
+    color: #4e2b00;
+    background: linear-gradient(90deg, #ffd250 0%, #ffdf73 100%);
+    font-size: 0.87rem;
+    font-weight: 800;
+    box-shadow: 0 5px 12px rgba(161,91,0,0.12);
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 4px;
+    white-space: nowrap;
+}
+
+.menu-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 13px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.92);
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.87rem;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(118,67,0,0.12);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(118,67,0,0.16);
+}
+
+.menu-item.ativo {
+    background: #0f8bd8;
+    color: #ffffff;
+}
+
+.cabecalho-frase {
+    align-self: center;
+    justify-self: end;
+    max-width: 205px;
+    text-align: center;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    font-weight: 700;
+    font-style: italic;
+    transform: rotate(-2deg);
+    text-shadow: 0 2px 3px rgba(0,0,0,0.08);
+}
+
+/* ========================================
+   DECORAÇÕES LATERAIS
+======================================== */
+
+.decoracao-lateral {
+    position: fixed;
+    z-index: 0;
+    top: 43%;
+    color: #b6c0ca;
+    font-size: 1.06rem;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 1.35;
+    opacity: 0.72;
+    pointer-events: none;
+    user-select: none;
+}
+
+.decoracao-esquerda {
+    left: 28px;
+    transform: rotate(-7deg);
+}
+
+.decoracao-direita {
+    right: 28px;
+    transform: rotate(-7deg);
+    text-align: right;
+}
+
+/* ========================================
+   CONTEÚDO PRINCIPAL
+======================================== */
+
+main {
+    position: relative;
+    z-index: 1;
+    width: min(76%, 1160px);
+    margin: 28px auto 20px;
+    background: rgba(255,255,255,0.97);
+    padding: 26px 28px 24px;
+    border-radius: 24px;
+    box-shadow: 0 10px 34px rgba(31,41,55,0.10);
+    border: 1px solid rgba(214,220,226,0.75);
+}
+
+.introducao-compacta {
+    margin-bottom: 6px;
+}
+
+.versao-selo {
+    display: inline-block;
+    padding: 5px 12px;
+    background: #fff7f0;
+    color: #f07812;
+    border: 1px solid #f6b879;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.modulo {
+    border-top: none;
+    padding-top: 3px;
+}
+
+.modulo > h2 {
+    margin: 6px 0 2px;
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    color: #102b52;
+    line-height: 1.15;
+}
+
+.modulo-subtitulo {
+    margin-bottom: 16px;
+    color: #5f6d7c;
+    font-size: 0.99rem;
+}
+
+/* ========================================
+   TRILHA DE PROGRESSO
+======================================== */
+
+.trilha-progresso {
+    position: relative;
+    z-index: 2;
+    margin: 10px 0 18px;
+    padding: 14px 16px 16px;
+    background: linear-gradient(180deg, #eaf6ff 0%, #e3f1fb 100%);
+    border: 1px solid #bfdcf2;
+    border-radius: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.75);
+    transition: all .25s ease;
+}
+
+.trilha-topo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.trilha-titulo {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #173b65;
+}
+
+#progressoTexto {
+    color: #1478c9;
+    font-size: 0.87rem;
+    padding: 2px 9px;
+    border: 1px solid #b9d9ef;
+    background: rgba(255,255,255,0.55);
+    border-radius: 10px;
+}
+
+.trilha-etapas {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    gap: 8px;
+}
+
+.trilha-linha {
+    position: absolute;
+    z-index: 0;
+    top: 24px;
+    left: 12.5%;
+    width: 75%;
+    height: 6px;
+    background: #b7c1ca;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.trilha-preenchimento {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff7a00 0%, #2f9b5d 36%, #1f78cf 68%, #7f33d6 100%);
+    border-radius: inherit;
+    transition: width 0.4s ease;
+}
+
+.trilha-passo {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 0;
+    text-align: center;
+    color: #697886;
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.trilha-icone {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    background: #f7f8fa;
+    border: 3px solid #b6bec6;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    filter: grayscale(1);
+    opacity: .9;
+    box-shadow: 0 2px 5px rgba(0,0,0,.05);
+    transition: .25s ease;
+}
+
+.trilha-passo.concluido .trilha-icone {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.trilha-passo[data-etapa="aprenda"].concluido .trilha-icone {
+    background: #fff1e8;
+    border-color: #ff6f00;
+}
+
+.trilha-passo[data-etapa="faca"].concluido .trilha-icone {
+    background: #e6f8ed;
+    border-color: #2ca65a;
+}
+
+.trilha-passo[data-etapa="interprete"].concluido .trilha-icone {
+    background: #eaf5ff;
+    border-color: #1478c9;
+}
+
+.trilha-passo[data-etapa="decida"].concluido .trilha-icone {
+    background: #f4ecff;
+    border-color: #8135d4;
+}
+
+.trilha-acessivel {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.mensagem-conclusao {
+    margin-top: 10px;
+    padding: 9px 11px;
+    background: #fff7d6;
+    border: 1px solid #e7cf79;
+    border-radius: 9px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+/* ========================================
+   ACORDEÕES PRINCIPAIS
+======================================== */
+
+.etapa {
+    margin-top: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: none;
+}
+
+.acordeao {
+    padding: 0;
+}
+
+.acordeao-titulo {
+    width: 100%;
+    border: none;
+    padding: 12px 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: #18314f;
+    text-align: left;
+    transition: filter .18s ease;
+}
+
+.acordeao-titulo:hover {
+    filter: brightness(.985);
+}
+
+.acordeao-identidade {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.acordeao-icone {
+    flex: 0 0 auto;
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.35rem;
+    background: rgba(255,255,255,.55);
+    border: 1px solid rgba(255,255,255,.8);
+}
+
+.acordeao-textos {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.acordeao-textos strong {
+    font-size: 1.05rem;
+    line-height: 1.15;
+    letter-spacing: .01em;
+}
+
+.acordeao-textos small {
+    margin-top: 3px;
+    font-size: .84rem;
+    font-weight: 500;
+    color: #536475;
+    line-height: 1.25;
+}
+
+.seta {
+    flex: 0 0 auto;
+    font-size: 0.87rem;
+    color: #173b65;
+}
+
+.acordeao-conteudo {
+    display: none;
+    padding: 16px 20px 20px;
+}
+
+.acordeao.aberto .acordeao-conteudo {
+    display: block;
+}
+
+/* cores como no mockup */
+.aprenda {
+    background: #fff0e2;
+    border-color: #f5bb79;
+}
+.aprenda .acordeao-titulo {
+    background: linear-gradient(90deg, #ffe5ca 0%, #fff0e2 100%);
+}
+.aprenda .acordeao-conteudo {
+    background: #fff9f3;
+}
+.aprenda .acordeao-textos strong {
+    color: #f06400;
+}
+
+.faca {
+    background: #e8f3ff;
+    border-color: #9bc6ef;
+}
+.faca .acordeao-titulo {
+    background: linear-gradient(90deg, #dcecff 0%, #eef6ff 100%);
+}
+.faca .acordeao-conteudo {
+    background: #f7fbff;
+}
+.faca .acordeao-textos strong {
+    color: #1470bf;
+}
+
+.interprete {
+    background: #e8f7ee;
+    border-color: #9bd2ad;
+}
+.interprete .acordeao-titulo {
+    background: linear-gradient(90deg, #dff3e7 0%, #eef9f2 100%);
+}
+.interprete .acordeao-conteudo {
+    background: #f7fcf9;
+}
+.interprete .acordeao-textos strong {
+    color: #12833f;
+}
+
+.decida {
+    background: #f3eafe;
+    border-color: #c8a8ef;
+}
+.decida .acordeao-titulo {
+    background: linear-gradient(90deg, #eadbfb 0%, #f6effd 100%);
+}
+.decida .acordeao-conteudo {
+    background: #fbf8ff;
+}
+.decida .acordeao-textos strong {
+    color: #7b28c7;
+}
+
+/* ========================================
+   SUBTÓPICOS E BLOCOS INTERNOS
+======================================== */
+
+.subtopico {
+    margin-bottom: 10px;
+    border: 1px solid #e0e5eb;
+    border-radius: 11px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.subtopico-titulo {
+    width: 100%;
+    border: none;
+    background: #ffffff;
+    padding: 13px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: .98rem;
+    font-weight: 800;
+    color: #222;
+    text-align: left;
+    cursor: pointer;
+}
+
+.subtopico-titulo:hover {
+    background: #f8fafc;
+}
+
+.subtopico-conteudo {
+    display: none;
+    padding: 15px 17px 17px;
+    background: #ffffff;
+    border-top: 1px solid #edf0f4;
+}
+
+.subtopico.subtopico-aberto .subtopico-conteudo {
+    display: block;
+}
+
+.subtopico-seta {
+    flex-shrink: 0;
+}
+
+.subtopico-conteudo .exemplo {
+    margin-top: 0;
+    border: none;
+    padding: 0;
+    background: transparent;
+}
+
+.exemplo,
+.situacao-interpretacao,
+.situacao-decisao,
+.resultado {
+    margin-top: 16px;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.exemplo {
+    background: #fff8f0;
+    border: 1px solid #f3c890;
+}
+
+.exemplo h4 {
+    color: #e87918;
+}
+
+.calculadora-porcentagem {
+    margin-top: 10px;
+    max-width: 520px;
+}
+
+.campo {
+    margin-bottom: 15px;
+}
+
+.campo label {
+    display: block;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 12px 13px;
+    font-size: 0.87rem;
+    border: 1px solid #b5cbe0;
+    border-radius: 8px;
+    background: #f7fbff;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #2f78c4;
+    box-shadow: 0 0 0 3px rgba(47,120,196,.10);
+}
+
+.calculadora-porcentagem button,
+#verificarInterpretacao,
+#verificarInterpretacaoDesconto,
+#verificarInterpretacaoAumento,
+#verificarDecisao,
+#verificarDecisaoAumento,
+#verificarDecisaoPagamento {
+    padding: 11px 18px;
+    margin-right: 8px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: .98rem;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+#calcularPorcentagem,
+#calcularRepresentacao,
+#calcularAjuste {
+    background: #1478c9;
+    color: #fff;
+}
+
+#limparPorcentagem,
+#limparRepresentacao,
+#limparAjuste {
+    background: #e5edf5;
+    color: #222;
+}
+
+.resultado {
+    background: #eef6ff;
+    border: 1px solid #a9c9e8;
+}
+
+.alternativa {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 12px;
+    background: rgba(255,255,255,.82);
+    border: 1px solid rgba(120,140,160,.25);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.alternativa input {
+    margin-right: 8px;
+}
+
+#verificarInterpretacao,
+#verificarInterpretacaoDesconto,
+#verificarInterpretacaoAumento {
+    background: #2f9b5d;
+    color: #fff;
+}
+
+.feedback-interpretacao {
+    margin-top: 15px;
+    padding: 15px;
+    background: #eaf7ef;
+    border: 1px solid #9ed1b1;
+    border-radius: 8px;
+}
+
+#verificarDecisao,
+#verificarDecisaoAumento,
+#verificarDecisaoPagamento {
+    background: #7b28c7;
+    color: #fff;
+}
+
+.feedback-decisao {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f6effd;
+    border: 1px solid #c6a5eb;
+    border-radius: 8px;
+}
+
+.oferta {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+    padding: 15px;
+    margin: 5px 1% 15px 0;
+    background: rgba(255,255,255,.75);
+    border: 1px solid rgba(150,130,180,.28);
+    border-radius: 10px;
+}
+
+.fracao {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    line-height: 1;
+    margin: 0 4px;
+}
+
+.fracao span:first-child {
+    border-bottom: 1px solid currentColor;
+    padding: 0 4px 2px;
+}
+
+.fracao span:last-child {
+    padding-top: 2px;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape-projeto {
+    width: min(76%, 1160px);
+    margin: 0 auto 28px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    color: #64748b;
+    font-size: .78rem;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1250px) {
+    .cabecalho-conteudo {
+        grid-template-columns: minmax(430px, 1fr) auto;
+    }
+
+    .cabecalho-frase {
+        display: none;
+    }
+
+    .menu-principal {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    main,
+    .rodape-projeto {
+        width: min(88%, 1160px);
+    }
+
+    .decoracao-lateral {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .cabecalho-conteudo {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .menu-principal {
+        justify-content: flex-start;
+    }
+
+    .cabecalho-slogan {
+        margin-top: 10px;
+    }
+
+    main,
+    .rodape-projeto {
+        width: 92%;
+    }
+}
+
+@media (max-width: 700px) {
+    .cabecalho-projeto {
+        padding: 14px 12px 16px;
+    }
+
+    .cabecalho-conteudo {
+        width: 100%;
+        display: block;
+    }
+
+    .marca-area {
+        gap: 12px;
+        align-items: flex-start;
+    }
+
+    .calculadora-marca {
+        width: 62px;
+        height: 80px;
+        padding: 7px;
+        border-radius: 12px;
+    }
+
+    .calc-tela {
+        height: 17px;
+        margin-bottom: 7px;
+    }
+
+    .calc-teclas {
+        gap: 4px;
+    }
+
+    .calc-teclas span {
+        height: 8px;
+    }
+
+    .cabecalho-identidade h1 {
+        font-size: 1.45rem;
+        white-space: normal;
+    }
+
+    .cabecalho-identidade p {
+        font-size: .8rem;
+        margin-top: 3px;
+        line-height: 1.25;
+    }
+
+    .cabecalho-slogan {
+        margin-top: 9px;
+        padding: 6px 12px;
+        font-size: .72rem;
+    }
+
+    .menu-principal {
+        display: none;
+    }
+
+    .cabecalho-decoracao {
+        display: none;
+    }
+
+    main {
+        width: 94%;
+        margin: 16px auto 18px;
+        padding: 16px 13px 18px;
+        border-radius: 14px;
+    }
+
+    .rodape-projeto {
+        width: 94%;
+        margin-bottom: 18px;
+        flex-direction: column;
+        gap: 3px;
+        text-align: center;
+    }
+
+    .modulo > h2 {
+        font-size: 1.55rem;
+    }
+
+    .modulo-subtitulo {
+        font-size: .88rem;
+        margin-bottom: 12px;
+    }
+
+    .trilha-progresso {
+        padding: 9px 8px 10px;
+        border-radius: 12px;
+        margin-bottom: 14px;
+    }
+
+    .trilha-topo {
+        margin-bottom: 3px;
+    }
+
+    .trilha-etapas {
+        gap: 2px;
+    }
+
+    .trilha-linha {
+        top: 16px;
+    }
+
+    .trilha-icone {
+        width: 36px;
+        height: 36px;
+        font-size: 0.87rem;
+        border-width: 2px;
+    }
+
+    .trilha-passo {
+        font-size: .54rem;
+        gap: 3px;
+    }
+
+    .etapa {
+        margin-top: 10px;
+        border-radius: 13px;
+    }
+
+    .acordeao-titulo {
+        padding: 12px 12px;
+    }
+
+    .acordeao-identidade {
+        gap: 9px;
+    }
+
+    .acordeao-icone {
+        width: 38px;
+        height: 38px;
+        font-size: 1.08rem;
+    }
+
+    .acordeao-textos strong {
+        font-size: .94rem;
+    }
+
+    .acordeao-textos small {
+        font-size: .73rem;
+    }
+
+    .acordeao-conteudo {
+        padding: 13px 11px 16px;
+    }
+
+    .subtopico-titulo {
+        padding: 12px 11px;
+        font-size: .94rem;
+    }
+
+    .subtopico-conteudo {
+        padding: 13px 11px 15px;
+    }
+
+    .calculadora-porcentagem {
+        max-width: 100%;
+    }
+
+    .calculadora-porcentagem button {
+        margin-bottom: 8px;
+    }
+
+    .oferta {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .situacao-interpretacao,
+    .situacao-decisao,
+    .resultado,
+    .exemplo {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .trilha-passo span {
+        display: none;
+    }
+
+    .trilha-linha {
+        top: 16px;
+    }
+
+    .trilha-progresso {
+        padding-bottom: 8px;
+    }
+
+    .acordeao-textos small {
+        max-width: 215px;
+    }
+}
+
+
+/* ========================================
+   AJUSTE FINAL DO CABEÇALHO - REFERÊNCIA
+======================================== */
+@media (min-width: 901px) {
+    .cabecalho-identidade {
+        padding-top: 2px;
+    }
+
+    .cabecalho-frase {
+        padding-top: 18px;
+    }
+}
+
+@media (max-width: 1250px) and (min-width: 901px) {
+    .cabecalho-conteudo {
+        grid-template-columns: minmax(540px, 1fr) auto;
+    }
+
+    .decoracao-moedas {
+        left: 78%;
+    }
+
+    .decoracao-grafico {
+        left: 65%;
+    }
+}
+
+
+/* Ajuste final do gráfico decorativo: três barras visíveis */
+.decoracao-grafico {
+    width: 92px;
+    gap: 10px;
+}
+
+.decoracao-grafico .barra {
+    flex: 0 0 20px;
+    display: block;
+    background: rgba(255, 220, 138, 0.78);
+    border-radius: 3px 3px 1px 1px;
+}
+
+.decoracao-grafico .barra-1 { height: 30px; }
+.decoracao-grafico .barra-2 { height: 50px; }
+.decoracao-grafico .barra-3 { height: 72px; }
+.decoracao-grafico .barra-4 { display: none; }
+
+
+/* Correção definitiva do gráfico: três barras independentes */
+.decoracao-grafico .barra {
+    position: static;
+    display: block;
+    flex: 0 0 20px;
+    width: 20px;
+    background: rgba(255, 220, 138, 0.78);
+    border: none;
+    border-radius: 4px 4px 1px 1px;
+    opacity: 1;
+    transform: none;
+}
+
+.decoracao-grafico .barra-1 { height: 30px; }
+.decoracao-grafico .barra-2 { height: 50px; }
+.decoracao-grafico .barra-3 { height: 72px; }
+.decoracao-grafico .barra-4 { display: none; }
+
+
+/* Cores definitivas das etapas e botões */
+#verificarInterpretacao,
+#verificarInterpretacaoDesconto,
+#verificarInterpretacaoAumento {
+    background: #2f9b5d;
+    color: #ffffff;
+}
+
+#verificarDecisao,
+#verificarDecisaoAumento,
+#verificarDecisaoPagamento {
+    background: #7b28c7;
+    color: #ffffff;
+}
+
+
+/* ========================================
+   PROGRESSO COMPACTO INDEPENDENTE
+======================================== */
+
+.progresso-compacto {
+    position: fixed;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: min(440px, 86vw);
+    min-height: 38px;
+    padding: 7px 11px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: rgba(239, 248, 255, 0.97);
+    border: 1px solid #b9d9ef;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(31, 78, 121, 0.16);
+    backdrop-filter: blur(6px);
+}
+
+.progresso-compacto[hidden] {
+    display: none !important;
+}
+
+.progresso-compacto-rotulo {
+    flex: 0 0 auto;
+    color: #173b65;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.progresso-compacto-barra {
+    flex: 1;
+    height: 6px;
+    overflow: hidden;
+    background: #c7d1da;
+    border-radius: 999px;
+}
+
+.progresso-compacto-preenchimento {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #f28c28 0%, #2f78c4 35%, #3aa76d 70%, #7b28c7 100%);
+    border-radius: inherit;
+    transition: width .3s ease;
+}
+
+#progressoCompactoTexto {
+    flex: 0 0 auto;
+    color: #1478c9;
+    font-size: 0.82rem;
+}
+
+@media (max-width: 600px) {
+    .progresso-compacto {
+        top: 4px;
+        width: 92vw;
+        min-height: 32px;
+        padding: 5px 8px;
+        gap: 7px;
+        border-radius: 9px;
+    }
+
+    .progresso-compacto-rotulo {
+        font-size: 0.66rem;
+    }
+
+    .progresso-compacto-barra {
+        height: 5px;
+    }
+
+    #progressoCompactoTexto {
+        font-size: 0.74rem;
+    }
+}
+
+/* ========================================
+   CARTÃO DE CONQUISTA - MÓDULO CONCLUÍDO
+======================================== */
+
+.progresso-compacto-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.progresso-compacto-mensagem {
+    display: none;
+}
+
+/* MÓDULO CONCLUÍDO */
+
+.progresso-compacto.concluido {
+    width: min(650px, 92vw);
+    min-height: 52px;
+    padding: 7px 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "conteudo percentual"
+        "barra barra";
+    column-gap: 10px;
+    row-gap: 5px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 250, 221, 0.98),
+        rgba(255, 244, 190, 0.98)
+    );
+    border: 1px solid #e6c75b;
+    box-shadow: 0 6px 18px rgba(127, 94, 0, 0.16);
+    backdrop-filter: blur(7px);
+}
+
+.progresso-compacto.concluido .progresso-compacto-conteudo {
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+}
+
+.progresso-compacto.concluido .progresso-compacto-rotulo {
+    color: #745600;
+    font-size: 0.82rem;
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.progresso-compacto.concluido .progresso-compacto-mensagem {
+    display: block;
+    color: #675b32;
+    font-size: 0.70rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.progresso-compacto.concluido .progresso-compacto-barra {
+    grid-area: barra;
+    width: 100%;
+    height: 4px;
+    background: rgba(135, 111, 30, 0.20);
+}
+
+.progresso-compacto.concluido .progresso-compacto-preenchimento {
+    background: linear-gradient(
+        90deg,
+        #e4a900 0%,
+        #f2c532 55%,
+        #d69d00 100%
+    );
+}
+
+.progresso-compacto.concluido #progressoCompactoTexto {
+    grid-area: percentual;
+    align-self: center;
+    color: #856300;
+    font-size: 0.82rem;
+    font-weight: 900;
+    padding: 2px 7px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(184, 145, 19, 0.30);
+    border-radius: 8px;
+}
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+    .progresso-compacto.concluido {
+        width: calc(100vw - 24px);
+        min-height: 48px;
+        padding: 6px 8px;
+        column-gap: 6px;
+        row-gap: 4px;
+    }
+
+    .progresso-compacto.concluido .progresso-compacto-rotulo {
+        font-size: 0.70rem;
+        line-height: 1.1;
+    }
+
+    .progresso-compacto.concluido .progresso-compacto-mensagem {
+        font-size: 0.60rem;
+        line-height: 1.15;
+    }
+
+    .progresso-compacto.concluido #progressoCompactoTexto {
+        font-size: 0.68rem;
+        padding: 2px 5px;
+    }
+
+    .progresso-compacto.concluido .progresso-compacto-barra {
+        height: 3px;
+    }
+}
+
+
+/* ========================================
+   APRENDA — REPRESENTAÇÃO GRÁFICA DA PORCENTAGEM
+======================================== */
+
+.visual-porcentagem {
+    margin-top: 4px;
+    padding: 18px;
+    border: 1px solid #f3c890;
+    border-radius: 14px;
+    background: #fff8f0;
+}
+
+.visual-porcentagem-cabecalho {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 16px;
+}
+
+.visual-porcentagem-cabecalho h4 {
+    margin: 0 0 4px;
+    color: #d66f13;
+    font-size: 1.05rem;
+}
+
+.visual-porcentagem-cabecalho p {
+    margin: 0;
+}
+
+.visual-porcentagem-controle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 145px;
+    font-size: .82rem;
+    font-weight: 800;
+    color: #5d5145;
+}
+
+.visual-porcentagem-campo {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.visual-porcentagem-campo input {
+    width: 96px;
+    padding: 8px 9px;
+    border: 1px solid #d9a66e;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #222;
+    font: inherit;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.visual-porcentagem-campo input:focus {
+    outline: 2px solid rgba(232, 121, 24, .25);
+    border-color: #e87918;
+}
+
+.visual-porcentagem-campo strong {
+    color: #d66f13;
+    font-size: 1.1rem;
+}
+
+.visual-porcentagem-corpo {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, .85fr);
+    align-items: start;
+    gap: 20px;
+}
+
+/* Área que recebe um ou mais quadros de 100% */
+.grades-porcentagem {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    align-items: start;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Cada quadro representa 100% */
+.grade-porcentagem-bloco {
+    min-width: 0;
+}
+
+.grade-porcentagem-rotulo {
+    margin: 0 0 5px;
+    text-align: center;
+    color: #7a5a3b;
+    font-size: .74rem;
+    font-weight: 800;
+}
+
+.grade-porcentagem {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    width: 100%;
+    max-width: 215px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    padding: 5px;
+    border: 1px solid #e2c6a5;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.grade-porcentagem-parte {
+    min-width: 0;
+    border: 1.5px solid #2a2a2a;
+    border-radius: 2px;
+    background: #ffffff;
+    overflow: hidden;
+    transition: background .15s ease, border-color .15s ease;
+}
+.grade-porcentagem-parte.parcial {
+    background:
+        linear-gradient(
+            to right,
+            #f6a33b 0%,
+            #f6a33b var(--preenchimento-parcial),
+            #ffffff var(--preenchimento-parcial),
+            #ffffff 100%
+        );
+}
+
+/* 1% totalmente preenchido */
+.grade-porcentagem-parte.ativa {
+    background: #f3a447;
+}
+
+
+.visual-porcentagem-explicacao {
+    padding: 15px 16px;
+    border-radius: 11px;
+    background: rgba(255, 255, 255, .82);
+    border: 1px solid rgba(217, 166, 110, .45);
+}
+
+.visual-porcentagem-explicacao strong {
+    display: block;
+    color: #9a5418;
+    margin-bottom: 8px;
+}
+
+.visual-porcentagem-explicacao p {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.visual-porcentagem-explicacao small {
+    color: #6f675f;
+}
+
+/* Aviso usado quando o valor gera mais quadros do que o limite visual */
+.visual-porcentagem-limite {
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 8px 10px;
+    border: 1px dashed #d9a66e;
+    border-radius: 9px;
+    background: #fffdf9;
+    color: #71573f;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/* Quando houver muitos quadros, eles ficam um pouco menores */
+.grades-porcentagem.muitas-grades {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+}
+
+.grades-porcentagem.muitas-grades .grade-porcentagem {
+    max-width: 175px;
+}
+
+@media (max-width: 700px) {
+    .visual-porcentagem {
+        padding: 13px;
+    }
+
+    .visual-porcentagem-cabecalho {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 11px;
+        margin-bottom: 13px;
+    }
+
+    .visual-porcentagem-controle {
+        min-width: 0;
+    }
+
+    .visual-porcentagem-campo input {
+        width: 110px;
+        min-height: 44px;
+        font-size: 1rem;
+    }
+
+    .visual-porcentagem-corpo {
+        grid-template-columns: 1fr;
+        gap: 13px;
+    }
+
+    .grades-porcentagem,
+    .grades-porcentagem.muitas-grades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+    }
+
+    .grade-porcentagem,
+    .grades-porcentagem.muitas-grades .grade-porcentagem {
+        width: 100%;
+        max-width: 170px;
+        padding: 4px;
+        gap: 1.5px;
+    }
+
+    .grade-porcentagem-rotulo {
+        font-size: .68rem;
+    }
+
+    .visual-porcentagem-explicacao {
+        width: 100%;
+        padding: 12px 13px;
+    }
+
+    .visual-porcentagem-explicacao p {
+        font-size: .96rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .grades-porcentagem,
+    .grades-porcentagem.muitas-grades {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 7px;
+    }
+
+    .grade-porcentagem,
+    .grades-porcentagem.muitas-grades .grade-porcentagem {
+        max-width: 145px;
+        padding: 3px;
+        gap: 1px;
+    }
+}
+
+/* ========================================
+   AJUSTE FINAL MOBILE — ROLAGEM NATURAL
+======================================== */
+
+@media (max-width: 700px) {
+
+    .acordeao-conteudo {
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        overflow-y: visible !important;
+    }
+
+    .subtopico-conteudo {
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        overflow-y: visible !important;
+    }
+
+    .visual-porcentagem {
+        max-height: none !important;
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    .grades-porcentagem {
+        max-height: none !important;
+        overflow: visible !important;
+    }
+}
+/* ==================================================
+   MÓDULO 2 — LINHA DO TEMPO DOS JUROS SIMPLES
+================================================== */
+
+.linha-tempo-juros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 24px 0 18px;
+    padding: 20px;
+    background: #fffaf4;
+    border: 1px solid #f2c38f;
+    border-radius: 14px;
+}
+
+.linha-tempo-item {
+    flex: 1;
+    min-width: 135px;
+    padding: 16px 12px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #e3e8ee;
+    border-radius: 12px;
+}
+
+.linha-tempo-item span,
+.linha-tempo-item strong,
+.linha-tempo-item small {
+    display: block;
+}
+
+.linha-tempo-periodo {
+    margin-bottom: 7px;
+    font-weight: 700;
+    color: #d96b00;
+}
+
+.linha-tempo-item strong {
+    margin-bottom: 5px;
+    font-size: 1.08rem;
+}
+
+.linha-tempo-item small {
+    color: #5f6b76;
+}
+
+.linha-tempo-seta {
+    flex: 0 0 auto;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #d96b00;
+}
+
+.linha-tempo-explicacao {
+    margin-top: 12px;
+    padding: 12px 15px;
+    background: #fff7e8;
+    border-left: 4px solid #f28c28;
+    border-radius: 8px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .linha-tempo-juros {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding: 14px;
+    }
+
+    .linha-tempo-item {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .linha-tempo-seta {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+/* ==================================================
+   MÓDULO 2 — CONTROLES INTERATIVOS DO APRENDA
+================================================== */
+
+.controles-juros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 16px 0 10px;
+}
+
+.controle-juros {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.controle-juros label {
+    font-weight: 700;
+    color: #333;
+}
+
+.controle-juros input {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #cfd7df;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.controle-juros input:focus {
+    outline: 2px solid #f28c28;
+    outline-offset: 1px;
+    border-color: #f28c28;
+}
+
+.dica-interacao-juros {
+    margin: 8px 0 4px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .controles-juros {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+/* ==================================================
+   MÓDULO 2 — ROLAGEM DA LINHA DO TEMPO
+================================================== */
+
+#juros-simples .linha-tempo-juros {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 20px;
+    scroll-behavior: smooth;
+
+    /* evita que os cartões sejam espremidos */
+    flex-wrap: nowrap;
+}
+
+#juros-simples .linha-tempo-item {
+    flex: 0 0 200px;
+}
+
+#juros-simples .linha-tempo-seta {
+    flex: 0 0 auto;
+}
+
+/* deixa a rolagem mais confortável no celular */
+#juros-simples .linha-tempo-juros {
+    -webkit-overflow-scrolling: touch;
+}
+/* ============================= */
+/* BOTÃO VOLTAR AO INÍCIO */
+/* ============================= */
+
+.voltar-inicio {
+    display: inline-block;
+    margin: 12px 0 12px 20px;
+    padding: 9px 16px;
+    background-color: #0b84d8;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.voltar-inicio:hover {
+    background-color: #0869ad;
+}
+
+/* ==================================================
+   FAÇA - AJUSTE COMPACTO: AUMENTO OU DESCONTO
+   ================================================== */
+
+.calculadora-ajuste .ajuste-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 760px;
+}
+
+.calculadora-ajuste .ajuste-campos .campo {
+    margin: 0;
+}
+
+.calculadora-ajuste .ajuste-campos input {
+    width: 100%;
+}
+
+.calculadora-ajuste > p {
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.calculadora-ajuste .ajuste-opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 760px;
+}
+
+.calculadora-ajuste .ajuste-opcoes .alternativa {
+    margin: 0;
+}
+
+.calculadora-ajuste .ajuste-botoes {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.calculadora-ajuste .resultado {
+    margin-top: 16px;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    .calculadora-ajuste .ajuste-campos {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .calculadora-ajuste .ajuste-opcoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+    }
+}

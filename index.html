@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Ajuda nas Finanças</title>
+
+    <style>
+
+        /* =========================================
+           CONFIGURAÇÕES GERAIS
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+            min-height: 100vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* =========================================
+           CABEÇALHO
+        ========================================= */
+
+        .cabecalho {
+            background: linear-gradient(
+                135deg,
+                #f28c28,
+                #f5a623
+            );
+
+            color: white;
+            text-align: center;
+
+            padding: 42px 20px 50px;
+        }
+
+        .cabecalho h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        .cabecalho p {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           CONTEÚDO PRINCIPAL
+        ========================================= */
+
+        main {
+            width: 100%;
+            max-width: 1050px;
+
+            margin: -25px auto 0;
+            padding: 0 20px 40px;
+
+            flex: 1;
+        }
+
+
+        /* =========================================
+           CARTÃO DE BOAS-VINDAS
+        ========================================= */
+
+        .boas-vindas {
+            background: white;
+
+            border-radius: 16px;
+
+            padding: 28px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.08);
+
+            margin-bottom: 28px;
+        }
+
+        .boas-vindas h2 {
+            color: #1d3557;
+            margin-bottom: 8px;
+        }
+
+        .boas-vindas p {
+            color: #5f6b78;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           ÁREA DAS DUAS ESCOLHAS
+        ========================================= */
+
+        .escolhas {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 24px;
+        }
+
+
+        /* =========================================
+           CARTÕES
+        ========================================= */
+
+        .cartao {
+            background: white;
+
+            border-radius: 18px;
+
+            padding: 32px 28px;
+
+            text-decoration: none;
+            color: inherit;
+
+            box-shadow:
+                0 8px 24px rgba(0, 0, 0, 0.08);
+
+            border: 2px solid transparent;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease,
+                border-color 0.2s ease;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 340px;
+        }
+
+        .cartao:hover {
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 14px 32px rgba(0, 0, 0, 0.13);
+        }
+
+
+        /* =========================================
+           CARTÃO CALCULAR
+        ========================================= */
+
+        .cartao-calcular {
+            border-top: 6px solid #8b5e3c;
+        }
+
+        .cartao-calcular:hover {
+            border-color: #8b5e3c;
+        }
+
+
+        /* =========================================
+           CARTÃO APRENDER
+        ========================================= */
+
+        .cartao-aprender {
+            border-top: 6px solid #f28c28;
+        }
+
+        .cartao-aprender:hover {
+            border-color: #f28c28;
+        }
+
+
+        /* =========================================
+           ÍCONES
+        ========================================= */
+
+        .icone {
+            width: 72px;
+            height: 72px;
+
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 2.2rem;
+
+            margin-bottom: 22px;
+        }
+
+        .cartao-calcular .icone {
+            background: #f4e9df;
+        }
+
+        .cartao-aprender .icone {
+            background: #fff0df;
+        }
+
+
+        /* =========================================
+           TEXTOS DOS CARTÕES
+        ========================================= */
+
+        .tipo {
+            font-size: 0.9rem;
+            font-weight: bold;
+
+            letter-spacing: 0.7px;
+
+            margin-bottom: 9px;
+        }
+
+        .cartao-calcular .tipo {
+            color: #8b5e3c;
+        }
+
+        .cartao-aprender .tipo {
+            color: #e87500;
+        }
+
+        .cartao h2 {
+            font-size: 1.65rem;
+            color: #1d3557;
+
+            margin-bottom: 13px;
+        }
+
+        .descricao {
+            color: #5f6b78;
+            line-height: 1.6;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================
+           LISTA DE RECURSOS
+        ========================================= */
+
+        .recursos {
+            list-style: none;
+
+            margin-bottom: 25px;
+
+            flex: 1;
+        }
+
+        .recursos li {
+            margin: 9px 0;
+
+            color: #374151;
+
+            padding-left: 22px;
+
+            position: relative;
+        }
+
+        .recursos li::before {
+            content: "✓";
+
+            position: absolute;
+            left: 0;
+
+            font-weight: bold;
+            color: #3c9d5d;
+        }
+
+
+        /* =========================================
+           BOTÕES
+        ========================================= */
+
+        .botao {
+            width: 100%;
+
+            padding: 14px 18px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            font-weight: bold;
+            font-size: 1rem;
+
+            color: white;
+        }
+
+        .cartao-calcular .botao {
+            background: #8b5e3c;
+        }
+
+        .cartao-aprender .botao {
+            background: #f28c28;
+        }
+
+
+        /* =========================================
+           RODAPÉ
+        ========================================= */
+
+        footer {
+            text-align: center;
+
+            color: #687482;
+
+            font-size: 0.9rem;
+
+            padding: 22px 20px 28px;
+        }
+
+
+        /* =========================================
+           CELULAR
+        ========================================= */
+
+        @media (max-width: 720px) {
+
+            .cabecalho {
+                padding: 32px 18px 42px;
+            }
+
+            .cabecalho h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                margin-top: -18px;
+                padding-left: 14px;
+                padding-right: 14px;
+            }
+
+            .escolhas {
+                grid-template-columns: 1fr;
+            }
+
+            .cartao {
+                min-height: auto;
+                padding: 26px 22px;
+            }
+
+            .icone {
+                width: 62px;
+                height: 62px;
+
+                font-size: 1.9rem;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         CABEÇALHO
+    ========================================== -->
+
+    <header class="cabecalho">
+
+        <h1>Ajuda nas Finanças</h1>
+
+        <p>
+            Matemática financeira para calcular,
+            compreender e tomar melhores decisões.
+        </p>
+
+    </header>
+
+
+    <!-- =========================================
+         CONTEÚDO
+    ========================================== -->
+
+    <main>
+
+
+        <section class="boas-vindas">
+
+            <h2>Como podemos ajudar você hoje?</h2>
+
+            <p>
+                Escolha o caminho de acordo com o que você precisa.
+            </p>
+
+        </section>
+
+
+        <section class="escolhas">
+
+
+            <!-- =================================
+                 PRECISO CALCULAR
+            ================================== -->
+
+            <a
+                class="cartao cartao-calcular"
+                href="calcular/index.html"
+            >
+
+                <div class="icone">
+                    🧮
+                </div>
+
+                <div class="tipo">
+                    PRECISO CALCULAR
+                </div>
+
+                <h2>
+                    Calculadora Financeira
+                </h2>
+
+                <p class="descricao">
+                    Use uma ferramenta rápida para resolver
+                    cálculos e problemas de matemática financeira.
+                </p>
+
+                <ul class="recursos">
+
+                    <li>
+                        Juros simples
+                    </li>
+
+                    <li>
+                        Juros compostos
+                    </li>
+
+                    <li>
+                        Capital, taxa e tempo
+                    </li>
+
+                    <li>
+                        Juros e montante
+                    </li>
+
+                </ul>
+
+                <div class="botao">
+                    Abrir Calculadora →
+                </div>
+
+            </a>
+
+
+            <!-- =================================
+                 QUERO APRENDER
+            ================================== -->
+
+            <a
+                class="cartao cartao-aprender"
+                href="aprender/index.html"
+            >
+
+                <div class="icone">
+                    📚
+                </div>
+
+                <div class="tipo">
+                    QUERO APRENDER
+                </div>
+
+                <h2>
+                    Ambiente de Aprendizagem
+                </h2>
+
+                <p class="descricao">
+                    Aprenda matemática e educação financeira
+                    passo a passo e aplique o conhecimento
+                    em situações do dia a dia.
+                </p>
+
+                <ul class="recursos">
+
+                    <li>
+                        Aprenda os conceitos
+                    </li>
+
+                    <li>
+                        Faça os cálculos
+                    </li>
+
+                    <li>
+                        Interprete os resultados
+                    </li>
+
+                    <li>
+                        Tome decisões financeiras
+                    </li>
+
+                </ul>
+
+                <div class="botao">
+                    Quero Aprender →
+                </div>
+
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
+         RODAPÉ
+    ========================================== -->
+
+    <footer>
+
+        © 2026 Ajuda nas Finanças
+        · Matemática Financeira e Educação Financeira
+
+    </footer>
+
+
+</body>
+
+</html>

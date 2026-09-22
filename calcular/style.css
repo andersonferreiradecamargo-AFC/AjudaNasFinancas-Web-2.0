@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #8B5A2B;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ============================= */
+/* CONTAINER PRINCIPAL */
+/* ============================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #F4E7C5;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    box-sizing: border-box;
+}
+
+
+/* ============================= */
+/* TÍTULOS */
+/* ============================= */
+
+h1 {
+    text-align: center;
+    color: #5d4037;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    color: #5d4037;
+}
+
+h3 {
+    color: #5d4037;
+}
+
+
+/* ============================= */
+/* TIPO DE JUROS */
+/* ============================= */
+
+.tipo-juros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: nowrap;
+}
+
+.tipo-juros label {
+    color: #333;
+    white-space: nowrap;
+    font-size: 15px;
+}
+
+.tipo-juros input {
+    margin-right: 4px;
+}
+
+
+/* ============================= */
+/* CAMPOS DA CALCULADORA */
+/* ============================= */
+
+.campo {
+    width: 100%;
+    background: #6B4F3A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+
+/* ============================= */
+/* NOMES DAS VARIÁVEIS */
+/* ============================= */
+
+.campo label {
+    margin: 0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.campo .ajuda:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================= */
+/* CAMPOS PARA DIGITAR */
+/* ============================= */
+
+.campo input {
+    width: 100%;
+    min-width: 0;
+    height: 44px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+
+/* ============================= */
+/* INPUTS GERAIS */
+/* ============================= */
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+#calcular,
+#limpar,
+#info,
+#questoes {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* ============================= */
+/* CALCULAR */
+/* ============================= */
+
+#calcular {
+    background: #4CAF50;
+    color: white;
+}
+
+
+/* ============================= */
+/* LIMPAR */
+/* ============================= */
+
+#limpar {
+    background: #f44336;
+    color: white;
+}
+
+
+/* ============================= */
+/* INFORMAÇÕES */
+/* ============================= */
+
+#info {
+    background: #2196F3;
+    color: white;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+/* ============================= */
+/* QUESTIONÁRIO */
+/* ============================= */
+
+#questoes {
+    background: #8d6e63;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+}
+
+
+/* ============================= */
+/* ÁREA DO QUESTIONÁRIO */
+/* ============================= */
+
+#areaQuestionario {
+    display: none;
+    margin-top: 25px;
+}
+
+
+/* ============================= */
+/* PROGRESSO */
+/* ============================= */
+
+#progressoQuestionario {
+    text-align: center;
+    font-weight: bold;
+    color: #5d4037;
+    margin-bottom: 15px;
+}
+
+
+/* ============================= */
+/* QUESTÕES */
+/* ============================= */
+
+.questao {
+    display: none;
+
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+.questao.ativa {
+    display: block;
+}
+
+.questao h3 {
+    margin-top: 0;
+}
+
+.questao p {
+    line-height: 1.5;
+}
+
+.questao label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+
+/* ============================= */
+/* BOTÃO VERIFICAR */
+/* ============================= */
+
+.verificarQuestao,
+.proximaQuestao,
+#reiniciarQuestionario {
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #2196F3;
+    color: white;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.verificarQuestao:hover,
+.proximaQuestao:hover,
+#reiniciarQuestionario:hover {
+    opacity: 0.9;
+}
+
+
+/* ============================= */
+/* BOTÃO PRÓXIMA */
+/* ============================= */
+
+.proximaQuestao {
+    display: none;
+    background: #4CAF50;
+    margin-top: 10px;
+}
+
+
+/* ============================= */
+/* RESULTADO DA QUESTÃO */
+/* ============================= */
+
+.resultadoQuestao {
+    font-weight: bold;
+    min-height: 24px;
+}
+
+
+/* ============================= */
+/* RESULTADO FINAL */
+/* ============================= */
+
+#resultadoFinal {
+    display: none;
+
+    background: white;
+    border-radius: 10px;
+
+    padding: 20px;
+    margin-top: 20px;
+
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+
+/* ============================= */
+/* RESPONSIVO */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        padding: 18px;
+        margin: 20px auto;
+    }
+
+    .tipo-juros {
+        gap: 8px;
+        justify-content: center;
+    }
+
+    .tipo-juros label {
+        font-size: 13px;
+    }
+
+    .campo {
+        grid-template-columns: 85px 1fr;
+        gap: 8px;
+    }
+
+    .campo input {
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .questao {
+        padding: 15px;
+    }
+
+    .questao p {
+        font-size: 15px;
+    }
+
+    .verificarQuestao,
+    .proximaQuestao {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+/* ============================= */
+/* BOTÃO VOLTAR AO INÍCIO */
+/* ============================= */
+
+.voltar-inicio {
+    display: inline-block;
+    margin: 15px 0 0 20px;
+    padding: 10px 16px;
+    background-color: #6f4e37;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.voltar-inicio:hover {
+    background-color: #523824;
+}

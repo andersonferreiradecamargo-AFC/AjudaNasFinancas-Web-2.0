@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="icone.png">
+    <title>Ajuda nas Finanças</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCNN9HXMEW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DCNN9HXMEW');
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <a href="../index.html" class="voltar-inicio">
+    ← Voltar ao início
+    </a>
+
+<div class="container">
+
+    <h1>Ajuda nas Finanças</h1>
+
+    <h2>Calculadora Financeira</h2>
+
+    <!-- ============================= -->
+    <!-- TIPO DE JUROS -->
+    <!-- ============================= -->
+
+    <div class="tipo-juros">
+
+        <label>
+            <input type="radio" name="tipoJuros" id="simples" checked>
+            Juros Simples
+        </label>
+
+        <label>
+            <input type="radio" name="tipoJuros" id="compostos">
+            Juros Compostos
+        </label>
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- CAMPOS -->
+    <!-- ============================= -->
+
+    <div class="campo">
+
+        <label for="capital" class="ajuda" id="labelCapital">
+            Capital
+        </label>
+
+        <input
+            type="number"
+            id="capital"
+            placeholder="Digite o capital">
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="taxa" class="ajuda" id="labelTaxa">
+            Taxa (%)
+        </label>
+
+        <input
+            type="number"
+            id="taxa"
+            placeholder="Digite a taxa">
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="tempo" class="ajuda" id="labelTempo">
+            Tempo
+        </label>
+
+        <input
+            type="number"
+            id="tempo"
+            placeholder="Digite o tempo">
+
+    </div>
+
+
+    <p class="aviso-unidade">
+        ⚠️ <strong>Atenção:</strong> a unidade da taxa deve ser a mesma do tempo.
+        Ex.: 2% ao mês → informe o tempo em meses.
+    </p>
+
+    <div class="campo">
+
+        <label for="juros" class="ajuda" id="labelJuros">
+            Juros
+        </label>
+
+        <input
+            type="number"
+            id="juros"
+            placeholder="Resultado dos juros">
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="montante" class="ajuda" id="labelMontante">
+            Montante
+        </label>
+
+        <input
+            type="number"
+            id="montante"
+            placeholder="Resultado do montante">
+
+    </div>
+
+
+    <!-- ============================= -->
+    <!-- BOTÕES -->
+    <!-- ============================= -->
+
+    <div class="botoes">
+
+        <button type="button" id="calcular">
+            CALCULAR
+        </button>
+
+        <button type="button" id="limpar">
+            LIMPAR
+        </button>
+
+    </div>
+
+
+    <button type="button" id="info">
+        INFORMAÇÕES
+    </button>
+    
+    <div id="areaInformacoes" style="display: none;">
+
+    <h2>Informações</h2>
+
+    <p>
+        Esta calculadora foi desenvolvida para auxiliar no estudo de
+        Matemática Financeira.
+    </p>
+
+    <p>
+        Você pode utilizar a calculadora para resolver problemas de
+        <strong>Juros Simples</strong> e <strong>Juros Compostos</strong>.
+    </p>
+
+    <p>
+        Preencha os valores que você já conhece e deixe em branco
+        o valor que deseja descobrir.
+    </p>
+
+    <p>
+        <strong>Capital:</strong> valor inicial aplicado.
+    </p>
+
+    <p>
+        <strong>Taxa:</strong> percentual de juros aplicado.
+    </p>
+
+    <p>
+        <strong>Tempo:</strong> período da aplicação.
+    </p>
+
+    <p>
+        <strong>Juros:</strong> valor obtido pela aplicação dos juros.
+    </p>
+
+    <p>
+        <strong>Montante:</strong> capital mais os juros.
+    </p>
+
+</div>
+
+
+    <button type="button" id="questoes">
+        QUESTIONÁRIO
+    </button>
+
+
+    <!-- ============================= -->
+    <!-- QUESTIONÁRIO -->
+    <!-- ============================= -->
+
+    <div id="areaQuestionario">
+
+        <h2>Questionário</h2>
+
+        <div id="progressoQuestionario">
+            Questão <span id="numeroQuestao">1</span> de 10
+        </div>
+
+
+        <!-- QUESTÃO 1 -->
+
+        <div class="questao" data-questao="1">
+
+            <h3>Questão 1 — Juros Simples</h3>
+
+            <p>
+                Um capital de R$ 500,00 foi aplicado a uma taxa
+                de 2% ao mês durante 3 meses.
+                Qual foi o valor dos juros?
+            </p>
+
+            <label>
+                <input type="radio" name="q1" value="a">
+                A) R$ 20,00
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="b">
+                B) R$ 30,00
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="c">
+                C) R$ 40,00
+            </label>
+
+            <label>
+                <input type="radio" name="q1" value="d">
+                D) R$ 50,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="1">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ1"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="2">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 2 -->
+
+        <div class="questao" data-questao="2">
+
+            <h3>Questão 2 — Juros Compostos</h3>
+
+            <p>
+                Um capital de R$ 1.000,00 foi aplicado a uma taxa
+                de 2% ao mês durante 2 meses.
+                Qual será o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q2" value="a">
+                A) R$ 1.020,00
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="b">
+                B) R$ 1.040,40
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="c">
+                C) R$ 1.200,00
+            </label>
+
+            <label>
+                <input type="radio" name="q2" value="d">
+                D) R$ 1.400,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="2">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ2"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="3">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 3 -->
+
+        <div class="questao" data-questao="3">
+
+            <h3>Questão 3 — Juros Simples</h3>
+
+            <p>
+                Um capital de R$ 800,00 foi aplicado a uma taxa
+                de 3% ao mês durante 4 meses.
+                Qual foi o valor dos juros?
+            </p>
+
+            <label>
+                <input type="radio" name="q3" value="a">
+                A) R$ 72,00
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="b">
+                B) R$ 96,00
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="c">
+                C) R$ 104,00
+            </label>
+
+            <label>
+                <input type="radio" name="q3" value="d">
+                D) R$ 120,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="3">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ3"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="4">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 4 -->
+
+        <div class="questao" data-questao="4">
+
+            <h3>Questão 4 — Juros Compostos</h3>
+
+            <p>
+                Um capital de R$ 500,00 foi aplicado a uma taxa
+                de 4% ao mês durante 2 meses.
+                Qual será o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q4" value="a">
+                A) R$ 520,00
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="b">
+                B) R$ 540,80
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="c">
+                C) R$ 560,00
+            </label>
+
+            <label>
+                <input type="radio" name="q4" value="d">
+                D) R$ 580,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="4">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ4"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="5">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 5 -->
+
+        <div class="questao" data-questao="5">
+
+            <h3>Questão 5 — Juros Simples</h3>
+
+            <p>
+                Um capital de R$ 600,00 foi aplicado a uma taxa
+                de 2% ao mês durante 5 meses.
+                Qual foi o valor dos juros?
+            </p>
+
+            <label>
+                <input type="radio" name="q5" value="a">
+                A) R$ 30,00
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="b">
+                B) R$ 60,00
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="c">
+                C) R$ 70,00
+            </label>
+
+            <label>
+                <input type="radio" name="q5" value="d">
+                D) R$ 80,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="5">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ5"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="6">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 6 -->
+
+        <div class="questao" data-questao="6">
+
+            <h3>Questão 6 — Juros Compostos</h3>
+
+            <p>
+                Um capital de R$ 1.000,00 foi aplicado a uma taxa
+                de 3% ao mês durante 2 meses.
+                Qual será o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q6" value="a">
+                A) R$ 1.030,00
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="b">
+                B) R$ 1.060,90
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="c">
+                C) R$ 1.060,00
+            </label>
+
+            <label>
+                <input type="radio" name="q6" value="d">
+                D) R$ 1.100,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="6">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ6"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="7">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 7 -->
+
+        <div class="questao" data-questao="7">
+
+            <h3>Questão 7 — Juros Simples</h3>
+
+            <p>
+                Um capital de R$ 1.000,00 foi aplicado a uma taxa
+                de 5% ao mês durante 2 meses.
+                Qual foi o valor dos juros?
+            </p>
+
+            <label>
+                <input type="radio" name="q7" value="a">
+                A) R$ 50,00
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="b">
+                B) R$ 100,00
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="c">
+                C) R$ 150,00
+            </label>
+
+            <label>
+                <input type="radio" name="q7" value="d">
+                D) R$ 200,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="7">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ7"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="8">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 8 -->
+
+        <div class="questao" data-questao="8">
+
+            <h3>Questão 8 — Juros Compostos</h3>
+
+            <p>
+                Um capital de R$ 500,00 foi aplicado a uma taxa
+                de 2% ao mês durante 2 meses.
+                Qual será aproximadamente o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q8" value="a">
+                A) R$ 510,00
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="b">
+                B) R$ 520,20
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="c">
+                C) R$ 530,00
+            </label>
+
+            <label>
+                <input type="radio" name="q8" value="d">
+                D) R$ 540,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="8">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ8"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="9">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 9 -->
+
+        <div class="questao" data-questao="9">
+
+            <h3>Questão 9 — Juros Simples</h3>
+
+            <p>
+                Uma aplicação de R$ 400,00 rende juros simples
+                de 2% ao mês durante 5 meses.
+                Qual será o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q9" value="a">
+                A) R$ 420,00
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="b">
+                B) R$ 440,00
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="c">
+                C) R$ 460,00
+            </label>
+
+            <label>
+                <input type="radio" name="q9" value="d">
+                D) R$ 480,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="9">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ9"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="10">
+                PRÓXIMA QUESTÃO →
+            </button>
+
+        </div>
+
+
+        <!-- QUESTÃO 10 -->
+
+        <div class="questao" data-questao="10">
+
+            <h3>Questão 10 — Juros Compostos</h3>
+
+            <p>
+                Uma pessoa aplicou R$ 1.000,00 a uma taxa
+                de 2% ao mês durante 3 meses.
+                Qual será aproximadamente o montante?
+            </p>
+
+            <label>
+                <input type="radio" name="q10" value="a">
+                A) R$ 1.020,00
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="b">
+                B) R$ 1.040,40
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="c">
+                C) R$ 1.061,21
+            </label>
+
+            <label>
+                <input type="radio" name="q10" value="d">
+                D) R$ 1.100,00
+            </label>
+
+            <button type="button" class="verificarQuestao" data-numero="10">
+                VERIFICAR RESPOSTA
+            </button>
+
+            <p class="resultadoQuestao" id="resultadoQ10"></p>
+
+            <button type="button" class="proximaQuestao" data-proxima="11">
+                FINALIZAR QUESTIONÁRIO
+            </button>
+
+        </div>
+
+
+        <!-- RESULTADO FINAL -->
+
+        <div id="resultadoFinal">
+
+            <h2>🎉 Questionário concluído!</h2>
+
+            <p id="textoResultadoFinal"></p>
+
+            <p id="mensagemFinal"></p>
+
+            <button type="button" id="reiniciarQuestionario">
+                REFAZER QUESTIONÁRIO
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

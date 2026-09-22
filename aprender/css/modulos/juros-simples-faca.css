@@ -1,0 +1,361 @@
+/* Estilos exclusivos da etapa FAÇA de Juros Simples. */
+#jsEtapaFaca .js-campos-faca { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:20px 0; }
+#jsEtapaFaca label { display:block; font-weight:700; margin-bottom:8px; }
+#jsEtapaFaca input { box-sizing:border-box; width:100%; min-width:0; padding:12px; border:1px solid #6c92a5; border-radius:8px; background:#fff; color:#183848; font-size:1rem; }
+#jsEtapaFaca .js-acoes-faca { display:flex; flex-wrap:wrap; gap:10px; }
+#jsEtapaFaca .js-acoes-faca button { background:#205875; color:white; padding:12px 16px; border:0; border-radius:8px; font-weight:700; cursor:pointer; }
+#jsEtapaFaca .js-acoes-faca button:hover { background:#153d53; }
+#jsEtapaFaca :focus-visible { outline:3px solid #a66300; outline-offset:3px; }
+#jsEtapaFaca #jsErroFaca { color:#8a1d17; font-weight:700; }
+#jsEtapaFaca #jsResultadoFaca { margin-top:20px; padding:20px; background:#e0f0f8; border:1px solid #78a4ba; border-radius:12px; overflow-wrap:anywhere; }
+#jsEtapaFaca .js-totais { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; }
+#jsEtapaFaca .js-total { background:white; padding:14px; border-radius:8px; }
+#jsEtapaFaca .js-total strong { display:block; font-size:1.3rem; color:#184d68; }
+#jsEtapaFaca li { margin-bottom:14px; }
+#jsEtapaFaca [hidden] { display:none !important; }
+/* ==================================================
+   CAMPOS COM SELETOR DE PERÍODO
+   ================================================== */
+
+#jsEtapaFaca .js-campo-com-unidade {
+    display: flex;
+    width: 100%;
+}
+
+#jsEtapaFaca .js-campo-com-unidade input {
+    flex: 1;
+    min-width: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+#jsEtapaFaca .js-campo-com-unidade select {
+    box-sizing: border-box;
+    min-width: 135px;
+    padding: 12px 10px;
+    border: 1px solid #6c92a5;
+    border-left: 0;
+    border-radius: 0 8px 8px 0;
+    background: #fff;
+    color: #183848;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    #jsEtapaFaca .js-campos-faca {
+        grid-template-columns: 1fr;
+    }
+
+    #jsEtapaFaca .js-campo-com-unidade select {
+        min-width: 125px;
+    }
+    .js-grafico-area {
+    min-height: 0;
+    height: auto;
+    padding: 10px 6px;
+    }
+
+    .js-grafico-faca {
+        min-height: 0;
+        height: auto;
+    }
+}
+
+@media(max-width:600px) { #jsEtapaFaca .js-campos-faca, #jsEtapaFaca .js-totais { grid-template-columns:1fr; } #jsEtapaFaca .js-acoes-faca button { width:100%; } #jsEtapaFaca #jsResultadoFaca { padding:14px; } }
+/* ==================================================
+   LABORATÓRIO FINANCEIRO — JUROS SIMPLES
+================================================== */
+
+.js-laboratorio-faca {
+    margin-top: 24px;
+}
+
+/* CABEÇALHO DO GRÁFICO */
+
+.js-grafico-cabecalho {
+    margin-bottom: 16px;
+}
+
+.js-grafico-cabecalho h4 {
+    margin: 0 0 6px;
+    font-size: 1.15rem;
+}
+
+.js-grafico-cabecalho p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ÁREA DO GRÁFICO */
+
+.js-grafico-area {
+    width: 100%;
+    min-height: 320px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    background: #101820;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.js-grafico-faca {
+    width: 100%;
+    min-height: 280px;
+}
+
+/* PERÍODO SELECIONADO */
+
+.js-periodo-selecionado {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.js-periodo-selecionado span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.js-periodo-selecionado strong {
+    display: block;
+}
+
+/* EVOLUÇÃO / TABELA */
+
+.js-evolucao-faca {
+    margin-top: 16px;
+}
+
+.js-mostrar-tabela {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.js-tabela-evolucao {
+    margin-top: 12px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .js-laboratorio-faca {
+        margin-top: 18px;
+    }
+
+    .js-grafico-area {
+        min-height: 180px;
+        padding: 12px 8px;
+    }
+
+    .js-grafico-faca {
+        min-height: 150px;
+    }
+
+    .js-periodo-selecionado {
+        padding: 12px;
+    }
+}
+
+/* ==================================================
+   GRÁFICO — JUROS SIMPLES
+================================================== */
+
+.js-grafico-eixo {
+    stroke: #8fa3b5;
+    stroke-width: 2;
+}
+
+.js-grafico-linha {
+    fill: none;
+    stroke: #35b9e6;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.js-grafico-ponto {
+    fill: #35b9e6;
+    stroke: #ffffff;
+    stroke-width: 3;
+    cursor: pointer;
+    transition: r 0.2s ease;
+}
+
+.js-grafico-ponto:hover,
+.js-grafico-ponto:focus {
+    r: 9;
+    outline: none;
+}
+.js-grafico-ponto.selecionado {
+    fill: #35d07f;
+    stroke: #ff2b2b;
+    stroke-width: 3;
+    r: 9;
+}
+
+.js-grafico-texto {
+    font-size: 16px;
+    fill: #e7f1f7;
+}
+
+/* ==================================================
+   PAINEL DO PERÍODO SELECIONADO
+================================================== */
+
+.js-periodo-valores {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.js-periodo-valores > div {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.js-periodo-valores span {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.9rem;
+}
+
+.js-periodo-valores strong {
+    display: block;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 700px) {
+    .js-periodo-valores {
+        grid-template-columns: 1fr;
+    }
+    .js-grafico-texto {
+    font-size: 22px;
+    }
+
+    .js-grafico-ponto {
+        stroke-width: 4;
+    }
+}
+/* ==================================================
+   TABELA DE EVOLUÇÃO — JUROS SIMPLES
+================================================== */
+
+.js-tabela-evolucao {
+    margin-top: 14px;
+    max-height: 420px;
+    overflow: auto;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.82);
+}
+
+.js-tabela-financeira {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.js-tabela-financeira th,
+.js-tabela-financeira td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    text-align: right;
+    white-space: nowrap;
+}
+
+.js-tabela-financeira th:first-child,
+.js-tabela-financeira td:first-child {
+    text-align: center;
+}
+
+.js-tabela-financeira thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #e8f4fa;
+    font-weight: 700;
+}
+
+.js-tabela-financeira tbody tr:hover {
+    background: rgba(31, 99, 128, 0.08);
+}
+
+.js-tabela-financeira tbody tr:last-child td {
+    border-bottom: none;
+}
+
+@media (max-width: 700px) {
+
+    .js-tabela-evolucao {
+        max-height: 340px;
+    }
+
+    .js-tabela-financeira {
+        font-size: 0.88rem;
+    }
+
+    .js-tabela-financeira th,
+    .js-tabela-financeira td {
+        padding: 9px 10px;
+    }
+}
+/* ==================================================
+   LINHA SELECIONADA — TABELA DE EVOLUÇÃO
+================================================== */
+
+.js-tabela-financeira tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.js-tabela-financeira tbody tr:hover {
+    background-color: #eef8fc;
+}
+
+.js-tabela-financeira tbody tr.selecionada {
+    background-color: #63d694;
+    font-weight: 600;
+}
+/* ==================================================
+   TOOLTIP DO GRÁFICO — PERÍODO SELECIONADO
+   ================================================== */
+
+.js-grafico-tooltip-fundo {
+    fill: #ffffff;
+    stroke: #2563eb;
+    stroke-width: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
+}
+
+.js-grafico-tooltip-texto {
+    fill: #1f2937;
+    font-size: 14px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+#jsTooltipGrafico {
+    pointer-events: none;
+}
+/* ==================================================
+   OCULTAR PAINEL REPETIDO DO PERÍODO SELECIONADO
+   As informações já aparecem no tooltip do gráfico
+   ================================================== */
+
+#jsPeriodoSelecionado {
+    display: none;
+}
