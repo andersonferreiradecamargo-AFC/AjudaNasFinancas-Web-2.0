@@ -44,7 +44,7 @@ body {
 
 .decoracao-percentual {
     left: 47%;
-    top: 170px;
+    top: 165px;
     font-size: 5.6rem;
     transform: rotate(-7deg);
     opacity: 0.34;
@@ -55,7 +55,7 @@ body {
 .decoracao-grafico {
     position: absolute;
     left: 61.8%;
-    top: 175px;
+    top: 170px;
     width: 112px;
     height: 78px;
     display: flex;
@@ -86,7 +86,7 @@ body {
 .decoracao-moedas {
     position: absolute;
     left: 74.4%;
-    top: 175px;
+    top: 170px;
     width: 104px;
     height: 78px;
     opacity: 0.58;
