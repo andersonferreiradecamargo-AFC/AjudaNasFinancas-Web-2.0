@@ -839,28 +839,26 @@ function selecionarPeriodoGrafico(dados) {
                     const alturaTooltip = 78;
                     const distanciaPonto = 16;
 
-                    let tooltipX;
-                    let tooltipY;
+                    // O tooltip acompanha o ponto selecionado.
+                    // Por padrão aparece à direita; perto da borda direita,
+                    // muda automaticamente para a esquerda.
+                    let tooltipX = x + distanciaPonto;
+                    let tooltipY = y - (alturaTooltip / 2);
 
-                    if (modoCelular) {
-                        // No celular: fixa o tooltip na faixa inferior do gráfico
-                        tooltipX = (900 - larguraTooltip) / 2;
-                        tooltipY = 170;
-                    } else {
-                        // No desktop: mantém o tooltip ao lado do ponto
-                        tooltipX = x + distanciaPonto;
-                        tooltipY = y - (alturaTooltip / 2);
-                    }
-                                if (!modoCelular) {
                     if (tooltipX + larguraTooltip > 900 - 30) {
                         tooltipX = x - larguraTooltip - distanciaPonto;
                     }
+
+                    // Mantém a caixa dentro da área útil do gráfico.
+                    tooltipX = Math.max(
+                        125,
+                        Math.min(tooltipX, 900 - 30 - larguraTooltip)
+                    );
 
                     tooltipY = Math.max(
                         30,
                         Math.min(tooltipY, 320 - 55 - alturaTooltip)
                     );
-                }
                 tooltip.setAttribute(
                     "transform",
                     `translate(${tooltipX}, ${tooltipY})`
