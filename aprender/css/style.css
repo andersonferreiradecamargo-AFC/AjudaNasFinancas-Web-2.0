@@ -2056,3 +2056,249 @@ main {
 .decida input[type="text"], .decida input[type="number"], .decida select {
     background:#fff;
 }
+
+/* ==================================================
+   ACORDEÃO DOS MÓDULOS
+   ================================================== */
+.modulo-acordeao-titulo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border: 0;
+    border-radius: 14px;
+    background: #ffffff;
+    color: inherit;
+    font: inherit;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.modulo-acordeao-titulo .modulo-seta {
+    flex: 0 0 auto;
+    font-size: 0.9rem;
+}
+
+.modulo-corpo[hidden] {
+    display: none !important;
+}
+
+.modulo.modulo-futuro .modulo-subtitulo {
+    margin: 14px 4px 0;
+}
+
+@media (max-width: 600px) {
+    .modulo-acordeao-titulo {
+        padding: 14px 15px;
+        font-size: 1.08rem;
+    }
+}
+
+/* ==================================================
+   ACORDEÃO DOS MÓDULOS — IDENTIDADE VISUAL NEUTRA
+   Os módulos usam uma única linguagem visual.
+   As cores ficam reservadas para APRENDA/FAÇA/INTERPRETE/DECIDA.
+   ================================================== */
+section.modulo > .modulo-acordeao-titulo {
+    margin: 8px 0 10px;
+    padding: 14px 18px;
+    border: 1px solid #aebdca;
+    border-left: 5px solid #73899c;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #eef3f7 0%, #e4ebf1 100%);
+    color: #243746;
+    box-shadow: none;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-numero {
+    flex: 0 0 54px;
+    font-size: 1.55rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .03em;
+    color: #526d82;
+    text-align: center;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade {
+    min-width: 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade strong {
+    font-size: 1.12rem;
+    line-height: 1.2;
+    color: #243746;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade small {
+    font-size: .86rem;
+    line-height: 1.3;
+    font-weight: 500;
+    color: #5f7180;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-seta {
+    color: #526d82;
+}
+
+section.modulo.modulo-aberto > .modulo-acordeao-titulo {
+    background: linear-gradient(90deg, #e3ebf1 0%, #dbe5ec 100%);
+    border-color: #8298aa;
+    border-left-color: #345f7a;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, .07);
+}
+
+section.modulo.modulo-aberto > .modulo-acordeao-titulo .modulo-numero,
+section.modulo.modulo-aberto > .modulo-acordeao-titulo .modulo-seta {
+    color: #285a78;
+}
+
+section.modulo + section.modulo {
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+    section.modulo > .modulo-acordeao-titulo {
+        margin: 7px 0 9px;
+        padding: 13px 14px;
+        gap: 11px;
+        border-radius: 12px;
+    }
+
+    section.modulo > .modulo-acordeao-titulo .modulo-numero {
+        flex-basis: 42px;
+        font-size: 1.3rem;
+    }
+
+    section.modulo > .modulo-acordeao-titulo .modulo-identidade strong {
+        font-size: 1rem;
+    }
+
+    section.modulo > .modulo-acordeao-titulo .modulo-identidade small {
+        font-size: .78rem;
+    }
+}
+
+/* ==================================================
+   VISUAL FINAL DOS MÓDULOS — FUNDO CONTÍNUO
+   ================================================== */
+body {
+    background: linear-gradient(180deg, #d8e3ec 0%, #cbd9e4 100%);
+}
+
+main {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+section.modulo > .modulo-acordeao-titulo {
+    overflow: hidden;
+    padding: 0 18px 0 0;
+    min-height: 78px;
+    border: 1px solid #2d78b7;
+    border-left: 0;
+    border-radius: 14px;
+    background: linear-gradient(90deg, #e5f2ff 0%, #d9eafa 100%);
+    color: #0d3155;
+    box-shadow: 0 4px 12px rgba(31, 74, 111, .10);
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-numero {
+    align-self: stretch;
+    flex: 0 0 78px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2px;
+    background: linear-gradient(180deg, #126db3 0%, #07558f 100%);
+    color: #fff;
+    font-size: 1.72rem;
+    text-shadow: 0 1px 1px rgba(0,0,0,.12);
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade {
+    padding: 12px 0;
+    border-left: 3px solid #278bd5;
+    padding-left: 18px;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade strong {
+    color: #0b3157;
+    font-size: 1.16rem;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-identidade small {
+    color: #405d76;
+}
+
+section.modulo > .modulo-acordeao-titulo .modulo-seta {
+    color: #0c568d;
+    font-size: 1rem;
+}
+
+section.modulo.modulo-aberto > .modulo-acordeao-titulo {
+    background: linear-gradient(90deg, #d8ecff 0%, #cce4f8 100%);
+    border-color: #176ca9;
+    box-shadow: 0 5px 15px rgba(20, 77, 119, .16);
+}
+
+section.modulo.modulo-aberto > .modulo-acordeao-titulo .modulo-numero,
+section.modulo.modulo-aberto > .modulo-acordeao-titulo .modulo-seta {
+    color: #fff;
+}
+
+section.modulo.modulo-aberto > .modulo-acordeao-titulo .modulo-seta {
+    color: #084a7b;
+}
+
+@media (max-width: 600px) {
+    main {
+        width: calc(100% - 24px);
+        margin-top: 18px;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section.modulo > .modulo-acordeao-titulo {
+        min-height: 70px;
+        padding: 0 12px 0 0;
+    }
+
+    section.modulo > .modulo-acordeao-titulo .modulo-numero {
+        flex-basis: 58px;
+        font-size: 1.38rem;
+    }
+
+    section.modulo > .modulo-acordeao-titulo .modulo-identidade {
+        padding: 10px 0 10px 12px;
+    }
+}
+
+/* ==================================================
+   AJUSTE FINO FINAL — CONTRASTE E RESPIRO DOS MÓDULOS
+   ================================================== */
+body {
+    background: linear-gradient(180deg, #ccd9e4 0%, #bdcedb 100%);
+}
+
+section.modulo.modulo-aberto > .modulo-corpo:not([hidden]) {
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    section.modulo.modulo-aberto > .modulo-corpo:not([hidden]) {
+        margin-top: 10px;
+    }
+}
