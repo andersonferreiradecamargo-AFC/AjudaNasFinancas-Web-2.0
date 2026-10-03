@@ -1677,6 +1677,36 @@
 
                     </div>
 
+                    <!-- SUBTÓPICO 5 -->
+                    <div class="subtopico">
+                        <button type="button" class="subtopico-titulo">
+                            <span>5. Juros são o único custo de um empréstimo?</span>
+                            <span class="subtopico-seta">▼</span>
+                        </button>
+                        <div class="subtopico-conteudo">
+                            <p>
+                                <strong>Nem sempre.</strong> Além dos juros, uma operação de crédito pode incluir
+                                outros custos, como <strong>tarifas, impostos, seguros e outros encargos</strong>.
+                            </p>
+                            <div class="exemplo">
+                                <h4>💡 CET — Custo Efetivo Total</h4>
+                                <p>
+                                    O <strong>CET</strong> reúne, em uma única informação, os custos da operação de crédito.
+                                    Por isso, ele ajuda a comparar propostas de empréstimos e financiamentos.
+                                </p>
+                                <p>
+                                    Uma proposta com <strong>taxa de juros menor</strong> pode acabar tendo
+                                    <strong>custo total maior</strong> quando existem outras despesas.
+                                </p>
+                            </div>
+                            <p>
+                                <strong>Neste módulo, não vamos calcular o CET.</strong> Vamos apenas usar essa ideia
+                                para lembrar que, antes de escolher um empréstimo, é importante observar
+                                <strong>todos os custos informados</strong>, e não somente a taxa de juros.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -1840,6 +1870,88 @@
                 </div>
             </div>
 
+            <!-- ==================================================
+                 JUROS SIMPLES — INTERPRETE
+            =================================================== -->
+            <div class="etapa interprete acordeao" id="jsEtapaInterprete">
+                <button type="button" class="acordeao-titulo">
+                    <span class="acordeao-identidade">
+                        <span class="acordeao-icone" aria-hidden="true">🔎</span>
+                        <span class="acordeao-textos">
+                            <strong>INTERPRETE</strong>
+                            <small>Compreenda o que os resultados significam</small>
+                        </span>
+                    </span>
+                    <span class="seta" aria-hidden="true">▼</span>
+                </button>
+
+                <div class="acordeao-conteudo">
+                    <h3>O que os juros representam?</h3>
+                    <p>João fez um empréstimo de <strong>R$ 1.000,00</strong>, com juros simples de <strong>2% ao mês</strong>, durante <strong>6 meses</strong>.</p>
+                    <p>Ao final desse período, os juros são <strong>R$ 120,00</strong> e o montante é <strong>R$ 1.120,00</strong>.</p>
+
+                    <div class="subtopico">
+                        <button type="button" class="subtopico-titulo">
+                            <span>1. Interpretando os R$ 120,00</span><span class="subtopico-seta">▼</span>
+                        </button>
+                        <div class="subtopico-conteudo">
+                            <p><strong>O que representam os R$ 120,00?</strong></p>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="capital"> É o valor que João recebeu emprestado.</label>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="juros"> É o custo do empréstimo acumulado durante os 6 meses.</label>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="montante"> É o total que João deverá pagar.</label>
+                            <button type="button" id="jsVerificarInterpreteJuros">VERIFICAR RESPOSTA</button>
+                            <div id="jsFeedbackInterpreteJuros" class="feedback-interpretacao" hidden aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="subtopico">
+                        <button type="button" class="subtopico-titulo">
+                            <span>2. E se o prazo aumentar?</span><span class="subtopico-seta">▼</span>
+                        </button>
+                        <div class="subtopico-conteudo">
+                            <p>Se o capital e a taxa permanecerem iguais, mas o prazo passar de <strong>6 para 12 meses</strong>, o que acontece com os juros?</p>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="iguais"> Continuam em R$ 120,00.</label>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="dobram"> Dobram para R$ 240,00.</label>
+                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="diminuem"> Diminuem para R$ 60,00.</label>
+                            <button type="button" id="jsVerificarInterpreteTempo">VERIFICAR RESPOSTA</button>
+                            <div id="jsFeedbackInterpreteTempo" class="feedback-interpretacao" hidden aria-live="polite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================================================
+                 JUROS SIMPLES — DECIDA
+            =================================================== -->
+            <div class="etapa decida acordeao" id="jsEtapaDecida">
+                <button type="button" class="acordeao-titulo">
+                    <span class="acordeao-identidade">
+                        <span class="acordeao-icone" aria-hidden="true">💡</span>
+                        <span class="acordeao-textos">
+                            <strong>DECIDA</strong>
+                            <small>Compare propostas antes de escolher</small>
+                        </span>
+                    </span>
+                    <span class="seta" aria-hidden="true">▼</span>
+                </button>
+
+                <div class="acordeao-conteudo">
+                    <h3>Qual empréstimo tem o menor custo?</h3>
+                    <p>Ana precisa de <strong>R$ 2.000,00</strong> por <strong>6 meses</strong> e recebeu duas propostas.</p>
+                    <p class="js-lembrete-cet"><strong>Lembre-se:</strong> uma taxa de juros menor nem sempre significa um empréstimo mais barato. Considere todos os custos informados antes de decidir.</p>
+                    <div class="situacao-decisao">
+                        <div class="oferta"><h4>Banco A</h4><p>Juros simples de <strong>2% ao mês</strong>.</p><p>Sem taxa adicional.</p></div>
+                        <div class="oferta"><h4>Banco B</h4><p>Juros simples de <strong>1,5% ao mês</strong>.</p><p>Mais uma taxa fixa de <strong>R$ 80,00</strong>.</p></div>
+                    </div>
+                    <p><strong>Considerando todos os custos, qual proposta resulta no menor valor total a pagar?</strong></p>
+                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="a"> Banco A.</label>
+                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="b"> Banco B.</label>
+                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="iguais"> As duas propostas têm o mesmo custo.</label>
+                    <button type="button" id="jsVerificarDecisao">VERIFICAR DECISÃO</button>
+                    <div id="jsFeedbackDecisao" class="feedback-decisao" hidden aria-live="polite"></div>
+                </div>
+            </div>
+
         </section>
 
 
@@ -1855,6 +1967,8 @@
     <script src="js/modulos/juros-simples/juros-simples.js"></script>
 
     <script src="js/modulos/juros-simples/juros-simples-faca.js"></script>
+    <script src="js/modulos/juros-simples/juros-simples-interprete.js"></script>
+    <script src="js/modulos/juros-simples/juros-simples-decida.js"></script>
 </body>
 
 </html>

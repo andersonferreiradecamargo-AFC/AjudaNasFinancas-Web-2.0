@@ -570,7 +570,7 @@ main {
     background: linear-gradient(90deg, #ffe5ca 0%, #fff0e2 100%);
 }
 .aprenda .acordeao-conteudo {
-    background: #fff9f3;
+    background: #fff4e8;
 }
 .aprenda .acordeao-textos strong {
     color: #f06400;
@@ -584,7 +584,7 @@ main {
     background: linear-gradient(90deg, #dcecff 0%, #eef6ff 100%);
 }
 .faca .acordeao-conteudo {
-    background: #f7fbff;
+    background: #edf7ff;
 }
 .faca .acordeao-textos strong {
     color: #1470bf;
@@ -598,7 +598,7 @@ main {
     background: linear-gradient(90deg, #dff3e7 0%, #eef9f2 100%);
 }
 .interprete .acordeao-conteudo {
-    background: #f7fcf9;
+    background: #eef9f2;
 }
 .interprete .acordeao-textos strong {
     color: #12833f;
@@ -612,7 +612,7 @@ main {
     background: linear-gradient(90deg, #eadbfb 0%, #f6effd 100%);
 }
 .decida .acordeao-conteudo {
-    background: #fbf8ff;
+    background: #f7f0fd;
 }
 .decida .acordeao-textos strong {
     color: #7b28c7;
@@ -711,7 +711,7 @@ main {
     font-size: 0.87rem;
     border: 1px solid #b5cbe0;
     border-radius: 8px;
-    background: #f7fbff;
+    background: #edf7ff;
     outline: none;
 }
 
@@ -726,7 +726,10 @@ main {
 #verificarInterpretacaoAumento,
 #verificarDecisao,
 #verificarDecisaoAumento,
-#verificarDecisaoPagamento {
+#verificarDecisaoPagamento,
+#jsVerificarInterpreteJuros,
+#jsVerificarInterpreteTempo,
+#jsVerificarDecisao {
     padding: 11px 18px;
     margin-right: 8px;
     margin-top: 8px;
@@ -772,7 +775,9 @@ main {
 
 #verificarInterpretacao,
 #verificarInterpretacaoDesconto,
-#verificarInterpretacaoAumento {
+#verificarInterpretacaoAumento,
+#jsVerificarInterpreteJuros,
+#jsVerificarInterpreteTempo {
     background: #2f9b5d;
     color: #fff;
 }
@@ -787,7 +792,8 @@ main {
 
 #verificarDecisao,
 #verificarDecisaoAumento,
-#verificarDecisaoPagamento {
+#verificarDecisaoPagamento,
+#jsVerificarDecisao {
     background: #7b28c7;
     color: #fff;
 }
@@ -1156,14 +1162,17 @@ main {
 /* Cores definitivas das etapas e botões */
 #verificarInterpretacao,
 #verificarInterpretacaoDesconto,
-#verificarInterpretacaoAumento {
+#verificarInterpretacaoAumento,
+#jsVerificarInterpreteJuros,
+#jsVerificarInterpreteTempo {
     background: #2f9b5d;
     color: #ffffff;
 }
 
 #verificarDecisao,
 #verificarDecisaoAumento,
-#verificarDecisaoPagamento {
+#verificarDecisaoPagamento,
+#jsVerificarDecisao {
     background: #7b28c7;
     color: #ffffff;
 }
@@ -1904,4 +1913,134 @@ main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
+}
+
+/* JUROS SIMPLES — lembrete que conecta APRENDA ao DECIDA */
+.js-lembrete-cet {
+    margin: 14px 0 16px;
+    padding: 12px 14px;
+    border-left: 4px solid #7b28c7;
+    border-radius: 8px;
+    background: #f3eafe;
+}
+
+/* ==================================================
+   PALETA DOS 4 PASSOS — CONTRASTE APROVADO
+   Cabeçalho mais presente; conteúdo usa tom semelhante
+   ao antigo cabeçalho, mantendo cartões internos claros.
+   ================================================== */
+.aprenda { background:#ffe4c7; border-color:#f3a956; }
+.aprenda .acordeao-titulo { background:linear-gradient(90deg,#ffd5aa 0%,#ffe4c7 100%); }
+.aprenda .acordeao-conteudo { background:#ffe4c7; }
+
+.faca { background:#d9ebff; border-color:#79b8ef; }
+.faca .acordeao-titulo { background:linear-gradient(90deg,#c6e1ff 0%,#d9ebff 100%); }
+.faca .acordeao-conteudo { background:#d9ebff; }
+
+.interprete { background:#d9f3e2; border-color:#75c891; }
+.interprete .acordeao-titulo { background:linear-gradient(90deg,#c6ebd3 0%,#d9f3e2 100%); }
+.interprete .acordeao-conteudo { background:#d9f3e2; }
+
+.decida { background:#ead9fb; border-color:#b987e8; }
+.decida .acordeao-titulo { background:linear-gradient(90deg,#dfc7f7 0%,#ead9fb 100%); }
+.decida .acordeao-conteudo { background:#ead9fb; }
+
+/* ==================================================
+   PAINÉIS INTERNOS ABERTOS — CONTINUIDADE DE COR
+   O conteúdo aberto acompanha a cor externa de cada etapa.
+   Títulos dos subtópicos, campos, botões e cartões de resposta
+   permanecem claros para preservar contraste e legibilidade.
+   ================================================== */
+.aprenda .subtopico-conteudo { background:#ffe4c7; }
+.faca .subtopico-conteudo { background:#d9ebff; }
+.interprete .subtopico-conteudo { background:#d9f3e2; }
+.decida .subtopico-conteudo { background:#ead9fb; }
+
+/* evita que o hover do título pareça desbotado; o título continua claro */
+.aprenda .subtopico-titulo:hover,
+.faca .subtopico-titulo:hover,
+.interprete .subtopico-titulo:hover,
+.decida .subtopico-titulo:hover { background:#f8fafc; }
+
+/* ==================================================
+   PADRÃO VISUAL DEFINITIVO — CONTINUIDADE DE COR
+   Subníveis seguem a mesma família cromática da etapa.
+   A separação é feita por bordas e espaçamento, evitando
+   grandes faixas brancas dentro dos acordeões.
+   ================================================== */
+
+/* APRENDA */
+.aprenda .subtopico {
+    background:#ffe4c7;
+    border-color:#f3bd80;
+}
+.aprenda .subtopico-titulo,
+.aprenda .subtopico-titulo:hover,
+.aprenda .subtopico-conteudo {
+    background:#ffe4c7;
+}
+.aprenda .subtopico-conteudo { border-top-color:#f3bd80; }
+.aprenda .alternativa {
+    background:#ffead2;
+    border-color:#efc99d;
+}
+.aprenda .alternativa:hover { background:#ffe2c1; }
+
+/* FAÇA */
+.faca .subtopico {
+    background:#d9ebff;
+    border-color:#9cc8ef;
+}
+.faca .subtopico-titulo,
+.faca .subtopico-titulo:hover,
+.faca .subtopico-conteudo {
+    background:#d9ebff;
+}
+.faca .subtopico-conteudo { border-top-color:#9cc8ef; }
+.faca .alternativa {
+    background:#e1efff;
+    border-color:#abcdec;
+}
+.faca .alternativa:hover { background:#d4e9ff; }
+
+/* INTERPRETE */
+.interprete .subtopico {
+    background:#d9f3e2;
+    border-color:#9bd2ad;
+}
+.interprete .subtopico-titulo,
+.interprete .subtopico-titulo:hover,
+.interprete .subtopico-conteudo {
+    background:#d9f3e2;
+}
+.interprete .subtopico-conteudo { border-top-color:#9bd2ad; }
+.interprete .alternativa {
+    background:#e1f6e8;
+    border-color:#add8bb;
+}
+.interprete .alternativa:hover { background:#d3efdd; }
+
+/* DECIDA */
+.decida .subtopico {
+    background:#ead9fb;
+    border-color:#c5a0e8;
+}
+.decida .subtopico-titulo,
+.decida .subtopico-titulo:hover,
+.decida .subtopico-conteudo {
+    background:#ead9fb;
+}
+.decida .subtopico-conteudo { border-top-color:#c5a0e8; }
+.decida .alternativa {
+    background:#efe2fc;
+    border-color:#cfafea;
+}
+.decida .alternativa:hover { background:#e6d2f9; }
+
+/* Os controles de entrada permanecem claros para leitura. */
+.aprenda input[type="text"], .aprenda input[type="number"], .aprenda select,
+.faca input[type="text"], .faca input[type="number"], .faca select,
+.interprete input[type="text"], .interprete input[type="number"], .interprete select,
+.decida input[type="text"], .decida input[type="number"], .decida select {
+    background:#fff;
 }
