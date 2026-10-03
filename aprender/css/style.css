@@ -806,6 +806,18 @@ main {
     border-radius: 8px;
 }
 
+/* Sinal visual das respostas — INTERPRETE e DECIDA (Juros Simples) */
+.feedback-sinal {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.25em;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.feedback-correto { color: #16823b; }
+.feedback-erro { color: #c62828; }
+
 .oferta {
     display: inline-block;
     width: 48%;
