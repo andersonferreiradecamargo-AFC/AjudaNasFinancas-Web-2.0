@@ -1,538 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
-    <title>Ajuda nas Finanças</title>
-
-    <style>
-
-        /* =========================================
-           CONFIGURAÇÕES GERAIS
-        ========================================= */
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f8;
-            color: #1f2937;
-            min-height: 100vh;
-
-            display: flex;
-            flex-direction: column;
-        }
-
-
-        /* =========================================
-           CABEÇALHO
-        ========================================= */
-
-        .cabecalho {
-            background: linear-gradient(
-                135deg,
-                #f28c28,
-                #f5a623
-            );
-
-            color: white;
-            text-align: center;
-
-            padding: 42px 20px 50px;
-        }
-
-        .cabecalho h1 {
-            font-size: 2.6rem;
-            margin-bottom: 10px;
-        }
-
-        .cabecalho p {
-            font-size: 1.1rem;
-            max-width: 650px;
-            margin: auto;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           CONTEÚDO PRINCIPAL
-        ========================================= */
-
-        main {
-            width: 100%;
-            max-width: 1050px;
-
-            margin: -25px auto 0;
-            padding: 0 20px 40px;
-
-            flex: 1;
-        }
-
-
-        /* =========================================
-           CARTÃO DE BOAS-VINDAS
-        ========================================= */
-
-        .boas-vindas {
-            background: white;
-
-            border-radius: 16px;
-
-            padding: 28px 25px;
-
-            text-align: center;
-
-            box-shadow:
-                0 8px 25px rgba(0, 0, 0, 0.08);
-
-            margin-bottom: 28px;
-        }
-
-        .boas-vindas h2 {
-            color: #1d3557;
-            margin-bottom: 8px;
-        }
-
-        .boas-vindas p {
-            color: #5f6b78;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           ÁREA DAS DUAS ESCOLHAS
-        ========================================= */
-
-        .escolhas {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 24px;
-        }
-
-
-        /* =========================================
-           CARTÕES
-        ========================================= */
-
-        .cartao {
-            background: white;
-
-            border-radius: 18px;
-
-            padding: 32px 28px;
-
-            text-decoration: none;
-            color: inherit;
-
-            box-shadow:
-                0 8px 24px rgba(0, 0, 0, 0.08);
-
-            border: 2px solid transparent;
-
-            transition:
-                transform 0.2s ease,
-                box-shadow 0.2s ease,
-                border-color 0.2s ease;
-
-            display: flex;
-            flex-direction: column;
-
-            min-height: 340px;
-        }
-
-        .cartao:hover {
-            transform: translateY(-5px);
-
-            box-shadow:
-                0 14px 32px rgba(0, 0, 0, 0.13);
-        }
-
-
-        /* =========================================
-           CARTÃO CALCULAR
-        ========================================= */
-
-        .cartao-calcular {
-            border-top: 6px solid #8b5e3c;
-        }
-
-        .cartao-calcular:hover {
-            border-color: #8b5e3c;
-        }
-
-
-        /* =========================================
-           CARTÃO APRENDER
-        ========================================= */
-
-        .cartao-aprender {
-            border-top: 6px solid #f28c28;
-        }
-
-        .cartao-aprender:hover {
-            border-color: #f28c28;
-        }
-
-
-        /* =========================================
-           ÍCONES
-        ========================================= */
-
-        .icone {
-            width: 72px;
-            height: 72px;
-
-            border-radius: 50%;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            font-size: 2.2rem;
-
-            margin-bottom: 22px;
-        }
-
-        .cartao-calcular .icone {
-            background: #f4e9df;
-        }
-
-        .cartao-aprender .icone {
-            background: #fff0df;
-        }
-
-
-        /* =========================================
-           TEXTOS DOS CARTÕES
-        ========================================= */
-
-        .tipo {
-            font-size: 0.9rem;
-            font-weight: bold;
-
-            letter-spacing: 0.7px;
-
-            margin-bottom: 9px;
-        }
-
-        .cartao-calcular .tipo {
-            color: #8b5e3c;
-        }
-
-        .cartao-aprender .tipo {
-            color: #e87500;
-        }
-
-        .cartao h2 {
-            font-size: 1.65rem;
-            color: #1d3557;
-
-            margin-bottom: 13px;
-        }
-
-        .descricao {
-            color: #5f6b78;
-            line-height: 1.6;
-
-            margin-bottom: 20px;
-        }
-
-
-        /* =========================================
-           LISTA DE RECURSOS
-        ========================================= */
-
-        .recursos {
-            list-style: none;
-
-            margin-bottom: 25px;
-
-            flex: 1;
-        }
-
-        .recursos li {
-            margin: 9px 0;
-
-            color: #374151;
-
-            padding-left: 22px;
-
-            position: relative;
-        }
-
-        .recursos li::before {
-            content: "✓";
-
-            position: absolute;
-            left: 0;
-
-            font-weight: bold;
-            color: #3c9d5d;
-        }
-
-
-        /* =========================================
-           BOTÕES
-        ========================================= */
-
-        .botao {
-            width: 100%;
-
-            padding: 14px 18px;
-
-            border-radius: 10px;
-
-            text-align: center;
-
-            font-weight: bold;
-            font-size: 1rem;
-
-            color: white;
-        }
-
-        .cartao-calcular .botao {
-            background: #8b5e3c;
-        }
-
-        .cartao-aprender .botao {
-            background: #f28c28;
-        }
-
-
-        /* =========================================
-           RODAPÉ
-        ========================================= */
-
-        footer {
-            text-align: center;
-
-            color: #687482;
-
-            font-size: 0.9rem;
-
-            padding: 22px 20px 28px;
-        }
-
-
-        /* =========================================
-           CELULAR
-        ========================================= */
-
-        @media (max-width: 720px) {
-
-            .cabecalho {
-                padding: 32px 18px 42px;
-            }
-
-            .cabecalho h1 {
-                font-size: 2rem;
-            }
-
-            main {
-                margin-top: -18px;
-                padding-left: 14px;
-                padding-right: 14px;
-            }
-
-            .escolhas {
-                grid-template-columns: 1fr;
-            }
-
-            .cartao {
-                min-height: auto;
-                padding: 26px 22px;
-            }
-
-            .icone {
-                width: 62px;
-                height: 62px;
-
-                font-size: 1.9rem;
-            }
-        }
-
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f28c28">
+  <title>Ajuda nas Finanças</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--azul:#1d3557;--texto:#374151;--muted:#5f6b78;--laranja:#f28c28;--laranja2:#f5a623;--marrom:#8b5e3c;--fundo:#d8dfe8;--calc:#fff4e4;--apr:#fff0dc}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--fundo);color:#1f2937;min-height:100vh;display:flex;flex-direction:column}
+    .cabecalho{background:linear-gradient(135deg,var(--laranja),var(--laranja2));color:#fff;text-align:center;padding:34px 20px 48px}
+    .marca{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:8px}
+    .marca-icone{width:74px;height:74px;border-radius:20px;background:#ffe0b2;padding:5px;object-fit:contain;box-shadow:0 5px 16px rgba(99,54,12,.18)}
+    .cabecalho h1{font-size:2.6rem;line-height:1.05}
+    .cabecalho p{font-size:1.1rem;max-width:650px;margin:auto;line-height:1.6}
+    main{width:100%;max-width:1050px;margin:-25px auto 0;padding:0 20px 40px;flex:1}
+    .boas-vindas{background:var(--fundo);border-radius:16px;padding:25px;text-align:center;box-shadow:0 8px 25px rgba(80,54,28,.09);margin-bottom:28px}
+    .boas-vindas h2{color:var(--azul);margin-bottom:8px}.boas-vindas p{color:var(--muted);line-height:1.6}
+    .escolhas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+    .cartao{border-radius:18px;padding:28px;text-decoration:none;color:inherit;box-shadow:0 8px 24px rgba(80,54,28,.10);border:2px solid transparent;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;display:flex;flex-direction:column;min-height:350px;overflow:hidden}
+    .cartao:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(80,54,28,.14)}
+    .cartao-calcular{background:linear-gradient(145deg,#fffaf2,var(--calc));border-top:6px solid var(--marrom)}
+    .cartao-calcular:hover{border-color:var(--marrom)}
+    .cartao-aprender{background:linear-gradient(145deg,#fffaf2,var(--apr));border-top:6px solid var(--laranja)}
+    .cartao-aprender:hover{border-color:var(--laranja)}
+    .topo-cartao{display:flex;align-items:center;gap:16px;margin-bottom:16px;min-width:0}
+    .icone{width:76px;height:76px;flex:0 0 76px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .cartao-calcular .icone{background:#ffe0b2}.cartao-aprender .icone{background:#ffe7c6;font-size:2.25rem}
+    .icone img{width:92%;height:92%;object-fit:contain}
+    .titulo-linha{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;min-width:0}
+    .tipo{font-size:.86rem;font-weight:700;letter-spacing:.65px;white-space:nowrap}.cartao-calcular .tipo{color:var(--marrom)}.cartao-aprender .tipo{color:#e66f00}
+    .cartao h2{font-size:1.55rem;color:var(--azul);line-height:1.15;margin:0}
+    .descricao{color:var(--muted);line-height:1.55;margin:0 0 18px 92px}
+    .recursos{list-style:none;margin:0 0 24px 92px;flex:1}.recursos li{margin:9px 0;color:var(--texto);padding-left:22px;position:relative}.recursos li::before{content:"✓";position:absolute;left:0;font-weight:bold;color:#3c9d5d}
+    .botao{width:100%;padding:14px 18px;border-radius:10px;text-align:center;font-weight:bold;font-size:1rem;color:#fff;margin-top:auto}.cartao-calcular .botao{background:var(--marrom)}.cartao-aprender .botao{background:var(--laranja)}
+    footer{text-align:center;color:#687482;font-size:.9rem;padding:22px 20px 28px}
+    @media(max-width:720px){
+      .cabecalho{padding:24px 16px 38px}.marca{gap:11px;margin-bottom:7px}.marca-icone{width:56px;height:56px;border-radius:16px}.cabecalho h1{font-size:1.8rem}.cabecalho p{font-size:.98rem;line-height:1.45;max-width:350px}
+      main{margin-top:-16px;padding:0 12px 28px}.boas-vindas{padding:20px 16px;margin-bottom:18px}.boas-vindas h2{font-size:1.3rem}.boas-vindas p{font-size:.94rem}
+      .escolhas{grid-template-columns:1fr;gap:16px}.cartao{min-height:auto;padding:20px 18px}.topo-cartao{gap:12px;margin-bottom:12px}.icone{width:62px;height:62px;flex-basis:62px}.cartao-aprender .icone{font-size:1.9rem}
+      .titulo-linha{gap:5px 8px}.tipo{font-size:.75rem}.cartao h2{font-size:1.27rem}.descricao{margin-left:74px;font-size:.93rem;margin-bottom:14px}.recursos{margin-left:74px;margin-bottom:18px}.recursos li{font-size:.93rem;margin:7px 0}.botao{padding:13px 14px}
+    }
+    @media(max-width:430px){
+      .marca{align-items:center}.marca-icone{width:52px;height:52px}.cabecalho h1{font-size:1.65rem}.cabecalho p{font-size:.91rem}
+      .topo-cartao{align-items:flex-start}.titulo-linha{display:block}.tipo{display:block;margin-bottom:4px;white-space:normal}.cartao h2{font-size:1.22rem}.descricao,.recursos{margin-left:0}.descricao{margin-top:2px}.icone{width:58px;height:58px;flex-basis:58px}
+    }
+  </style>
 </head>
-
-
 <body>
-
-
-    <!-- =========================================
-         CABEÇALHO
-    ========================================== -->
-
-    <header class="cabecalho">
-
-        <h1>Ajuda nas Finanças</h1>
-
-        <p>
-            Matemática financeira para calcular,
-            compreender e tomar melhores decisões.
-        </p>
-
-    </header>
-
-
-    <!-- =========================================
-         CONTEÚDO
-    ========================================== -->
-
-    <main>
-
-
-        <section class="boas-vindas">
-
-            <h2>Como podemos ajudar você hoje?</h2>
-
-            <p>
-                Escolha o caminho de acordo com o que você precisa.
-            </p>
-
-        </section>
-
-
-        <section class="escolhas">
-
-
-            <!-- =================================
-                 PRECISO CALCULAR
-            ================================== -->
-
-            <a
-                class="cartao cartao-calcular"
-                href="calcular/index.html"
-            >
-
-                <div class="icone">
-                    🧮
-                </div>
-
-                <div class="tipo">
-                    PRECISO CALCULAR
-                </div>
-
-                <h2>
-                    Calculadora Financeira
-                </h2>
-
-                <p class="descricao">
-                    Use uma ferramenta rápida para resolver
-                    cálculos e problemas de matemática financeira.
-                </p>
-
-                <ul class="recursos">
-
-                    <li>
-                        Juros simples
-                    </li>
-
-                    <li>
-                        Juros compostos
-                    </li>
-
-                    <li>
-                        Capital, taxa e tempo
-                    </li>
-
-                    <li>
-                        Juros e montante
-                    </li>
-
-                </ul>
-
-                <div class="botao">
-                    Abrir Calculadora →
-                </div>
-
-            </a>
-
-
-            <!-- =================================
-                 QUERO APRENDER
-            ================================== -->
-
-            <a
-                class="cartao cartao-aprender"
-                href="aprender/index.html"
-            >
-
-                <div class="icone">
-                    📚
-                </div>
-
-                <div class="tipo">
-                    QUERO APRENDER
-                </div>
-
-                <h2>
-                    Ambiente de Aprendizagem
-                </h2>
-
-                <p class="descricao">
-                    Aprenda matemática e educação financeira
-                    passo a passo e aplique o conhecimento
-                    em situações do dia a dia.
-                </p>
-
-                <ul class="recursos">
-
-                    <li>
-                        Aprenda os conceitos
-                    </li>
-
-                    <li>
-                        Faça os cálculos
-                    </li>
-
-                    <li>
-                        Interprete os resultados
-                    </li>
-
-                    <li>
-                        Tome decisões financeiras
-                    </li>
-
-                </ul>
-
-                <div class="botao">
-                    Quero Aprender →
-                </div>
-
-            </a>
-
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================================
-         RODAPÉ
-    ========================================== -->
-
-    <footer>
-
-        © 2026 Ajuda nas Finanças
-        · Matemática Financeira e Educação Financeira
-
-    </footer>
-
-
+  <header class="cabecalho">
+    <div class="marca"><img class="marca-icone" src="assets/icon-192.png" alt=""><h1>Ajuda nas Finanças</h1></div>
+    <p>Matemática financeira para calcular, compreender e tomar melhores decisões.</p>
+  </header>
+  <main>
+    <section class="boas-vindas"><h2>Como podemos ajudar você hoje?</h2><p>Escolha o caminho de acordo com o que você precisa.</p></section>
+    <section class="escolhas">
+      <a class="cartao cartao-calcular" href="calcular/index.html">
+        <div class="topo-cartao"><div class="icone"><img src="assets/mao-calculadora.png" alt="Mão usando a calculadora Ajuda nas Finanças"></div><div class="titulo-linha"><span class="tipo">PRECISO CALCULAR</span><h2>Calculadora Financeira</h2></div></div>
+        <p class="descricao">Use uma ferramenta rápida para resolver cálculos e problemas de matemática financeira.</p>
+        <ul class="recursos"><li>Juros simples</li><li>Juros compostos</li><li>Capital, taxa e tempo</li><li>Juros e montante</li></ul>
+        <div class="botao">Abrir Calculadora →</div>
+      </a>
+      <a class="cartao cartao-aprender" href="aprender/index.html">
+        <div class="topo-cartao"><div class="icone" aria-hidden="true">📚</div><div class="titulo-linha"><span class="tipo">QUERO APRENDER</span><h2>Ambiente de Aprendizagem</h2></div></div>
+        <p class="descricao">Aprenda matemática e educação financeira passo a passo e aplique o conhecimento em situações do dia a dia.</p>
+        <ul class="recursos"><li>Aprenda os conceitos</li><li>Faça os cálculos</li><li>Interprete os resultados</li><li>Tome decisões financeiras</li></ul>
+        <div class="botao">Quero Aprender →</div>
+      </a>
+    </section>
+  </main>
+  <footer>© 2026 Ajuda nas Finanças · Matemática Financeira e Educação Financeira</footer>
 </body>
-
 </html>
