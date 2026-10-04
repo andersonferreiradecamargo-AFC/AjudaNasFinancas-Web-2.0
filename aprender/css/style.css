@@ -445,8 +445,8 @@ main {
 }
 
 .trilha-passo[data-etapa="interprete"].concluido .trilha-icone {
-    background: #eaf5ff;
-    border-color: #1478c9;
+    background: #dcfce7;
+    border-color: #16a34a;
 }
 
 .trilha-passo[data-etapa="decida"].concluido .trilha-icone {
@@ -561,62 +561,12 @@ main {
     display: block;
 }
 
-/* cores como no mockup */
-.aprenda {
-    background: #fff0e2;
-    border-color: #f5bb79;
-}
-.aprenda .acordeao-titulo {
-    background: linear-gradient(90deg, #ffe5ca 0%, #fff0e2 100%);
-}
-.aprenda .acordeao-conteudo {
-    background: #fff4e8;
-}
-.aprenda .acordeao-textos strong {
-    color: #f06400;
-}
-
-.faca {
-    background: #e8f3ff;
-    border-color: #9bc6ef;
-}
-.faca .acordeao-titulo {
-    background: linear-gradient(90deg, #dcecff 0%, #eef6ff 100%);
-}
-.faca .acordeao-conteudo {
-    background: #edf7ff;
-}
-.faca .acordeao-textos strong {
-    color: #1470bf;
-}
-
-.interprete {
-    background: #e8f7ee;
-    border-color: #9bd2ad;
-}
-.interprete .acordeao-titulo {
-    background: linear-gradient(90deg, #dff3e7 0%, #eef9f2 100%);
-}
-.interprete .acordeao-conteudo {
-    background: #eef9f2;
-}
-.interprete .acordeao-textos strong {
-    color: #12833f;
-}
-
-.decida {
-    background: #f3eafe;
-    border-color: #c8a8ef;
-}
-.decida .acordeao-titulo {
-    background: linear-gradient(90deg, #eadbfb 0%, #f6effd 100%);
-}
-.decida .acordeao-conteudo {
-    background: #f7f0fd;
-}
-.decida .acordeao-textos strong {
-    color: #7b28c7;
-}
+/* Cores dos títulos das quatro etapas.
+   Fundos e bordas ficam centralizados na paleta definitiva ao final do arquivo. */
+.aprenda .acordeao-textos strong { color: #f06400; }
+.faca .acordeao-textos strong { color: #1470bf; }
+.interprete .acordeao-textos strong { color: #12833f; }
+.decida .acordeao-textos strong { color: #7b28c7; }
 
 /* ========================================
    SUBTÓPICOS E BLOCOS INTERNOS
@@ -1945,13 +1895,13 @@ main {
 .aprenda .acordeao-titulo { background:linear-gradient(90deg,#ffd5aa 0%,#ffe4c7 100%); }
 .aprenda .acordeao-conteudo { background:#ffe4c7; }
 
-.faca { background:#d9ebff; border-color:#79b8ef; }
-.faca .acordeao-titulo { background:linear-gradient(90deg,#c6e1ff 0%,#d9ebff 100%); }
-.faca .acordeao-conteudo { background:#d9ebff; }
+.faca { background:#c9e3ff; border-color:#5fa8e8; }
+.faca .acordeao-titulo { background:linear-gradient(90deg,#acd4ff 0%,#c9e3ff 100%); }
+.faca .acordeao-conteudo { background:#c9e3ff; }
 
-.interprete { background:#d9f3e2; border-color:#75c891; }
-.interprete .acordeao-titulo { background:linear-gradient(90deg,#c6ebd3 0%,#d9f3e2 100%); }
-.interprete .acordeao-conteudo { background:#d9f3e2; }
+.interprete { background:#c5efcf; border-color:#38ad57; }
+.interprete .acordeao-titulo { background:linear-gradient(90deg,#a5e6b5 0%,#c5efcf 100%); }
+.interprete .acordeao-conteudo { background:#c5efcf; }
 
 .decida { background:#ead9fb; border-color:#b987e8; }
 .decida .acordeao-titulo { background:linear-gradient(90deg,#dfc7f7 0%,#ead9fb 100%); }
@@ -1964,8 +1914,8 @@ main {
    permanecem claros para preservar contraste e legibilidade.
    ================================================== */
 .aprenda .subtopico-conteudo { background:#ffe4c7; }
-.faca .subtopico-conteudo { background:#d9ebff; }
-.interprete .subtopico-conteudo { background:#d9f3e2; }
+.faca .subtopico-conteudo { background:#c9e3ff; }
+.interprete .subtopico-conteudo { background:#c5efcf; }
 .decida .subtopico-conteudo { background:#ead9fb; }
 
 /* evita que o hover do título pareça desbotado; o título continua claro */
@@ -2000,37 +1950,37 @@ main {
 
 /* FAÇA */
 .faca .subtopico {
-    background:#d9ebff;
-    border-color:#9cc8ef;
+    background:#c9e3ff;
+    border-color:#7fb8e8;
 }
 .faca .subtopico-titulo,
 .faca .subtopico-titulo:hover,
 .faca .subtopico-conteudo {
-    background:#d9ebff;
+    background:#c9e3ff;
 }
-.faca .subtopico-conteudo { border-top-color:#9cc8ef; }
+.faca .subtopico-conteudo { border-top-color:#7fb8e8; }
 .faca .alternativa {
-    background:#e1efff;
-    border-color:#abcdec;
+    background:#d7eaff;
+    border-color:#8fbce3;
 }
-.faca .alternativa:hover { background:#d4e9ff; }
+.faca .alternativa:hover { background:#c1ddfb; }
 
-/* INTERPRETE */
+/* INTERPRETE — verde mais definido para diferenciar do FAÇA em telas menores */
 .interprete .subtopico {
-    background:#d9f3e2;
-    border-color:#9bd2ad;
+    background:#c5efcf;
+    border-color:#62c17a;
 }
 .interprete .subtopico-titulo,
 .interprete .subtopico-titulo:hover,
 .interprete .subtopico-conteudo {
-    background:#d9f3e2;
+    background:#c5efcf;
 }
-.interprete .subtopico-conteudo { border-top-color:#9bd2ad; }
+.interprete .subtopico-conteudo { border-top-color:#62c17a; }
 .interprete .alternativa {
-    background:#e1f6e8;
-    border-color:#add8bb;
+    background:#d9f4e0;
+    border-color:#73c989;
 }
-.interprete .alternativa:hover { background:#d3efdd; }
+.interprete .alternativa:hover { background:#b8e9c4; }
 
 /* DECIDA */
 .decida .subtopico {
