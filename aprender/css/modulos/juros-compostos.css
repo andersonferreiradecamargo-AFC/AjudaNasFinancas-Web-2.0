@@ -28,7 +28,7 @@
 #juros-compostos th:first-child, #juros-compostos td:first-child { text-align:left; }
 #juros-compostos .jc-mostrar-tabela { margin-top:10px; }
 @media(max-width:760px){ #juros-compostos .jc-controles, #jcEtapaFaca .jc-campos-faca, #jcEtapaFaca .jc-resultado-grid { grid-template-columns:1fr; } #juros-compostos .jc-barra-linha { grid-template-columns:72px minmax(0,1fr); } #juros-compostos .jc-barra-linha > :last-child { grid-column:2; } }
-@media(max-width:520px){ #jcEtapaFaca .jc-campo-com-unidade { grid-template-columns:1fr; } #jcEtapaFaca .jc-acoes-faca button { width:100%; } #juros-compostos .jc-sequencia b { display:none; } }
+@media(max-width:520px){ #jcEtapaFaca .jc-campo-com-unidade { grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:8px; } #jcEtapaFaca .jc-campo-com-unidade input, #jcEtapaFaca .jc-campo-com-unidade select { min-width:0; } #jcEtapaFaca .jc-acoes-faca button { width:100%; } #juros-compostos .jc-sequencia b { display:none; } }
 
 /* Revisão visual — alinhada aos módulos anteriores */
 #juros-compostos .alternativa {
