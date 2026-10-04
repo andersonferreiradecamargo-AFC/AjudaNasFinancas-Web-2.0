@@ -1,0 +1,98 @@
+/* Módulo 3 — Juros Compostos. Mantém a identidade visual global das etapas. */
+#juros-compostos .jc-sequencia { display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center; margin:18px 0; }
+#juros-compostos .jc-sequencia span { background:#fff; border:1px solid rgba(0,0,0,.14); border-radius:10px; padding:10px 14px; font-weight:700; }
+#juros-compostos .jc-formula { text-align:center; font-size:1.35rem; margin:18px 0; padding:16px; background:rgba(255,255,255,.62); border-radius:12px; }
+#juros-compostos .jc-controles, #jcEtapaFaca .jc-campos-faca { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:18px 0; }
+#juros-compostos .jc-controles label, #jcEtapaFaca .campo { display:flex; flex-direction:column; gap:7px; font-weight:700; }
+#juros-compostos input, #juros-compostos select { width:100%; box-sizing:border-box; min-height:44px; padding:10px 12px; border:1px solid rgba(0,0,0,.25); border-radius:8px; background:#fff; font:inherit; }
+#jcEtapaFaca .jc-campo-com-unidade { display:grid; grid-template-columns:minmax(0,1fr) auto; gap:8px; }
+#jcEtapaFaca .jc-acoes-faca { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0; }
+#jcEtapaFaca #jcErroFaca { padding:12px; border-radius:9px; background:#ffe7e7; border:1px solid #d46a6a; }
+#jcEtapaFaca #jcResultadoFaca, #juros-compostos .jc-resumo-aprenda { margin-top:18px; padding:16px; border-radius:12px; background:rgba(255,255,255,.72); border:1px solid rgba(0,0,0,.14); }
+#jcEtapaFaca .jc-resultado-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:14px 0; }
+#jcEtapaFaca .jc-resultado-card { padding:14px; border-radius:10px; background:#fff; border:1px solid rgba(0,0,0,.13); }
+#jcEtapaFaca .jc-resultado-card strong { display:block; font-size:1.18rem; margin-top:5px; }
+#juros-compostos .jc-laboratorio-faca { margin-top:22px; padding:18px; border-radius:14px; background:rgba(255,255,255,.55); border:1px solid rgba(0,0,0,.14); }
+#juros-compostos .jc-comparacao, #juros-compostos .jc-grafico-faca { margin:18px 0; display:grid; gap:8px; }
+#juros-compostos .jc-barra-linha { display:grid; grid-template-columns:88px minmax(0,1fr) 118px; gap:8px; align-items:center; font-size:.92rem; }
+#juros-compostos .jc-barra-trilho { height:18px; border-radius:9px; background:rgba(255,255,255,.7); overflow:hidden; border:1px solid rgba(0,0,0,.1); }
+#juros-compostos .jc-barra { height:100%; min-width:2px; border-radius:9px; }
+#juros-compostos .jc-barra.simples { background:#4b93d1; }
+#juros-compostos .jc-barra.compostos { background:#7755b7; }
+#juros-compostos .jc-legenda { display:flex; flex-wrap:wrap; gap:14px; margin:8px 0; font-size:.9rem; }
+#juros-compostos .jc-legenda span::before { content:""; display:inline-block; width:12px; height:12px; margin-right:6px; border-radius:3px; vertical-align:-1px; }
+#juros-compostos .jc-legenda .simples::before { background:#4b93d1; } #juros-compostos .jc-legenda .compostos::before { background:#7755b7; }
+#juros-compostos .jc-tabela-wrap { overflow-x:auto; margin-top:16px; }
+#juros-compostos table { width:100%; border-collapse:collapse; min-width:520px; background:rgba(255,255,255,.72); }
+#juros-compostos th, #juros-compostos td { padding:10px 12px; border-bottom:1px solid rgba(0,0,0,.13); text-align:right; }
+#juros-compostos th:first-child, #juros-compostos td:first-child { text-align:left; }
+#juros-compostos .jc-mostrar-tabela { margin-top:10px; }
+@media(max-width:760px){ #juros-compostos .jc-controles, #jcEtapaFaca .jc-campos-faca, #jcEtapaFaca .jc-resultado-grid { grid-template-columns:1fr; } #juros-compostos .jc-barra-linha { grid-template-columns:72px minmax(0,1fr); } #juros-compostos .jc-barra-linha > :last-child { grid-column:2; } }
+@media(max-width:520px){ #jcEtapaFaca .jc-campo-com-unidade { grid-template-columns:1fr; } #jcEtapaFaca .jc-acoes-faca button { width:100%; } #juros-compostos .jc-sequencia b { display:none; } }
+
+/* Revisão visual — alinhada aos módulos anteriores */
+#juros-compostos .alternativa {
+  display:flex; align-items:flex-start; gap:10px; width:100%; box-sizing:border-box;
+}
+#juros-compostos .alternativa input[type="radio"] {
+  width:18px; height:18px; min-height:0; flex:0 0 18px; margin:2px 0 0; padding:0;
+}
+#juros-compostos .alternativa span { flex:1; min-width:0; }
+#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo) {
+  min-height:42px; padding:10px 18px; border:0; border-radius:8px; font:inherit; font-weight:700;
+  cursor:pointer; transition:filter .15s ease, transform .05s ease;
+}
+#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo):active { transform:translateY(1px); }
+#jcEtapaFaca .jc-acoes-faca button, #jcEtapaFaca .jc-mostrar-tabela { background:#1478c9; color:#fff; }
+#jcEtapaFaca #jcLimparFaca { background:#e5edf5; color:#222; }
+#jcEtapaInterprete button:not(.acordeao-titulo):not(.subtopico-titulo) { background:#238b45; color:#fff; }
+#jcEtapaDecida button:not(.acordeao-titulo):not(.subtopico-titulo) { background:#7a45a6; color:#fff; }
+
+/* O resultado e o laboratório pertencem visualmente à seção FAÇA. */
+#jcEtapaFaca #jcResultadoFaca,
+#jcEtapaFaca .jc-resultado-card,
+#jcEtapaFaca .jc-laboratorio-faca { background:#d7eaff; border-color:#8fbce3; }
+#jcEtapaFaca .jc-resultado-card { background:#c9e3ff; }
+
+/* Comparação em dois gráficos compactos, lado a lado. */
+#juros-compostos .jc-graficos-duplos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+#juros-compostos .jc-mini-grafico { min-width:0; padding:14px; border:1px solid rgba(0,0,0,.14); border-radius:12px; background:rgba(255,255,255,.28); }
+#juros-compostos .jc-mini-grafico h5 { margin:0 0 12px; font-size:1rem; }
+#juros-compostos .jc-mini-linha { display:grid; grid-template-columns:52px minmax(0,1fr); gap:7px; align-items:center; margin:8px 0; }
+#juros-compostos .jc-mini-periodo { font-size:.82rem; font-weight:700; }
+#juros-compostos .jc-mini-trilho { position:relative; height:28px; border-radius:7px; background:rgba(255,255,255,.64); border:1px solid rgba(0,0,0,.1); overflow:hidden; }
+#juros-compostos .jc-mini-barra { height:100%; min-width:2px; border-radius:6px; }
+#juros-compostos .jc-mini-barra.simples { background:#4b93d1; }
+#juros-compostos .jc-mini-barra.compostos { background:#7755b7; }
+#juros-compostos .jc-mini-valor { margin-top:2px; text-align:right; font-size:.78rem; font-weight:700; line-height:1.2; }
+#juros-compostos .jc-mini-final { margin-top:12px; padding-top:10px; border-top:1px solid rgba(0,0,0,.14); font-weight:700; text-align:center; }
+
+@media(max-width:760px){
+  #juros-compostos .jc-graficos-duplos { grid-template-columns:1fr; }
+}
+
+/* Gráfico detalhado de Juros Compostos — ligado à tabela */
+#jcEtapaFaca .jc-grafico-detalhado-cabecalho { margin:26px 0 14px; }
+#jcEtapaFaca .jc-grafico-detalhado-cabecalho h4 { margin:0 0 6px; font-size:1.15rem; }
+#jcEtapaFaca .jc-grafico-detalhado-cabecalho p { margin:0; line-height:1.5; }
+#jcEtapaFaca .jc-grafico-detalhado-area { width:100%; min-height:320px; padding:20px; border:1px solid rgba(255,255,255,.12); border-radius:14px; background:#101820; box-sizing:border-box; overflow:hidden; }
+#jcEtapaFaca .jc-grafico-detalhado { width:100%; min-height:280px; }
+#jcEtapaFaca .jc-grafico-eixo { stroke:#8fa3b5; stroke-width:2; }
+#jcEtapaFaca .jc-grafico-linha { fill:none; stroke:#8a63c7; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+#jcEtapaFaca .jc-grafico-ponto { fill:#8a63c7; stroke:#fff; stroke-width:3; cursor:pointer; transition:r .2s ease; }
+#jcEtapaFaca .jc-grafico-ponto:hover, #jcEtapaFaca .jc-grafico-ponto:focus { r:9; outline:none; }
+#jcEtapaFaca .jc-grafico-ponto.selecionado { fill:#35d07f; stroke:#ff2b2b; stroke-width:3; r:9; }
+#jcEtapaFaca .jc-grafico-marcador { fill:none; stroke:#ff2b2b; stroke-width:3; }
+#jcEtapaFaca .jc-grafico-texto { font-size:16px; fill:#e7f1f7; }
+#jcEtapaFaca .jc-grafico-tooltip-fundo { fill:#fff; stroke:#8a63c7; stroke-width:2; }
+#jcEtapaFaca .jc-grafico-tooltip-texto { fill:#18212a; font-size:15px; font-weight:700; }
+#jcEtapaFaca .jc-periodo-selecionado { margin-top:16px; padding:14px 18px; border-radius:12px; background:#c9e3ff; border:1px solid #8fbce3; }
+#jcEtapaFaca .jc-periodo-selecionado > span, #jcEtapaFaca .jc-periodo-valores span { display:block; margin-bottom:4px; font-size:.9rem; }
+#jcEtapaFaca .jc-periodo-selecionado > strong { display:block; }
+#jcEtapaFaca .jc-periodo-valores { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:12px; }
+#jcEtapaFaca .jc-periodo-valores > div { padding:12px 14px; border-radius:10px; background:#d7eaff; border:1px solid #8fbce3; }
+#jcEtapaFaca .jc-periodo-valores strong { display:block; font-size:1.05rem; }
+#jcEtapaFaca .jc-tabela-detalhada { max-height:420px; overflow:auto; border:1px solid rgba(0,0,0,.12); border-radius:12px; background:rgba(255,255,255,.82); }
+#jcEtapaFaca .jc-tabela-detalhada tbody tr { cursor:pointer; }
+#jcEtapaFaca .jc-tabela-detalhada tbody tr.selecionada { background:#cfead8; outline:2px solid #35a765; outline-offset:-2px; }
+@media(max-width:700px){ #jcEtapaFaca .jc-grafico-detalhado-area { min-height:180px; padding:12px 8px; } #jcEtapaFaca .jc-grafico-detalhado { min-height:150px; } #jcEtapaFaca .jc-periodo-valores { grid-template-columns:1fr; } #jcEtapaFaca .jc-grafico-texto { font-size:22px; } }

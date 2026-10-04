@@ -1,1474 +1,958 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ajuda nas Finanças 2.0</title>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modulos/juros-simples-faca.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ajuda nas Finanças 2.0</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/modulos/juros-simples-faca.css" rel="stylesheet"/>
+<link href="css/modulos/juros-compostos.css" rel="stylesheet"/>
 </head>
-
 <body>
-    
-    <header class="cabecalho-projeto">
-        <a href="../index.html" class="voltar-inicio">
+<header class="cabecalho-projeto">
+<a class="voltar-inicio" href="../index.html">
         ← Voltar ao início
         </a>
-        <div class="cabecalho-decoracao" aria-hidden="true">
-            <span class="decoracao-percentual">%</span>
-
-            <div class="decoracao-grafico">
-                <span class="barra barra-1"></span>
-                <span class="barra barra-2"></span>
-                <span class="barra barra-3"></span>
-                <span class="barra barra-4"></span>
-            </div>
-
-            <div class="decoracao-moedas">
-                <span class="moeda moeda-1"></span>
-                <span class="moeda moeda-2"></span>
-                <span class="moeda moeda-3"></span>
-            </div>
-        </div>
-
-        <div class="cabecalho-conteudo">
-
-            <div class="marca-area">
-                <div class="calculadora-marca" aria-hidden="true">
-                    <div class="calc-tela"></div>
-                    <div class="calc-teclas">
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                        <span></span><span></span><span></span>
-                    </div>
-                </div>
-
-                <div class="cabecalho-identidade">
-                    <h1>Ajuda nas Finanças</h1>
-                    <p>Matemática Financeira e Educação Financeira</p>
-
-                    <div class="cabecalho-slogan">
+<div aria-hidden="true" class="cabecalho-decoracao">
+<span class="decoracao-percentual">%</span>
+<div class="decoracao-grafico">
+<span class="barra barra-1"></span>
+<span class="barra barra-2"></span>
+<span class="barra barra-3"></span>
+<span class="barra barra-4"></span>
+</div>
+<div class="decoracao-moedas">
+<span class="moeda moeda-1"></span>
+<span class="moeda moeda-2"></span>
+<span class="moeda moeda-3"></span>
+</div>
+</div>
+<div class="cabecalho-conteudo">
+<div class="marca-area">
+<div aria-hidden="true" class="calculadora-marca">
+<div class="calc-tela"></div>
+<div class="calc-teclas">
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+<span></span><span></span><span></span>
+</div>
+</div>
+<div class="cabecalho-identidade">
+<h1>Ajuda nas Finanças</h1>
+<p>Matemática Financeira e Educação Financeira</p>
+<div class="cabecalho-slogan">
                         Aprender hoje para um futuro melhor!
                     </div>
-                </div>
-            </div>
-
-            <nav class="menu-principal" aria-label="Navegação principal">
-                <a class="menu-item ativo" href="#porcentagem">⌂ <span>Início</span></a>
-                <a class="menu-item" href="#porcentagem">📖 <span>Módulos</span></a>
-                <a class="menu-item" href="#porcentagem">▥ <span>Simulados</span></a>
-                <a class="menu-item" href="#porcentagem">💡 <span>Dicas</span></a>
-                <a class="menu-item" href="#porcentagem">⚙ <span>Sobre</span></a>
-            </nav>
-
-            <div class="cabecalho-frase">
-                “Pequenas decisões de hoje,<br>
+</div>
+</div>
+<nav aria-label="Navegação principal" class="menu-principal">
+<a class="menu-item ativo" href="#porcentagem">⌂ <span>Início</span></a>
+<a class="menu-item" href="#porcentagem">📖 <span>Módulos</span></a>
+<a class="menu-item" href="#porcentagem">▥ <span>Simulados</span></a>
+<a class="menu-item" href="#porcentagem">💡 <span>Dicas</span></a>
+<a class="menu-item" href="#porcentagem">⚙ <span>Sobre</span></a>
+</nav>
+<div class="cabecalho-frase">
+                “Pequenas decisões de hoje,<br/>
                 grandes conquistas amanhã!”
             </div>
-
-        </div>
-    </header>
-
-    <div class="decoracao-lateral decoracao-esquerda" aria-hidden="true">
-        <span>Educação<br>Financeira<br>transforma<br>vidas!</span>
-    </div>
-
-    <div class="decoracao-lateral decoracao-direita" aria-hidden="true">
-        <span>Mais<br>conhecimento,<br>mais liberdade!</span>
-    </div>
-
-    <main>
-
-        <section class="introducao introducao-compacta">
-            <span class="versao-selo">Versão 2.0</span>
-        </section>
-
-        <section class="modulo" id="porcentagem">
-
-
-            <h2>Módulo 1 — Porcentagem</h2>
-            <p class="modulo-subtitulo">
+</div>
+</header>
+<div aria-hidden="true" class="decoracao-lateral decoracao-esquerda">
+<span>Educação<br/>Financeira<br/>transforma<br/>vidas!</span>
+</div>
+<div aria-hidden="true" class="decoracao-lateral decoracao-direita">
+<span>Mais<br/>conhecimento,<br/>mais liberdade!</span>
+</div>
+<main>
+<section class="introducao introducao-compacta">
+<span class="versao-selo">Versão 2.0</span>
+</section>
+<section class="modulo" id="porcentagem">
+<h2>Módulo 1 — Porcentagem</h2>
+<p class="modulo-subtitulo">
                 Aprenda, calcule, interprete e tome decisões usando porcentagens no seu dia a dia.
             </p>
-
-            <div class="trilha-progresso" aria-label="Progresso do Módulo 1">
-
-                <div class="trilha-topo">
-                    <span class="trilha-titulo">Seu progresso</span>
-                    <strong id="progressoTexto">0%</strong>
-                </div>
-
-                <div class="trilha-etapas">
-
-                    <div class="trilha-linha" aria-hidden="true">
-                        <div id="trilhaPreenchimento" class="trilha-preenchimento"></div>
-                    </div>
-
-                    <div class="trilha-passo" data-etapa="aprenda">
-                        <div class="trilha-icone">🧠</div>
-                        <span>APRENDA</span>
-                    </div>
-
-                    <div class="trilha-passo" data-etapa="faca">
-                        <div class="trilha-icone">✏️</div>
-                        <span>FAÇA</span>
-                    </div>
-
-                    <div class="trilha-passo" data-etapa="interprete">
-                        <div class="trilha-icone">🔎</div>
-                        <span>INTERPRETE</span>
-                    </div>
-
-                    <div class="trilha-passo" data-etapa="decida">
-                        <div class="trilha-icone">💡</div>
-                        <span>DECIDA</span>
-                    </div>
-
-                </div>
-
-                <div
-                    class="trilha-acessivel"
-                    role="progressbar"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                    aria-valuenow="0"
-                    aria-labelledby="progressoTexto"
-                ></div>
-
-                <p id="mensagemConclusao" class="mensagem-conclusao" hidden>
+<div aria-label="Progresso do Módulo 1" class="trilha-progresso">
+<div class="trilha-topo">
+<span class="trilha-titulo">Seu progresso</span>
+<strong id="progressoTexto">0%</strong>
+</div>
+<div class="trilha-etapas">
+<div aria-hidden="true" class="trilha-linha">
+<div class="trilha-preenchimento" id="trilhaPreenchimento"></div>
+</div>
+<div class="trilha-passo" data-etapa="aprenda">
+<div class="trilha-icone">🧠</div>
+<span>APRENDA</span>
+</div>
+<div class="trilha-passo" data-etapa="faca">
+<div class="trilha-icone">✏️</div>
+<span>FAÇA</span>
+</div>
+<div class="trilha-passo" data-etapa="interprete">
+<div class="trilha-icone">🔎</div>
+<span>INTERPRETE</span>
+</div>
+<div class="trilha-passo" data-etapa="decida">
+<div class="trilha-icone">💡</div>
+<span>DECIDA</span>
+</div>
+</div>
+<div aria-labelledby="progressoTexto" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="trilha-acessivel" role="progressbar"></div>
+<p class="mensagem-conclusao" hidden="" id="mensagemConclusao">
                     🏆 <strong>Módulo 1 concluído!</strong>
                     Você aprendeu, calculou, interpretou e tomou decisões usando porcentagens.
                 </p>
-
-            </div>
-
-            <div id="progressoCompacto" class="progresso-compacto" hidden aria-hidden="true">
-
-                <div class="progresso-compacto-conteudo">
-
-                    <span id="progressoCompactoRotulo" class="progresso-compacto-rotulo">
+</div>
+<div aria-hidden="true" class="progresso-compacto" hidden="" id="progressoCompacto">
+<div class="progresso-compacto-conteudo">
+<span class="progresso-compacto-rotulo" id="progressoCompactoRotulo">
                         Progresso
                     </span>
-
-                    <span
-                        id="progressoCompactoMensagem"
-                        class="progresso-compacto-mensagem"
-                        hidden
-                    >
+<span class="progresso-compacto-mensagem" hidden="" id="progressoCompactoMensagem">
                         Você aprendeu, calculou, interpretou e tomou decisões usando porcentagem.
                     </span>
-
-                </div>
-
-                <div class="progresso-compacto-barra" aria-hidden="true">
-                    <div
-                        id="progressoCompactoPreenchimento"
-                        class="progresso-compacto-preenchimento">
-                    </div>
-                </div>
-
-                <strong id="progressoCompactoTexto">0%</strong>
-
-            </div>
-
-            <!-- ==================================================
+</div>
+<div aria-hidden="true" class="progresso-compacto-barra">
+<div class="progresso-compacto-preenchimento" id="progressoCompactoPreenchimento">
+</div>
+</div>
+<strong id="progressoCompactoTexto">0%</strong>
+</div>
+<!-- ==================================================
                  APRENDA
             =================================================== -->
-
-            <div class="etapa aprenda acordeao">
-
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">🧠</span>
-                        <span class="acordeao-textos">
-                            <strong>APRENDA</strong>
-                            <small>Entenda os conceitos e veja exemplos</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-
-                <div class="acordeao-conteudo">
-
-                    <!-- SUBTÓPICO 1 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. O que é porcentagem?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <p>
+<div class="etapa aprenda acordeao">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">🧠</span>
+<span class="acordeao-textos">
+<strong>APRENDA</strong>
+<small>Entenda os conceitos e veja exemplos</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<!-- SUBTÓPICO 1 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. O que é porcentagem?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
                                 Porcentagem é uma forma de representar uma parte
                                 de um total, considerando esse total dividido
                                 em 100 partes.
                             </p>
-
-                            <p>
+<p>
                                 O símbolo <strong>%</strong>
                                 significa <strong>“por cento”</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Por exemplo:
                             </p>
-
-                            <p>
-                                <strong>10%</strong> significa
+<p>
+<strong>10%</strong> significa
                                 <strong>10 de cada 100</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Podemos representar assim:
                             </p>
-
-                            <p>
+<p>
                                 10% =
                                 <span class="fracao">
-                                    <span>10</span>
-                                    <span>100</span>
-                                </span>
+<span>10</span>
+<span>100</span>
+</span>
                                 = 0,10
                             </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 2 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. Representação gráfica da porcentagem</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="visual-porcentagem" aria-labelledby="tituloVisualPorcentagem">
-
-                                <div class="visual-porcentagem-cabecalho">
-                                    <div>
-                                        <h4 id="tituloVisualPorcentagem">Veja a porcentagem acontecendo</h4>
-                                        <p>Digite uma porcentagem e observe como ela é representada em quadros de 100 partes.</p>
-                                    </div>
-
-                                    <label class="visual-porcentagem-controle" for="percentualVisual">
-                                        <span>Porcentagem</span>
-                                        <span class="visual-porcentagem-campo">
-                                            <input id="percentualVisual" type="number" min="0" step="0.25" value="10" inputmode="decimal">
-                                            <strong>%</strong>
-                                        </span>
-                                    </label>
-                                </div>
-
-                                <div class="visual-porcentagem-corpo">
-                                    <div id="gradePorcentagem" class="grades-porcentagem" role="img" aria-label="Representação gráfica de 10%"></div>
-
-                                    <div class="visual-porcentagem-explicacao" aria-live="polite">
-                                        <strong id="fraseVisualPorcentagem">10% significa 10 de cada 100 partes.</strong>
-                                        <p id="calculoVisualPorcentagem">10% = 10/100 = 0,10</p>
-                                        <small>Experimente valores como 10,75%, 120% ou 300%.</small>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 3 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>3. Como calcular uma porcentagem?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="exemplo">
-
-                                <h4>
+</div>
+</div>
+<!-- SUBTÓPICO 2 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. Representação gráfica da porcentagem</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div aria-labelledby="tituloVisualPorcentagem" class="visual-porcentagem">
+<div class="visual-porcentagem-cabecalho">
+<div>
+<h4 id="tituloVisualPorcentagem">Veja a porcentagem acontecendo</h4>
+<p>Digite uma porcentagem e observe como ela é representada em quadros de 100 partes.</p>
+</div>
+<label class="visual-porcentagem-controle" for="percentualVisual">
+<span>Porcentagem</span>
+<span class="visual-porcentagem-campo">
+<input id="percentualVisual" inputmode="decimal" min="0" step="0.25" type="number" value="10"/>
+<strong>%</strong>
+</span>
+</label>
+</div>
+<div class="visual-porcentagem-corpo">
+<div aria-label="Representação gráfica de 10%" class="grades-porcentagem" id="gradePorcentagem" role="img"></div>
+<div aria-live="polite" class="visual-porcentagem-explicacao">
+<strong id="fraseVisualPorcentagem">10% significa 10 de cada 100 partes.</strong>
+<p id="calculoVisualPorcentagem">10% = 10/100 = 0,10</p>
+<small>Experimente valores como 10,75%, 120% ou 300%.</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 3 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>3. Como calcular uma porcentagem?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="exemplo">
+<h4>
                                     Como calcular uma porcentagem de um valor?
                                 </h4>
-
-                                <p>
+<p>
                                     Vamos descobrir quanto é
                                     <strong>10% de 200</strong>.
                                 </p>
-
-                                <div class="conta-exemplo">
-
-                                    <p>
-                                        <strong>
+<div class="conta-exemplo">
+<p>
+<strong>
                                             1º passo — Transformar a porcentagem:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         10% =
                                         <span class="fracao">
-                                            <span>10</span>
-                                            <span>100</span>
-                                        </span>
+<span>10</span>
+<span>100</span>
+</span>
                                         = 0,10
                                     </p>
-
-                                    <p>
-                                        <em>
+<p>
+<em>
                                             10% significa 10 de cada 100.
                                         </em>
-                                    </p>
-
-                                    <p>
-                                        <strong>
+</p>
+<p>
+<strong>
                                             2º passo — Multiplicar pelo valor:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         0,10 × 200 = 20
                                     </p>
-
-                                    <p>
+<p>
                                         Portanto,
                                         <strong>
                                             10% de 200 é 20.
                                         </strong>
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 4 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>4. Qual porcentagem um valor representa?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="exemplo">
-
-                                <h4>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 4 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>4. Qual porcentagem um valor representa?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="exemplo">
+<h4>
                                     Descobrindo qual porcentagem um valor representa
                                 </h4>
-
-                                <p>
+<p>
                                     Imagine que temos <strong>R$ 50,00</strong>
                                     de um total de <strong>R$ 200,00</strong>.
                                 </p>
-
-                                <p>
-                                    <strong>
+<p>
+<strong>
                                         R$ 50,00 representa quantos por cento
                                         de R$ 200,00?
                                     </strong>
-                                </p>
-
-                                <div class="conta-exemplo">
-
-                                    <p>
-                                        <strong>
+</p>
+<div class="conta-exemplo">
+<p>
+<strong>
                                             1º passo — Dividir a parte pelo total:
                                         </strong>
-                                    </p>
-
-                                    <p>
-                                        <span class="fracao">
-                                            <span>50</span>
-                                            <span>200</span>
-                                        </span>
+</p>
+<p>
+<span class="fracao">
+<span>50</span>
+<span>200</span>
+</span>
                                         = 0,25
                                     </p>
-
-                                    <p>
-                                        <strong>
+<p>
+<strong>
                                             2º passo — Multiplicar por 100:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         0,25 × 100 =
                                         <strong>25%</strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         Portanto,
                                         <strong>
                                             R$ 50,00 representa 25%
                                             de R$ 200,00.
                                         </strong>
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 5 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>5. Desconto</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="exemplo">
-
-                                <h4>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 5 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>5. Desconto</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="exemplo">
+<h4>
                                     Aplicando porcentagem em um desconto
                                 </h4>
-
-                                <p>
+<p>
                                     Agora vamos usar a porcentagem
                                     em uma situação financeira.
                                 </p>
-
-                                <p>
+<p>
                                     Imagine um produto que custa
                                     <strong>R$ 200,00</strong>
                                     e recebe
                                     <strong>10% de desconto</strong>.
                                 </p>
-
-                                <div class="conta-exemplo">
-
-                                    <p>
-                                        <strong>
+<div class="conta-exemplo">
+<p>
+<strong>
                                             1º passo — Calcular 10%
                                             de R$ 200,00:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         10% =
                                         <span class="fracao">
-                                            <span>10</span>
-                                            <span>100</span>
-                                        </span>
+<span>10</span>
+<span>100</span>
+</span>
                                         = 0,10
                                     </p>
-
-                                    <p>
+<p>
                                         0,10 × 200 = 20
                                     </p>
-
-                                    <p>
-                                        <strong>
+<p>
+<strong>
                                             Valor do desconto:
                                             R$ 20,00
                                         </strong>
-                                    </p>
-
-                                    <p>
-                                        <strong>
+</p>
+<p>
+<strong>
                                             2º passo — Subtrair o desconto
                                             do valor inicial:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         R$ 200,00 − R$ 20,00 =
                                         <strong>R$ 180,00</strong>
-                                    </p>
-
-                                    <p>
-                                        <em>
+</p>
+<p>
+<em>
                                             No desconto, calculamos o valor correspondente à porcentagem e o subtraímos do valor inicial.
                                         </em>
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 6 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>6. Aumento</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="exemplo">
-
-                                <h4>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 6 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>6. Aumento</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="exemplo">
+<h4>
                                     Aplicando porcentagem em um aumento
                                 </h4>
-
-                                <p>
+<p>
                                     Agora imagine que um produto custa
                                     <strong>R$ 200,00</strong>
                                     e sofre um
                                     <strong>aumento de 10%</strong>.
                                 </p>
-
-                                <div class="conta-exemplo">
-
-                                    <p>
-                                        <strong>
+<div class="conta-exemplo">
+<p>
+<strong>
                                             1º passo — Calcular 10%
                                             de R$ 200,00:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         10% =
                                         <span class="fracao">
-                                            <span>10</span>
-                                            <span>100</span>
-                                        </span>
+<span>10</span>
+<span>100</span>
+</span>
                                         = 0,10
                                     </p>
-
-                                    <p>
+<p>
                                         0,10 × 200 = 20
                                     </p>
-
-                                    <p>
-                                        <strong>
+<p>
+<strong>
                                             Valor do aumento:
                                             R$ 20,00
                                         </strong>
-                                    </p>
-
-                                    <p>
-                                        <strong>
+</p>
+<p>
+<strong>
                                             2º passo — Somar o aumento
                                             ao valor inicial:
                                         </strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         R$ 200,00 + R$ 20,00 =
                                         <strong>R$ 220,00</strong>
-                                    </p>
-
-                                    <p>
-                                        <em>
+</p>
+<p>
+<em>
                                             No aumento, calculamos o valor correspondente à porcentagem e o somamos ao valor inicial.
                                         </em>
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- ==================================================
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================================================
                  FAÇA
             =================================================== -->
-
-            <div class="etapa faca acordeao">
-
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">✏️</span>
-                        <span class="acordeao-textos">
-                            <strong>FAÇA</strong>
-                            <small>Pratique com calculadoras e situações</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-
-                <div class="acordeao-conteudo">
-
-                    <!-- SUBTÓPICO 1 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. Calcular uma porcentagem de um valor</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <h4>Calcule uma porcentagem de um valor</h4>
-
-                            <p>
+<div class="etapa faca acordeao">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">✏️</span>
+<span class="acordeao-textos">
+<strong>FAÇA</strong>
+<small>Pratique com calculadoras e situações</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<!-- SUBTÓPICO 1 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. Calcular uma porcentagem de um valor</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>Calcule uma porcentagem de um valor</h4>
+<p>
                                 Digite os valores abaixo para calcular uma porcentagem de determinado valor.
                             </p>
-
-                            <div class="calculadora-porcentagem">
-
-                                <div class="campo">
-                                    <label for="percentual">
+<div class="calculadora-porcentagem">
+<div class="campo">
+<label for="percentual">
                                         Porcentagem (%)
                                     </label>
-
-                                    <input
-                                        type="number"
-                                        id="percentual"
-                                        placeholder="Ex.: 10"
-                                        min="0"
-                                        step="any"
-                                    >
-                                </div>
-
-                                <div class="campo">
-                                    <label for="valorBase">
+<input id="percentual" min="0" placeholder="Ex.: 10" step="any" type="number"/>
+</div>
+<div class="campo">
+<label for="valorBase">
                                         Valor (R$)
                                     </label>
-
-                                    <input
-                                        type="number"
-                                        id="valorBase"
-                                        placeholder="Ex.: 200"
-                                        min="0"
-                                        step="any"
-                                    >
-                                </div>
-
-                                <button
-                                    type="button"
-                                    id="calcularPorcentagem"
-                                >
+<input id="valorBase" min="0" placeholder="Ex.: 200" step="any" type="number"/>
+</div>
+<button id="calcularPorcentagem" type="button">
                                     Calcular
                                 </button>
-
-                                <button
-                                    type="button"
-                                    id="limparPorcentagem"
-                                >
+<button id="limparPorcentagem" type="button">
                                     Limpar
                                 </button>
-
-                                <div
-                                    id="resultadoPorcentagem"
-                                    class="resultado"
-                                    hidden
-                                >
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 2 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. Descobrir qual porcentagem um valor representa</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <h4>
+<div class="resultado" hidden="" id="resultadoPorcentagem">
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 2 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. Descobrir qual porcentagem um valor representa</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>
                                 Descubra qual porcentagem um valor representa
                             </h4>
-
-                            <p>
+<p>
                                 Digite uma parte e o valor total para descobrir
                                 qual porcentagem essa parte representa.
                             </p>
-
-                            <div class="calculadora-porcentagem">
-
-                                <div class="campo">
-                                    <label for="valorParte">
+<div class="calculadora-porcentagem">
+<div class="campo">
+<label for="valorParte">
                                         Parte (R$)
                                     </label>
-
-                                    <input
-                                        type="number"
-                                        id="valorParte"
-                                        placeholder="Ex.: 50"
-                                        min="0"
-                                        step="any"
-                                    >
-                                </div>
-
-                                <div class="campo">
-                                    <label for="valorTotal">
+<input id="valorParte" min="0" placeholder="Ex.: 50" step="any" type="number"/>
+</div>
+<div class="campo">
+<label for="valorTotal">
                                         Total (R$)
                                     </label>
-
-                                    <input
-                                        type="number"
-                                        id="valorTotal"
-                                        placeholder="Ex.: 200"
-                                        min="0"
-                                        step="any"
-                                    >
-                                </div>
-
-                                <button
-                                    type="button"
-                                    id="calcularRepresentacao"
-                                >
+<input id="valorTotal" min="0" placeholder="Ex.: 200" step="any" type="number"/>
+</div>
+<button id="calcularRepresentacao" type="button">
                                     Calcular
                                 </button>
-
-                                <button
-                                    type="button"
-                                    id="limparRepresentacao"
-                                >
+<button id="limparRepresentacao" type="button">
                                     Limpar
                                 </button>
-
-                                <div
-                                    id="resultadoRepresentacao"
-                                    class="resultado"
-                                    hidden
-                                >
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 3 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>3. Calcular aumento ou desconto</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-                        <div class="subtopico-conteudo">
-
-                            <h4>
+<div class="resultado" hidden="" id="resultadoRepresentacao">
+</div>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 3 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>3. Calcular aumento ou desconto</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>
                                 Calcule aumento ou desconto percentual
                             </h4>
-
-                            <p>
+<p>
                                 Informe o valor inicial, a porcentagem e escolha
                                 se deseja calcular um aumento ou um desconto.
                             </p>
-
-                            <div class="calculadora-porcentagem calculadora-ajuste">
-
-                                <div class="ajuste-campos">
-
-                                    <div class="campo">
-                                        <label for="valorInicialAjuste">
+<div class="calculadora-porcentagem calculadora-ajuste">
+<div class="ajuste-campos">
+<div class="campo">
+<label for="valorInicialAjuste">
                                             Valor inicial (R$)
                                         </label>
-
-                                        <input
-                                            type="number"
-                                            id="valorInicialAjuste"
-                                            placeholder="Ex.: 200"
-                                            min="0"
-                                            step="any"
-                                        >
-                                    </div>
-
-                                    <div class="campo">
-                                        <label for="percentualAjuste">
+<input id="valorInicialAjuste" min="0" placeholder="Ex.: 200" step="any" type="number"/>
+</div>
+<div class="campo">
+<label for="percentualAjuste">
                                             Porcentagem (%)
                                         </label>
-
-                                        <input
-                                            type="number"
-                                            id="percentualAjuste"
-                                            placeholder="Ex.: 10"
-                                            min="0"
-                                            step="any"
-                                        >
-                                    </div>
-
-                                </div>
-
-                                <p>
-                                    <strong>
+<input id="percentualAjuste" min="0" placeholder="Ex.: 10" step="any" type="number"/>
+</div>
+</div>
+<p>
+<strong>
                                         Escolha o tipo de cálculo:
                                     </strong>
-                                </p>
-
-                                <div class="ajuste-opcoes">
-
-                                    <label class="alternativa">
-                                        <input
-                                            type="radio"
-                                            name="tipoAjuste"
-                                            value="aumento"
-                                        >
+</p>
+<div class="ajuste-opcoes">
+<label class="alternativa">
+<input name="tipoAjuste" type="radio" value="aumento"/>
                                         Aumento
                                     </label>
-
-                                    <label class="alternativa">
-                                        <input
-                                            type="radio"
-                                            name="tipoAjuste"
-                                            value="desconto"
-                                        >
+<label class="alternativa">
+<input name="tipoAjuste" type="radio" value="desconto"/>
                                         Desconto
                                     </label>
-
-                                </div>
-
-                                <div class="ajuste-botoes">
-
-                                    <button
-                                        type="button"
-                                        id="calcularAjuste"
-                                    >
+</div>
+<div class="ajuste-botoes">
+<button id="calcularAjuste" type="button">
                                         Calcular
                                     </button>
-
-                                    <button
-                                        type="button"
-                                        id="limparAjuste"
-                                    >
+<button id="limparAjuste" type="button">
                                         Limpar
                                     </button>
-
-                                </div>
-
-                                <div
-                                    id="resultadoAjuste"
-                                    class="resultado"
-                                    hidden
-                                >
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- ==================================================
+</div>
+<div class="resultado" hidden="" id="resultadoAjuste">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================================================
                  INTERPRETE
             =================================================== -->
-
-            <div class="etapa interprete acordeao">
-
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">🔎</span>
-                        <span class="acordeao-textos">
-                            <strong>INTERPRETE</strong>
-                            <small>Compreenda o que os resultados significam</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-
-                <div class="acordeao-conteudo">
-
-                    <p>
+<div class="etapa interprete acordeao">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">🔎</span>
+<span class="acordeao-textos">
+<strong>INTERPRETE</strong>
+<small>Compreenda o que os resultados significam</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<p>
                         Calcular uma porcentagem é importante,
                         mas também precisamos compreender o que
                         o resultado representa em uma situação financeira.
                     </p>
-
-                    <!-- SUBTÓPICO 1 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. Interpretando um desconto</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <h4>Situação 1 — Desconto</h4>
-
-                            <p>
+<!-- SUBTÓPICO 1 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. Interpretando um desconto</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>Situação 1 — Desconto</h4>
+<p>
                                 Um produto custa
                                 <strong>R$ 500,00</strong>
                                 e está com
                                 <strong>25,5% de desconto</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Sabemos que
                                 <strong>
                                     25,5% de R$ 500,00 = R$ 127,50
                                 </strong>.
                             </p>
-
-                            <p>
-                                <strong>
+<p>
+<strong>
                                     O que significa o valor de R$ 127,50?
                                 </strong>
-                            </p>
+</p>
 
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoDesconto"
-                                    value="final"
-                                >
+<label class="alternativa">
+<input name="interpretacaoDesconto" type="radio" value="final"/>
                                 É o preço final do produto.
                             </label>
-
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoDesconto"
-                                    value="desconto"
-                                >
+<label class="alternativa">
+<input name="interpretacaoDesconto" type="radio" value="original"/>
+                                É o preço original do produto.
+                            </label>
+<label class="alternativa">
+<input name="interpretacaoDesconto" type="radio" value="desconto"/>
                                 É o valor do desconto.
                             </label>
 
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoDesconto"
-                                    value="original"
-                                >
-                                É o preço original do produto.
-                            </label>
 
-                            <button
-                                type="button"
-                                id="verificarInterpretacaoDesconto"
-                            >
+<button id="verificarInterpretacaoDesconto" type="button">
                                 Verificar resposta
                             </button>
-
-                            <div
-                                id="feedbackInterpretacaoDesconto"
-                                class="feedback-interpretacao"
-                                hidden
-                            >
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 2 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. Interpretando um aumento</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <h4>Situação 2 — Aumento</h4>
-
-                            <p>
+<div class="feedback-interpretacao" hidden="" id="feedbackInterpretacaoDesconto">
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 2 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. Interpretando um aumento</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>Situação 2 — Aumento</h4>
+<p>
                                 Um produto custa
                                 <strong>R$ 400,00</strong>
                                 e sofre um
                                 <strong>aumento de 15%</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Sabemos que
                                 <strong>
                                     15% de R$ 400,00 = R$ 60,00
                                 </strong>.
                             </p>
-
-                            <p>
-                                <strong>
+<p>
+<strong>
                                     O que significa o valor de R$ 60,00?
                                 </strong>
-                            </p>
+</p>
 
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoAumento"
-                                    value="final"
-                                >
-                                É o novo preço do produto.
-                            </label>
-
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoAumento"
-                                    value="aumento"
-                                >
+<label class="alternativa">
+<input name="interpretacaoAumento" type="radio" value="aumento"/>
                                 É o valor do aumento.
                             </label>
-
-                            <label class="alternativa">
-                                <input
-                                    type="radio"
-                                    name="interpretacaoAumento"
-                                    value="original"
-                                >
+<label class="alternativa">
+<input name="interpretacaoAumento" type="radio" value="final"/>
+                                É o novo preço do produto.
+                            </label>
+<label class="alternativa">
+<input name="interpretacaoAumento" type="radio" value="original"/>
                                 É o preço original do produto.
                             </label>
 
-                            <button
-                                type="button"
-                                id="verificarInterpretacaoAumento"
-                            >
+
+<button id="verificarInterpretacaoAumento" type="button">
                                 Verificar resposta
                             </button>
-
-                            <div
-                                id="feedbackInterpretacaoAumento"
-                                class="feedback-interpretacao"
-                                hidden
-                            >
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- ==================================================
+<div class="feedback-interpretacao" hidden="" id="feedbackInterpretacaoAumento">
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================================================
                  DECIDA
             =================================================== -->
-
-            <div class="etapa decida acordeao">
-
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">💡</span>
-                        <span class="acordeao-textos">
-                            <strong>DECIDA</strong>
-                            <small>Compare opções e tome decisões financeiras</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-
-                <div class="acordeao-conteudo">
-
-                    <p>
+<div class="etapa decida acordeao">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">💡</span>
+<span class="acordeao-textos">
+<strong>DECIDA</strong>
+<small>Compare opções e tome decisões financeiras</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<p>
                         Agora é hora de comparar situações e tomar decisões
                         usando porcentagem.
                     </p>
-
-                    <!-- SITUAÇÃO 1 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. Comparando descontos</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <h4>Qual oferta vale mais a pena?</h4>
-
-                            <p>
+<!-- SITUAÇÃO 1 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. Comparando descontos</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<h4>Qual oferta vale mais a pena?</h4>
+<p>
                                 O mesmo produto está sendo vendido em duas lojas.
                                 Observe as ofertas e escolha a opção mais vantajosa.
                             </p>
-
-                            <div class="situacao-decisao">
-
-                                <div class="oferta">
-
-                                    <h4>Loja A</h4>
-
-                                    <p>
+<div class="situacao-decisao">
+<div class="oferta">
+<h4>Loja A</h4>
+<p>
                                         Preço:
                                         <strong>R$ 600,00</strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         Desconto:
                                         <strong>20%</strong>
-                                    </p>
-
-                                </div>
-
-                                <div class="oferta">
-
-                                    <h4>Loja B</h4>
-
-                                    <p>
+</p>
+</div>
+<div class="oferta">
+<h4>Loja B</h4>
+<p>
                                         Preço:
                                         <strong>R$ 550,00</strong>
-                                    </p>
-
-                                    <p>
+</p>
+<p>
                                         Desconto:
                                         <strong>15%</strong>
-                                    </p>
-
-                                </div>
-
-                                <p>
-                                    <strong>
+</p>
+</div>
+<p>
+<strong>
                                         Qual oferta é mais vantajosa?
                                     </strong>
-                                </p>
+</p>
 
-                                <label class="alternativa">
-
-                                    <input
-                                        type="radio"
-                                        name="decisaoPorcentagem"
-                                        value="a"
-                                    >
+<label class="alternativa">
+<input name="decisaoPorcentagem" type="radio" value="a"/>
 
                                     Loja A, porque oferece o maior percentual de desconto.
 
                                 </label>
-
-                                <label class="alternativa">
-
-                                    <input
-                                        type="radio"
-                                        name="decisaoPorcentagem"
-                                        value="b"
-                                    >
+<label class="alternativa">
+<input name="decisaoPorcentagem" type="radio" value="b"/>
 
                                     Loja B, porque o preço final é menor.
 
                                 </label>
 
-                                <button
-                                    type="button"
-                                    id="verificarDecisao"
-                                >
+<button id="verificarDecisao" type="button">
                                     Verificar decisão
                                 </button>
-
-                                <div
-                                    id="feedbackDecisao"
-                                    class="feedback-decisao"
-                                    hidden
-                                >
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SITUAÇÃO 2 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. Aumento de preço</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="situacao-decisao">
-
-                                <h4>Situação 2 — Aumento de preço</h4>
-
-                                <p>
+<div class="feedback-decisao" hidden="" id="feedbackDecisao">
+</div>
+</div>
+</div>
+</div>
+<!-- SITUAÇÃO 2 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. Aumento de preço</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="situacao-decisao">
+<h4>Situação 2 — Aumento de preço</h4>
+<p>
                                     Um produto custava <strong>R$ 400,00</strong>.
                                     Em uma loja, ele sofreu um aumento de
                                     <strong>10%</strong>.
                                 </p>
-
-                                <p>
+<p>
                                     Em outra loja, o mesmo produto está sendo vendido por
                                     <strong>R$ 435,00</strong>.
                                 </p>
+<p>
+<strong>Qual opção tem o menor preço?</strong>
+</p>
 
-                                <p>
-                                    <strong>Qual opção tem o menor preço?</strong>
-                                </p>
-
-                                <label class="alternativa">
-                                    <input
-                                        type="radio"
-                                        name="decisaoAumento"
-                                        value="a"
-                                    >
+<label class="alternativa">
+<input name="decisaoAumento" type="radio" value="b"/>
+                                    A segunda loja, porque o preço final é menor.
+                                </label>
+<label class="alternativa">
+<input name="decisaoAumento" type="radio" value="a"/>
                                     A primeira loja, porque o aumento é de apenas 10%.
                                 </label>
 
-                                <label class="alternativa">
-                                    <input
-                                        type="radio"
-                                        name="decisaoAumento"
-                                        value="b"
-                                    >
-                                    A segunda loja, porque o preço final é menor.
-                                </label>
-
-                                <button
-                                    type="button"
-                                    id="verificarDecisaoAumento"
-                                >
+<button id="verificarDecisaoAumento" type="button">
                                     Verificar decisão
                                 </button>
-
-                                <div
-                                    id="feedbackDecisaoAumento"
-                                    class="feedback-decisao"
-                                    hidden
-                                >
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SITUAÇÃO 3 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>3. À vista ou parcelado?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <div class="situacao-decisao">
-
-                                <h4>Situação 3 — À vista ou parcelado?</h4>
-
-                                <p>
+<div class="feedback-decisao" hidden="" id="feedbackDecisaoAumento">
+</div>
+</div>
+</div>
+</div>
+<!-- SITUAÇÃO 3 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>3. À vista ou parcelado?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<div class="situacao-decisao">
+<h4>Situação 3 — À vista ou parcelado?</h4>
+<p>
                                     Um celular custa <strong>R$ 1.200,00</strong>.
                                     A loja oferece duas formas de pagamento.
                                 </p>
-
-                                <div class="oferta">
-
-                                    <h4>Opção A — À vista</h4>
-
-                                    <p>
+<div class="oferta">
+<h4>Opção A — À vista</h4>
+<p>
                                         Desconto de <strong>8%</strong>.
                                     </p>
-
-                                </div>
-
-                                <div class="oferta">
-
-                                    <h4>Opção B — Parcelado</h4>
-
-                                    <p>
+</div>
+<div class="oferta">
+<h4>Opção B — Parcelado</h4>
+<p>
                                         Preço total de <strong>R$ 1.140,00</strong>.
                                     </p>
-
-                                </div>
-
-                                <p>
-                                    <strong>
+</div>
+<p>
+<strong>
                                         Qual opção é mais vantajosa considerando
                                         apenas o menor preço total?
                                     </strong>
-                                </p>
+</p>
 
-                                <label class="alternativa">
-                                    <input
-                                        type="radio"
-                                        name="decisaoPagamento"
-                                        value="a"
-                                    >
+<label class="alternativa">
+<input name="decisaoPagamento" type="radio" value="b"/>
+                                    Opção B — pagamento parcelado.
+                                </label>
+<label class="alternativa">
+<input name="decisaoPagamento" type="radio" value="a"/>
                                     Opção A — pagamento à vista.
                                 </label>
 
-                                <label class="alternativa">
-                                    <input
-                                        type="radio"
-                                        name="decisaoPagamento"
-                                        value="b"
-                                    >
-                                    Opção B — pagamento parcelado.
-                                </label>
-
-                                <button
-                                    type="button"
-                                    id="verificarDecisaoPagamento"
-                                >
+<button id="verificarDecisaoPagamento" type="button">
                                     Verificar decisão
                                 </button>
-
-                                <div
-                                    id="feedbackDecisaoPagamento"
-                                    class="feedback-decisao"
-                                    hidden
-                                >
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ==================================================
+<div class="feedback-decisao" hidden="" id="feedbackDecisaoPagamento">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================
              MÓDULO 2 — JUROS SIMPLES
         =================================================== -->
-
-        <section class="modulo modulo-juros-simples" id="juros-simples">
-
-            <h2>Módulo 2 — Juros Simples</h2>
-
-            <p class="modulo-subtitulo">
+<section class="modulo modulo-juros-simples" id="juros-simples">
+<h2>Módulo 2 — Juros Simples</h2>
+<p class="modulo-subtitulo">
                 Aprenda como os juros simples funcionam, faça cálculos,
                 interprete resultados e tome decisões financeiras.
             </p>
-
-
-            <!-- ==================================================
+<!-- ==================================================
                  APRENDA
             =================================================== -->
-
-            <div class="etapa aprenda acordeao">
-
-                <button type="button" class="acordeao-titulo">
-
-                    <span class="acordeao-identidade">
-
-                        <span class="acordeao-icone" aria-hidden="true">
+<div class="etapa aprenda acordeao">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">
                             🧠
                         </span>
-
-                        <span class="acordeao-textos">
-                            <strong>APRENDA</strong>
-                            <small>
+<span class="acordeao-textos">
+<strong>APRENDA</strong>
+<small>
                                 Entenda como funcionam os juros simples
                             </small>
-                        </span>
-
-                    </span>
-
-                    <span class="seta" aria-hidden="true">▼</span>
-
-                </button>
-
-
-                <div class="acordeao-conteudo">
-
-
-                    <!-- SUBTÓPICO 1 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. O que são juros?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <p>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<!-- SUBTÓPICO 1 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. O que são juros?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
                                 Os <strong>juros</strong> representam o valor
                                 pago ou recebido pelo uso de uma quantia
                                 de dinheiro durante determinado período.
                             </p>
-
-                            <p>
+<p>
                                 Eles aparecem em diversas situações do dia a dia,
                                 como empréstimos, financiamentos, compras a prazo
                                 e investimentos.
                             </p>
-
-                            <div class="exemplo">
-
-                                <h4>Um exemplo simples</h4>
-
-                                <p>
+<div class="exemplo">
+<h4>Um exemplo simples</h4>
+<p>
                                     Imagine que uma pessoa empreste
                                     <strong>R$ 1.000,00</strong>
                                     a uma taxa de
                                     <strong>2% ao mês</strong>.
                                 </p>
-
-                                <p>
+<p>
                                     Como aprendemos no módulo anterior:
                                 </p>
-
-                                <p>
-                                    <strong>
+<p>
+<strong>
                                         2% de R$ 1.000,00 = R$ 20,00
                                     </strong>
-                                </p>
-
-                                <p>
+</p>
+<p>
                                     Esses <strong>R$ 20,00</strong>
                                     representam os juros de um mês.
                                 </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SUBTÓPICO 2 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. Como funcionam os juros simples?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <p>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 2 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. Como funcionam os juros simples?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
                                 Nos <strong>juros simples</strong>,
                                 os juros são sempre calculados sobre
                                 o <strong>capital inicial</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Por isso, considerando um capital de
                                 <strong>R$ 1.000,00</strong>
                                 e uma taxa de
@@ -1476,501 +960,440 @@
                                 o acréscimo será sempre de
                                 <strong>R$ 20,00 por mês</strong>.
                             </p>
-
-                            <div class="exemplo">
-
-                                <h4>Observe a evolução</h4>
-
-                                                                <!-- CONTROLES INTERATIVOS — JUROS SIMPLES -->
-
-                                <div class="controles-juros">
-
-                                    <div class="controle-juros">
-                                        <label for="jsCapitalAprenda">
+<div class="exemplo">
+<h4>Observe a evolução</h4>
+<!-- CONTROLES INTERATIVOS — JUROS SIMPLES -->
+<div class="controles-juros">
+<div class="controle-juros">
+<label for="jsCapitalAprenda">
                                             Capital inicial (R$)
                                         </label>
-
-                                        <input
-                                            type="number"
-                                            id="jsCapitalAprenda"
-                                            value="1000"
-                                            min="0"
-                                            step="100"
-                                        >
-                                    </div>
-
-                                    <div class="controle-juros">
-                                        <label for="jsTaxaAprenda">
+<input id="jsCapitalAprenda" min="0" step="100" type="number" value="1000"/>
+</div>
+<div class="controle-juros">
+<label for="jsTaxaAprenda">
                                             Taxa (% ao mês)
                                         </label>
-
-                                        <input
-                                            type="number"
-                                            id="jsTaxaAprenda"
-                                            value="2"
-                                            min="0"
-                                            step="0.1"
-                                        >
-                                    </div>
-
-                                    <div class="controle-juros">
-                                        <label for="jsTempoAprenda">
+<input id="jsTaxaAprenda" min="0" step="0.1" type="number" value="2"/>
+</div>
+<div class="controle-juros">
+<label for="jsTempoAprenda">
                                             Tempo (meses)
                                         </label>
-
-                                        <input
-                                            type="number"
-                                            id="jsTempoAprenda"
-                                            value="3"
-                                            min="1"
-                                            max="12"
-                                            step="1"
-                                        >
-                                    </div>
-
-                                </div>
-
-                                <p class="dica-interacao-juros">
+<input id="jsTempoAprenda" max="12" min="1" step="1" type="number" value="3"/>
+</div>
+</div>
+<p class="dica-interacao-juros">
                                     👆 Altere os valores e observe como os juros evoluem ao longo do tempo.
                                 </p>
-                                                                <!-- LINHA DO TEMPO — JUROS SIMPLES -->
-
-                                <div class="linha-tempo-juros">
-
-                                    <div class="linha-tempo-item">
-                                        <span class="linha-tempo-periodo">Início</span>
-                                        <strong>R$ 1.000,00</strong>
-                                        <small>Capital inicial</small>
-                                    </div>
-
-                                    <span class="linha-tempo-seta">→</span>
-
-                                    <div class="linha-tempo-item">
-                                        <span class="linha-tempo-periodo">1º mês</span>
-                                        <strong>R$ 1.020,00</strong>
-                                        <small>+ R$ 20,00</small>
-                                    </div>
-
-                                    <span class="linha-tempo-seta">→</span>
-
-                                    <div class="linha-tempo-item">
-                                        <span class="linha-tempo-periodo">2º mês</span>
-                                        <strong>R$ 1.040,00</strong>
-                                        <small>+ R$ 20,00</small>
-                                    </div>
-
-                                    <span class="linha-tempo-seta">→</span>
-
-                                    <div class="linha-tempo-item">
-                                        <span class="linha-tempo-periodo">3º mês</span>
-                                        <strong>R$ 1.060,00</strong>
-                                        <small>+ R$ 20,00</small>
-                                    </div>
-
-                                </div>
-
-                                <p class="linha-tempo-explicacao">
+<!-- LINHA DO TEMPO — JUROS SIMPLES -->
+<div class="linha-tempo-juros">
+<div class="linha-tempo-item">
+<span class="linha-tempo-periodo">Início</span>
+<strong>R$ 1.000,00</strong>
+<small>Capital inicial</small>
+</div>
+<span class="linha-tempo-seta">→</span>
+<div class="linha-tempo-item">
+<span class="linha-tempo-periodo">1º mês</span>
+<strong>R$ 1.020,00</strong>
+<small>+ R$ 20,00</small>
+</div>
+<span class="linha-tempo-seta">→</span>
+<div class="linha-tempo-item">
+<span class="linha-tempo-periodo">2º mês</span>
+<strong>R$ 1.040,00</strong>
+<small>+ R$ 20,00</small>
+</div>
+<span class="linha-tempo-seta">→</span>
+<div class="linha-tempo-item">
+<span class="linha-tempo-periodo">3º mês</span>
+<strong>R$ 1.060,00</strong>
+<small>+ R$ 20,00</small>
+</div>
+</div>
+<p class="linha-tempo-explicacao">
                                     💡 Nos juros simples, o acréscimo é
                                     <strong>constante</strong>: neste exemplo,
                                     são R$ 20,00 em cada mês.
                                 </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SUBTÓPICO 3 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>3. Elementos dos juros simples</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <p>
+</div>
+</div>
+</div>
+<!-- SUBTÓPICO 3 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>3. Elementos dos juros simples</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
                                 Para realizar os cálculos de juros simples,
                                 precisamos conhecer alguns elementos:
                             </p>
-
-                            <p>
-                                <strong>C — Capital:</strong>
+<p>
+<strong>C — Capital:</strong>
                                 valor inicial aplicado, emprestado ou financiado.
                             </p>
-
-                            <p>
-                                <strong>i — Taxa de juros:</strong>
+<p>
+<strong>i — Taxa de juros:</strong>
                                 porcentagem cobrada ou recebida em determinado período.
                             </p>
-
-                            <p>
-                                <strong>t — Tempo:</strong>
+<p>
+<strong>t — Tempo:</strong>
                                 quantidade de períodos da operação.
                             </p>
-
-                            <p>
-                                <strong>J — Juros:</strong>
+<p>
+<strong>J — Juros:</strong>
                                 valor pago ou recebido além do capital inicial.
                             </p>
-
-                            <p>
-                                <strong>M — Montante:</strong>
+<p>
+<strong>M — Montante:</strong>
                                 valor total ao final da operação.
                             </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SUBTÓPICO 4 -->
-
-                    <div class="subtopico">
-
-                        <button type="button" class="subtopico-titulo">
-                            <span>4. Fórmula dos juros simples</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-
-                        <div class="subtopico-conteudo">
-
-                            <p>
+</div>
+</div>
+<!-- SUBTÓPICO 4 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>4. Fórmula dos juros simples</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
                                 Os juros simples podem ser calculados pela fórmula:
                             </p>
-
-                            <div class="exemplo">
-
-                                <p>
-                                    <strong>J = C × i × t</strong>
-                                </p>
-
-                                <p>
+<div class="exemplo">
+<p>
+<strong>J = C × i × t</strong>
+</p>
+<p>
                                     Depois de calcular os juros,
                                     podemos encontrar o montante:
                                 </p>
-
-                                <p>
-                                    <strong>M = C + J</strong>
-                                </p>
-
-                            </div>
-
-                            <p>
-                                <strong>Atenção:</strong>
+<p>
+<strong>M = C + J</strong>
+</p>
+</div>
+<p>
+<strong>Atenção:</strong>
                                 a taxa de juros e o tempo precisam estar
                                 na <strong>mesma unidade de tempo</strong>.
                             </p>
-
-                            <p>
+<p>
                                 Por exemplo, se a taxa é
                                 <strong>2% ao mês</strong>,
                                 o tempo também deve estar expresso em
                                 <strong>meses</strong>.
                             </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- SUBTÓPICO 5 -->
-                    <div class="subtopico">
-                        <button type="button" class="subtopico-titulo">
-                            <span>5. Juros são o único custo de um empréstimo?</span>
-                            <span class="subtopico-seta">▼</span>
-                        </button>
-                        <div class="subtopico-conteudo">
-                            <p>
-                                <strong>Nem sempre.</strong> Além dos juros, uma operação de crédito pode incluir
+</div>
+</div>
+<!-- SUBTÓPICO 5 -->
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>5. Juros são o único custo de um empréstimo?</span>
+<span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>
+<strong>Nem sempre.</strong> Além dos juros, uma operação de crédito pode incluir
                                 outros custos, como <strong>tarifas, impostos, seguros e outros encargos</strong>.
                             </p>
-                            <div class="exemplo">
-                                <h4>💡 CET — Custo Efetivo Total</h4>
-                                <p>
+<div class="exemplo">
+<h4>💡 CET — Custo Efetivo Total</h4>
+<p>
                                     O <strong>CET</strong> reúne, em uma única informação, os custos da operação de crédito.
                                     Por isso, ele ajuda a comparar propostas de empréstimos e financiamentos.
                                 </p>
-                                <p>
+<p>
                                     Uma proposta com <strong>taxa de juros menor</strong> pode acabar tendo
                                     <strong>custo total maior</strong> quando existem outras despesas.
                                 </p>
-                            </div>
-                            <p>
-                                <strong>Neste módulo, não vamos calcular o CET.</strong> Vamos apenas usar essa ideia
+</div>
+<p>
+<strong>Neste módulo, não vamos calcular o CET.</strong> Vamos apenas usar essa ideia
                                 para lembrar que, antes de escolher um empréstimo, é importante observar
                                 <strong>todos os custos informados</strong>, e não somente a taxa de juros.
                             </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- JUROS SIMPLES — FAÇA -->
-            <div class="etapa faca acordeao" id="jsEtapaFaca">
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">✏️</span>
-                        <span class="acordeao-textos"><strong>FAÇA</strong><small>Calcule e acompanhe cada passo</small></span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-                <div class="acordeao-conteudo">
-                    <h3>Quanto o dinheiro aumenta com juros simples?</h3>
-
+</div>
+</div>
+</div>
+</div>
+<!-- JUROS SIMPLES — FAÇA -->
+<div class="etapa faca acordeao" id="jsEtapaFaca">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">✏️</span>
+<span class="acordeao-textos"><strong>FAÇA</strong><small>Calcule e acompanhe cada passo</small></span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<h3>Quanto o dinheiro aumenta com juros simples?</h3>
 <p>
     Informe o capital, a taxa de juros e o tempo para descobrir
     os juros e o montante.
 </p>
-
 <p>
-    <strong>Taxa e tempo podem estar em unidades diferentes.</strong>
+<strong>Taxa e tempo podem estar em unidades diferentes.</strong>
     Se necessário, o sistema fará a conversão e mostrará como ela foi feita.
 </p>
-
-<form id="jsFormularioFaca" novalidate>
-
-    <div class="js-campos-faca">
-
-        <!-- CAPITAL -->
-        <div class="campo">
-            <label for="jsCapitalFaca">
+<form id="jsFormularioFaca" novalidate="">
+<div class="js-campos-faca">
+<!-- CAPITAL -->
+<div class="campo">
+<label for="jsCapitalFaca">
                 Capital inicial (R$)
             </label>
-
-            <input
-                id="jsCapitalFaca"
-                type="number"
-                inputmode="decimal"
-                min="0"
-                step="any"
-                placeholder="Ex.: 1000"
-                required
-            >
-        </div>
-
-        <!-- TAXA -->
-        <div class="campo">
-            <label for="jsTaxaFaca">
+<input id="jsCapitalFaca" inputmode="decimal" min="0" placeholder="Ex.: 1000" required="" step="any" type="number"/>
+</div>
+<!-- TAXA -->
+<div class="campo">
+<label for="jsTaxaFaca">
                 Taxa de juros (%)
             </label>
-
-            <div class="js-campo-com-unidade">
-
-                <input
-                    id="jsTaxaFaca"
-                    type="number"
-                    inputmode="decimal"
-                    min="0"
-                    step="any"
-                    placeholder="Ex.: 2"
-                    required
-                >
-
-                <select id="jsUnidadeTaxaFaca" aria-label="Período da taxa de juros">
-                    <option value="dia">ao dia</option>
-                    <option value="mes" selected>ao mês</option>
-                    <option value="trimestre">ao trimestre</option>
-                    <option value="semestre">ao semestre</option>
-                    <option value="ano">ao ano</option>
-                </select>
-
-            </div>
-        </div>
-
-        <!-- TEMPO -->
-        <div class="campo">
-            <label for="jsTempoFaca">
+<div class="js-campo-com-unidade">
+<input id="jsTaxaFaca" inputmode="decimal" min="0" placeholder="Ex.: 2" required="" step="any" type="number"/>
+<select aria-label="Período da taxa de juros" id="jsUnidadeTaxaFaca">
+<option value="dia">ao dia</option>
+<option selected="" value="mes">ao mês</option>
+<option value="trimestre">ao trimestre</option>
+<option value="semestre">ao semestre</option>
+<option value="ano">ao ano</option>
+</select>
+</div>
+</div>
+<!-- TEMPO -->
+<div class="campo">
+<label for="jsTempoFaca">
                 Tempo
             </label>
-
-            <div class="js-campo-com-unidade">
-
-                <input
-                    id="jsTempoFaca"
-                    type="number"
-                    inputmode="decimal"
-                    min="0"
-                    step="any"
-                    placeholder="Ex.: 3"
-                    required
-                >
-
-                <select id="jsUnidadeTempoFaca" aria-label="Unidade do tempo">
-                    <option value="dia">dias</option>
-                    <option value="mes" selected>meses</option>
-                    <option value="trimestre">trimestres</option>
-                    <option value="semestre">semestres</option>
-                    <option value="ano">anos</option>
-                </select>
-
-            </div>
-        </div>
-
-    </div>
-                        <div class="js-acoes-faca">
-                            <button type="submit">CALCULAR</button>
-                            <button type="button" id="jsLimparFaca">LIMPAR</button>
-                            <button type="button" id="jsUsarAprenda">USAR VALORES DO APRENDA</button>
-                        </div>
-                        <p id="jsErroFaca" role="alert" hidden></p>
-                        <div id="jsResultadoFaca" aria-live="polite" hidden></div>
-                        <!-- LABORATÓRIO FINANCEIRO — JUROS SIMPLES -->
-<div id="jsLaboratorioFaca" class="js-laboratorio-faca" hidden>
-
-    <div class="js-grafico-cabecalho">
-        <div>
-            <h4>Evolução do dinheiro ao longo do tempo</h4>
-            <p>
+<div class="js-campo-com-unidade">
+<input id="jsTempoFaca" inputmode="decimal" min="0" placeholder="Ex.: 3" required="" step="any" type="number"/>
+<select aria-label="Unidade do tempo" id="jsUnidadeTempoFaca">
+<option value="dia">dias</option>
+<option selected="" value="mes">meses</option>
+<option value="trimestre">trimestres</option>
+<option value="semestre">semestres</option>
+<option value="ano">anos</option>
+</select>
+</div>
+</div>
+</div>
+<div class="js-acoes-faca">
+<button type="submit">CALCULAR</button>
+<button id="jsLimparFaca" type="button">LIMPAR</button>
+<button id="jsUsarAprenda" type="button">USAR VALORES DO APRENDA</button>
+</div>
+<p hidden="" id="jsErroFaca" role="alert"></p>
+<div aria-live="polite" hidden="" id="jsResultadoFaca"></div>
+<!-- LABORATÓRIO FINANCEIRO — JUROS SIMPLES -->
+<div class="js-laboratorio-faca" hidden="" id="jsLaboratorioFaca">
+<div class="js-grafico-cabecalho">
+<div>
+<h4>Evolução do dinheiro ao longo do tempo</h4>
+<p>
                 Observe como o montante aumenta em cada período
                 nos juros simples.
             </p>
-        </div>
-    </div>
-
-    <div class="js-grafico-area">
-
-        <div
-            id="jsGraficoFaca"
-            class="js-grafico-faca"
-            role="img"
-            aria-label="Gráfico da evolução do montante nos juros simples"
-        ></div>
-
-    </div>
-
-    <div id="jsPeriodoSelecionado" class="js-periodo-selecionado">
-         <span>Período selecionado</span>
-        <strong>Selecione um ponto do gráfico</strong>
-    </div>
-
-    <div class="js-evolucao-faca">
-
-        <button
-            type="button"
-            id="jsMostrarTabela"
-            class="js-mostrar-tabela"
-            aria-expanded="false"
-        >
+</div>
+</div>
+<div class="js-grafico-area">
+<div aria-label="Gráfico da evolução do montante nos juros simples" class="js-grafico-faca" id="jsGraficoFaca" role="img"></div>
+</div>
+<div class="js-periodo-selecionado" id="jsPeriodoSelecionado">
+<span>Período selecionado</span>
+<strong>Selecione um ponto do gráfico</strong>
+</div>
+<div class="js-evolucao-faca">
+<button aria-expanded="false" class="js-mostrar-tabela" id="jsMostrarTabela" type="button">
             Ver evolução período a período
         </button>
-
-        <div id="jsTabelaEvolucao" class="js-tabela-evolucao" hidden></div>
-
-    </div>
-
+<div class="js-tabela-evolucao" hidden="" id="jsTabelaEvolucao"></div>
 </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- ==================================================
+</div>
+</form>
+</div>
+</div>
+<!-- ==================================================
                  JUROS SIMPLES — INTERPRETE
             =================================================== -->
-            <div class="etapa interprete acordeao" id="jsEtapaInterprete">
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">🔎</span>
-                        <span class="acordeao-textos">
-                            <strong>INTERPRETE</strong>
-                            <small>Compreenda o que os resultados significam</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
+<div class="etapa interprete acordeao" id="jsEtapaInterprete">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">🔎</span>
+<span class="acordeao-textos">
+<strong>INTERPRETE</strong>
+<small>Compreenda o que os resultados significam</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<h3>O que os juros representam?</h3>
+<p>João fez um empréstimo de <strong>R$ 1.000,00</strong>, com juros simples de <strong>2% ao mês</strong>, durante <strong>6 meses</strong>.</p>
+<p>Ao final desse período, os juros são <strong>R$ 120,00</strong> e o montante é <strong>R$ 1.120,00</strong>.</p>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>1. Interpretando os R$ 120,00</span><span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p><strong>O que representam os R$ 120,00?</strong></p>
 
-                <div class="acordeao-conteudo">
-                    <h3>O que os juros representam?</h3>
-                    <p>João fez um empréstimo de <strong>R$ 1.000,00</strong>, com juros simples de <strong>2% ao mês</strong>, durante <strong>6 meses</strong>.</p>
-                    <p>Ao final desse período, os juros são <strong>R$ 120,00</strong> e o montante é <strong>R$ 1.120,00</strong>.</p>
+<label class="alternativa"><input name="jsInterpreteJuros" type="radio" value="capital"/> É o valor que João recebeu emprestado.</label>
+<label class="alternativa"><input name="jsInterpreteJuros" type="radio" value="montante"/> É o total que João deverá pagar.</label>
+<label class="alternativa"><input name="jsInterpreteJuros" type="radio" value="juros"/> É o custo do empréstimo acumulado durante os 6 meses.</label>
 
-                    <div class="subtopico">
-                        <button type="button" class="subtopico-titulo">
-                            <span>1. Interpretando os R$ 120,00</span><span class="subtopico-seta">▼</span>
-                        </button>
-                        <div class="subtopico-conteudo">
-                            <p><strong>O que representam os R$ 120,00?</strong></p>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="capital"> É o valor que João recebeu emprestado.</label>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="juros"> É o custo do empréstimo acumulado durante os 6 meses.</label>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteJuros" value="montante"> É o total que João deverá pagar.</label>
-                            <button type="button" id="jsVerificarInterpreteJuros">VERIFICAR RESPOSTA</button>
-                            <div id="jsFeedbackInterpreteJuros" class="feedback-interpretacao" hidden aria-live="polite"></div>
-                        </div>
-                    </div>
 
-                    <div class="subtopico">
-                        <button type="button" class="subtopico-titulo">
-                            <span>2. E se o prazo aumentar?</span><span class="subtopico-seta">▼</span>
-                        </button>
-                        <div class="subtopico-conteudo">
-                            <p>Se o capital e a taxa permanecerem iguais, mas o prazo passar de <strong>6 para 12 meses</strong>, o que acontece com os juros?</p>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="iguais"> Continuam em R$ 120,00.</label>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="dobram"> Dobram para R$ 240,00.</label>
-                            <label class="alternativa"><input type="radio" name="jsInterpreteTempo" value="diminuem"> Diminuem para R$ 60,00.</label>
-                            <button type="button" id="jsVerificarInterpreteTempo">VERIFICAR RESPOSTA</button>
-                            <div id="jsFeedbackInterpreteTempo" class="feedback-interpretacao" hidden aria-live="polite"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<button id="jsVerificarInterpreteJuros" type="button">VERIFICAR RESPOSTA</button>
+<div aria-live="polite" class="feedback-interpretacao" hidden="" id="jsFeedbackInterpreteJuros"></div>
+</div>
+</div>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button">
+<span>2. E se o prazo aumentar?</span><span class="subtopico-seta">▼</span>
+</button>
+<div class="subtopico-conteudo">
+<p>Se o capital e a taxa permanecerem iguais, mas o prazo passar de <strong>6 para 12 meses</strong>, o que acontece com os juros?</p>
 
-            <!-- ==================================================
+<label class="alternativa"><input name="jsInterpreteTempo" type="radio" value="dobram"/> Dobram para R$ 240,00.</label>
+<label class="alternativa"><input name="jsInterpreteTempo" type="radio" value="iguais"/> Continuam em R$ 120,00.</label>
+<label class="alternativa"><input name="jsInterpreteTempo" type="radio" value="diminuem"/> Diminuem para R$ 60,00.</label>
+
+
+<button id="jsVerificarInterpreteTempo" type="button">VERIFICAR RESPOSTA</button>
+<div aria-live="polite" class="feedback-interpretacao" hidden="" id="jsFeedbackInterpreteTempo"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================================================
                  JUROS SIMPLES — DECIDA
             =================================================== -->
-            <div class="etapa decida acordeao" id="jsEtapaDecida">
-                <button type="button" class="acordeao-titulo">
-                    <span class="acordeao-identidade">
-                        <span class="acordeao-icone" aria-hidden="true">💡</span>
-                        <span class="acordeao-textos">
-                            <strong>DECIDA</strong>
-                            <small>Compare propostas antes de escolher</small>
-                        </span>
-                    </span>
-                    <span class="seta" aria-hidden="true">▼</span>
-                </button>
-
-                <div class="acordeao-conteudo">
-                    <h3>Qual empréstimo tem o menor custo?</h3>
-                    <p>Ana precisa de <strong>R$ 2.000,00</strong> por <strong>6 meses</strong> e recebeu duas propostas.</p>
-                    <p class="js-lembrete-cet"><strong>Lembre-se:</strong> uma taxa de juros menor nem sempre significa um empréstimo mais barato. Considere todos os custos informados antes de decidir.</p>
-                    <div class="situacao-decisao">
-                        <div class="oferta"><h4>Banco A</h4><p>Juros simples de <strong>2% ao mês</strong>.</p><p>Sem taxa adicional.</p></div>
-                        <div class="oferta"><h4>Banco B</h4><p>Juros simples de <strong>1,5% ao mês</strong>.</p><p>Mais uma taxa fixa de <strong>R$ 80,00</strong>.</p></div>
-                    </div>
-                    <p><strong>Considerando todos os custos, qual proposta resulta no menor valor total a pagar?</strong></p>
-                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="a"> Banco A.</label>
-                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="b"> Banco B.</label>
-                    <label class="alternativa"><input type="radio" name="jsDecisaoEmprestimo" value="iguais"> As duas propostas têm o mesmo custo.</label>
-                    <button type="button" id="jsVerificarDecisao">VERIFICAR DECISÃO</button>
-                    <div id="jsFeedbackDecisao" class="feedback-decisao" hidden aria-live="polite"></div>
-                </div>
-            </div>
-
-        </section>
-
-
-    </main>
-
-    <footer class="rodape-projeto">
-        <span>© 2026 Ajuda nas Finanças | Matemática Financeira e Educação Financeira</span>
-        <span>Aprender hoje para um futuro melhor!</span>
-    </footer>
-
-    <script src="js/principal.js"></script>
-    <script src="js/modulos-acordeao.js"></script>
-    <script src="js/modulos/porcentagem/porcentagem.js"></script>
-    <script src="js/modulos/juros-simples/juros-simples.js"></script>
-
-    <script src="js/modulos/juros-simples/juros-simples-faca.js"></script>
-    <script src="js/modulos/juros-simples/juros-simples-interprete.js"></script>
-    <script src="js/modulos/juros-simples/juros-simples-decida.js"></script>
-    <script src="js/modulos/juros-simples/juros-simples-progresso.js"></script>
+<div class="etapa decida acordeao" id="jsEtapaDecida">
+<button class="acordeao-titulo" type="button">
+<span class="acordeao-identidade">
+<span aria-hidden="true" class="acordeao-icone">💡</span>
+<span class="acordeao-textos">
+<strong>DECIDA</strong>
+<small>Compare propostas antes de escolher</small>
+</span>
+</span>
+<span aria-hidden="true" class="seta">▼</span>
+</button>
+<div class="acordeao-conteudo">
+<h3>Decida comparando todos os custos</h3>
+<p>Resolva três situações diferentes usando juros simples e raciocínio financeiro.</p>
+<div class="subtopico"><button class="subtopico-titulo" type="button"><span>1. Qual empréstimo tem o menor custo?</span><span class="subtopico-seta">▼</span></button><div class="subtopico-conteudo"><p>Ana precisa de <strong>R$ 2.000,00</strong> por <strong>6 meses</strong>.</p><div class="situacao-decisao"><div class="oferta"><h4>Banco A</h4><p>Juros simples de <strong>2% ao mês</strong>.</p><p>Sem taxa adicional.</p></div><div class="oferta"><h4>Banco B</h4><p>Juros simples de <strong>1,5% ao mês</strong>.</p><p>Mais uma taxa fixa de <strong>R$ 80,00</strong>.</p></div></div><p><strong>Considerando todos os custos, qual proposta é mais barata?</strong></p>
+<label class="alternativa"><input name="jsDecisaoEmprestimo" type="radio" value="b"/><span>Banco B.</span></label>
+<label class="alternativa"><input name="jsDecisaoEmprestimo" type="radio" value="a"/><span>Banco A.</span></label>
+<label class="alternativa"><input name="jsDecisaoEmprestimo" type="radio" value="iguais"/><span>As duas propostas têm o mesmo custo.</span></label><button id="jsVerificarDecisao" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jsFeedbackDecisao"></div></div></div>
+<div class="subtopico"><button class="subtopico-titulo" type="button"><span>2. Prazo menor ou parcela de tempo maior?</span><span class="subtopico-seta">▼</span></button><div class="subtopico-conteudo"><p>Uma dívida de <strong>R$ 1.500,00</strong> cobra juros simples de <strong>2% ao mês</strong>. Carlos pode quitar em 4 meses ou em 8 meses.</p><p><strong>Qual escolha gera menor valor de juros?</strong></p>
+<label class="alternativa"><input name="jsDecisaoPrazo" type="radio" value="8"/><span>Quitar em 8 meses.</span></label>
+<label class="alternativa"><input name="jsDecisaoPrazo" type="radio" value="igual"/><span>O prazo não altera os juros.</span></label>
+<label class="alternativa"><input name="jsDecisaoPrazo" type="radio" value="4"/><span>Quitar em 4 meses.</span></label><button id="jsVerificarDecisaoPrazo" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jsFeedbackDecisaoPrazo"></div></div></div>
+<div class="subtopico"><button class="subtopico-titulo" type="button"><span>3. À vista ou parcelado?</span><span class="subtopico-seta">▼</span></button><div class="subtopico-conteudo"><p>Uma bicicleta custa <strong>R$ 1.200,00</strong> à vista ou pode ser paga após 5 meses com juros simples de <strong>1,5% ao mês</strong>.</p><p><strong>Se a pessoa tem o dinheiro disponível hoje, qual opção tem menor custo?</strong></p>
+<label class="alternativa"><input name="jsDecisaoVista" type="radio" value="vista"/><span>Pagar à vista.</span></label>
+<label class="alternativa"><input name="jsDecisaoVista" type="radio" value="prazo"/><span>Pagar após 5 meses com juros.</span></label>
+<label class="alternativa"><input name="jsDecisaoVista" type="radio" value="igual"/><span>As duas opções custam o mesmo.</span></label><button id="jsVerificarDecisaoVista" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jsFeedbackDecisaoVista"></div></div></div>
+</div>
+</div>
+</section>
+<!-- ==================================================
+             MÓDULO 3 — JUROS COMPOSTOS
+        =================================================== -->
+<section class="modulo modulo-juros-compostos" id="juros-compostos">
+<h2>Módulo 3 — Juros Compostos</h2>
+<p class="modulo-subtitulo">Entenda o efeito dos juros sobre juros, faça simulações, interprete o crescimento do dinheiro e compare alternativas financeiras.</p>
+<div class="etapa aprenda acordeao" id="jcEtapaAprenda">
+<button class="acordeao-titulo" type="button"><span class="acordeao-identidade"><span aria-hidden="true" class="acordeao-icone">🧠</span><span class="acordeao-textos"><strong>APRENDA</strong><small>Veja como os juros passam a render juros</small></span></span><span aria-hidden="true" class="seta">▼</span></button>
+<div class="acordeao-conteudo">
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>1. O que muda nos juros compostos?</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo">
+<p>Nos <strong>juros compostos</strong>, os juros de cada período são incorporados ao saldo. No período seguinte, a mesma taxa é aplicada sobre esse novo valor. É o conhecido efeito de <strong>juros sobre juros</strong>.</p>
+<div class="exemplo"><h4>Exemplo: R$ 1.000,00 a 10% ao mês</h4><div class="jc-sequencia"><span>R$ 1.000,00</span><b>→</b><span>R$ 1.100,00</span><b>→</b><span>R$ 1.210,00</span><b>→</b><span>R$ 1.331,00</span></div><p>No primeiro mês, os juros são R$ 100,00. No segundo, são R$ 110,00. No terceiro, R$ 121,00. A taxa continua em 10%, mas a <strong>base de cálculo aumenta</strong>.</p></div>
+</div>
+</div>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>2. Fórmula do montante</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo"><p>O montante é calculado por:</p><div class="jc-formula"><strong>M = C × (1 + i)<sup>t</sup></strong></div><p><strong>M</strong> é o montante, <strong>C</strong> é o capital inicial, <strong>i</strong> é a taxa na forma decimal e <strong>t</strong> é o número de períodos. Depois, os juros podem ser encontrados por <strong>J = M − C</strong>.</p><p><strong>Atenção:</strong> taxa e tempo precisam estar na mesma unidade de período.</p></div>
+</div>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>3. Explore período a período</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo"><p>Altere os valores e observe como o saldo cresce. Compare também com os juros simples usando o mesmo capital, taxa e tempo.</p><div class="jc-explorador"><div class="jc-controles"><label>Capital (R$)<input id="jcCapitalAprenda" min="1" step="any" type="number" value="1000"/></label><label>Taxa (% ao mês)<input id="jcTaxaAprenda" min="0" step="any" type="number" value="10"/></label><label>Tempo (meses)<input id="jcTempoAprenda" max="24" min="1" step="1" type="number" value="3"/></label></div><div class="jc-resumo-aprenda" id="jcResumoAprenda"></div><div class="jc-comparacao" id="jcComparacaoAprenda"></div><div class="jc-tabela-wrap" id="jcTabelaAprenda"></div></div></div>
+</div>
+</div>
+</div>
+<div class="etapa faca acordeao" id="jcEtapaFaca">
+<button class="acordeao-titulo" type="button"><span class="acordeao-identidade"><span aria-hidden="true" class="acordeao-icone">✏️</span><span class="acordeao-textos"><strong>FAÇA</strong><small>Calcule e acompanhe o crescimento</small></span></span><span aria-hidden="true" class="seta">▼</span></button>
+<div class="acordeao-conteudo"><h3>Quanto o dinheiro aumenta com juros compostos?</h3><p>Informe o capital, a taxa e o tempo. O sistema calcula o montante, os juros acumulados e mostra a evolução período a período.</p><p><strong>Taxa e tempo podem estar em unidades diferentes.</strong> Quando necessário, o sistema converte o tempo para o período da taxa.</p>
+<form id="jcFormularioFaca" novalidate=""><div class="jc-campos-faca"><div class="campo"><label for="jcCapitalFaca">Capital inicial (R$)</label><input id="jcCapitalFaca" inputmode="decimal" min="0" placeholder="Ex.: 1000" required="" step="any" type="number"/></div><div class="campo"><label for="jcTaxaFaca">Taxa de juros (%)</label><div class="jc-campo-com-unidade"><input id="jcTaxaFaca" inputmode="decimal" min="0" placeholder="Ex.: 2" required="" step="any" type="number"/><select aria-label="Período da taxa" id="jcUnidadeTaxaFaca"><option value="dia">ao dia</option><option selected="" value="mes">ao mês</option><option value="trimestre">ao trimestre</option><option value="semestre">ao semestre</option><option value="ano">ao ano</option></select></div></div><div class="campo"><label for="jcTempoFaca">Tempo</label><div class="jc-campo-com-unidade"><input id="jcTempoFaca" inputmode="decimal" min="0" placeholder="Ex.: 12" required="" step="any" type="number"/><select aria-label="Unidade do tempo" id="jcUnidadeTempoFaca"><option value="dia">dias</option><option selected="" value="mes">meses</option><option value="trimestre">trimestres</option><option value="semestre">semestres</option><option value="ano">anos</option></select></div></div></div><div class="jc-acoes-faca"><button type="submit">CALCULAR</button><button id="jcLimparFaca" type="button">LIMPAR</button><button id="jcUsarAprenda" type="button">USAR VALORES DO APRENDA</button></div><p hidden="" id="jcErroFaca" role="alert"></p><div aria-live="polite" hidden="" id="jcResultadoFaca"></div><div class="jc-laboratorio-faca" hidden="" id="jcLaboratorioFaca">
+<h4>Laboratório financeiro — simples × compostos</h4><p>Compare o crescimento dos dois regimes usando os mesmos valores.</p>
+<div class="jc-grafico-faca" id="jcGraficoFaca"></div>
+<div class="jc-grafico-detalhado-cabecalho"><h4>Evolução dos juros compostos ao longo do tempo</h4><p>Explore o gráfico e a tabela. Ao selecionar um período em um deles, o mesmo período será destacado no outro.</p></div>
+<div class="jc-grafico-detalhado-area"><div aria-label="Gráfico da evolução do montante nos juros compostos" class="jc-grafico-detalhado" id="jcGraficoDetalhado" role="img"></div></div>
+<div class="jc-periodo-selecionado" id="jcPeriodoSelecionado"><span>Período selecionado</span><strong>Selecione um ponto do gráfico ou uma linha da tabela</strong></div>
+<button aria-expanded="false" class="jc-mostrar-tabela" id="jcMostrarTabela" type="button">Ver evolução período a período</button>
+<div class="jc-tabela-wrap jc-tabela-detalhada" hidden="" id="jcTabelaEvolucao"></div>
+</div></form>
+</div>
+</div>
+<div class="etapa interprete acordeao" id="jcEtapaInterprete">
+<button class="acordeao-titulo" type="button"><span class="acordeao-identidade"><span aria-hidden="true" class="acordeao-icone">🔎</span><span class="acordeao-textos"><strong>INTERPRETE</strong><small>Entenda o que os resultados significam</small></span></span><span aria-hidden="true" class="seta">▼</span></button>
+<div class="acordeao-conteudo"><h3>Leia além do resultado</h3><p>Nos juros compostos, entender <strong>como</strong> o valor cresce é tão importante quanto calcular o montante.</p>
+<div class="subtopico"><button class="subtopico-titulo" type="button"><span>1. Por que os juros aumentam a cada mês?</span><span class="subtopico-seta">▼</span></button><div class="subtopico-conteudo"><p>Um capital de R$ 1.000,00 rende 10% ao mês. Por que os juros do segundo mês são maiores que os do primeiro?</p>
+<label class="alternativa"><input name="jcInterpreteBase" type="radio" value="taxa"/><span>Porque a taxa aumenta a cada mês.</span></label>
+<label class="alternativa"><input name="jcInterpreteBase" type="radio" value="capital"/><span>Porque o capital inicial é alterado manualmente.</span></label>
+<label class="alternativa"><input name="jcInterpreteBase" type="radio" value="saldo"/><span>Porque os juros passam a fazer parte do saldo e também rendem juros.</span></label><button id="jcVerificarInterpreteBase" type="button">VERIFICAR RESPOSTA</button><div aria-live="polite" class="feedback-interpretacao" hidden="" id="jcFeedbackInterpreteBase"></div></div></div>
+<div class="subtopico"><button class="subtopico-titulo" type="button"><span>2. Dobrar o tempo dobra os juros?</span><span class="subtopico-seta">▼</span></button><div class="subtopico-conteudo"><p>Em juros compostos, mantendo o mesmo capital e a mesma taxa, o que acontece quando o tempo dobra?</p>
+<label class="alternativa"><input name="jcInterpreteTempo" type="radio" value="nao"/><span>O crescimento não é proporcional: os juros acumulados também passam a render.</span></label>
+<label class="alternativa"><input name="jcInterpreteTempo" type="radio" value="sempre"/><span>Os juros sempre dobram exatamente.</span></label>
+<label class="alternativa"><input name="jcInterpreteTempo" type="radio" value="igual"/><span>Nada muda, pois a taxa é a mesma.</span></label><button id="jcVerificarInterpreteTempo" type="button">VERIFICAR RESPOSTA</button><div aria-live="polite" class="feedback-interpretacao" hidden="" id="jcFeedbackInterpreteTempo"></div></div></div>
+</div>
+</div>
+<div class="etapa decida acordeao" id="jcEtapaDecida">
+<button class="acordeao-titulo" type="button"><span class="acordeao-identidade"><span aria-hidden="true" class="acordeao-icone">💡</span><span class="acordeao-textos"><strong>DECIDA</strong><small>Compare o custo total antes de escolher</small></span></span><span aria-hidden="true" class="seta">▼</span></button>
+<div class="acordeao-conteudo">
+<h3>Decida usando o custo total</h3>
+<p>Analise três situações diferentes. Em cada uma, compare os valores antes de escolher.</p>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>1. Qual proposta de empréstimo custa menos?</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo"><p>Marina precisa de <strong>R$ 5.000,00</strong> por <strong>12 meses</strong> e recebeu duas propostas com juros compostos.</p><div class="situacao-decisao"><div class="oferta"><h4>Banco A</h4><p><strong>1,5% ao mês</strong>.</p><p>Sem tarifa adicional.</p></div><div class="oferta"><h4>Banco B</h4><p><strong>1,3% ao mês</strong>.</p><p>Tarifa única de <strong>R$ 100,00</strong>.</p></div></div><p><strong>Considerando juros e tarifa, qual proposta resulta no menor valor total?</strong></p>
+<label class="alternativa"><input name="jcDecisao1" type="radio" value="a"/><span>Banco A.</span></label>
+<label class="alternativa"><input name="jcDecisao1" type="radio" value="b"/><span>Banco B.</span></label>
+<label class="alternativa"><input name="jcDecisao1" type="radio" value="iguais"/><span>As duas têm o mesmo custo.</span></label><button id="jcVerificarDecisao1" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jcFeedbackDecisao1"></div></div>
+</div>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>2. À vista ou parcelado?</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo"><p>Um notebook custa <strong>R$ 3.000,00</strong>. A loja oferece <strong>8% de desconto à vista</strong> ou pagamento de R$ 3.000,00 daqui a 6 meses com juros compostos de <strong>1,5% ao mês</strong>.</p><p><strong>Se a pessoa dispõe do dinheiro hoje, qual opção tem o menor custo?</strong></p>
+<label class="alternativa"><input name="jcDecisao2" type="radio" value="prazo"/><span>Deixar para pagar em 6 meses com juros.</span></label>
+<label class="alternativa"><input name="jcDecisao2" type="radio" value="igual"/><span>As duas opções custam o mesmo.</span></label>
+<label class="alternativa"><input name="jcDecisao2" type="radio" value="vista"/><span>Pagar à vista com desconto.</span></label><button id="jcVerificarDecisao2" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jcFeedbackDecisao2"></div></div>
+</div>
+<div class="subtopico">
+<button class="subtopico-titulo" type="button"><span>3. E quando os juros trabalham a seu favor?</span><span class="subtopico-seta">▼</span></button>
+<div class="subtopico-conteudo"><p>Pedro pretende investir <strong>R$ 2.000,00</strong> por 12 meses. Duas aplicações têm a mesma taxa de <strong>1% ao mês</strong>, mas uma usa juros simples e a outra juros compostos.</p><p><strong>Sem considerar impostos ou tarifas, qual tende a gerar o maior montante ao final?</strong></p>
+<label class="alternativa"><input name="jcDecisao3" type="radio" value="compostos"/><span>A aplicação com juros compostos.</span></label>
+<label class="alternativa"><input name="jcDecisao3" type="radio" value="simples"/><span>A aplicação com juros simples.</span></label>
+<label class="alternativa"><input name="jcDecisao3" type="radio" value="igual"/><span>As duas geram exatamente o mesmo montante.</span></label><button id="jcVerificarDecisao3" type="button">VERIFICAR DECISÃO</button><div aria-live="polite" class="feedback-decisao" hidden="" id="jcFeedbackDecisao3"></div></div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="rodape-projeto">
+<span>© 2026 Ajuda nas Finanças | Matemática Financeira e Educação Financeira</span>
+<span>Aprender hoje para um futuro melhor!</span>
+</footer>
+<script src="js/principal.js"></script>
+<script src="js/modulos-acordeao.js"></script>
+<script src="js/modulos/porcentagem/porcentagem.js"></script>
+<script src="js/modulos/juros-simples/juros-simples.js"></script>
+<script src="js/modulos/juros-simples/juros-simples-faca.js"></script>
+<script src="js/modulos/juros-simples/juros-simples-interprete.js"></script>
+<script src="js/modulos/juros-simples/juros-simples-decida.js"></script>
+<script src="js/modulos/juros-simples/juros-simples-progresso.js"></script>
+<script src="js/modulos/juros-compostos/juros-compostos.js"></script>
 </body>
-
 </html>

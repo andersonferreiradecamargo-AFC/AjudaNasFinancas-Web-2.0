@@ -679,7 +679,9 @@ main {
 #verificarDecisaoPagamento,
 #jsVerificarInterpreteJuros,
 #jsVerificarInterpreteTempo,
-#jsVerificarDecisao {
+#jsVerificarDecisao,
+#jsVerificarDecisaoPrazo,
+#jsVerificarDecisaoVista {
     padding: 11px 18px;
     margin-right: 8px;
     margin-top: 8px;
@@ -743,7 +745,9 @@ main {
 #verificarDecisao,
 #verificarDecisaoAumento,
 #verificarDecisaoPagamento,
-#jsVerificarDecisao {
+#jsVerificarDecisao,
+#jsVerificarDecisaoPrazo,
+#jsVerificarDecisaoVista {
     background: #7b28c7;
     color: #fff;
 }
@@ -1134,7 +1138,9 @@ main {
 #verificarDecisao,
 #verificarDecisaoAumento,
 #verificarDecisaoPagamento,
-#jsVerificarDecisao {
+#jsVerificarDecisao,
+#jsVerificarDecisaoPrazo,
+#jsVerificarDecisaoVista {
     background: #7b28c7;
     color: #ffffff;
 }

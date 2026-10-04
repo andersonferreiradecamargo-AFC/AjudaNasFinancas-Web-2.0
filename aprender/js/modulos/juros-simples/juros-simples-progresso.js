@@ -89,12 +89,14 @@
     if (verificarJuros) verificarJuros.addEventListener("click", conferirInterprete);
     if (verificarTempo) verificarTempo.addEventListener("click", conferirInterprete);
 
-    // DECIDA: a alternativa correta é Banco A (valor \"a\").
-    const verificarDecisao = document.getElementById("jsVerificarDecisao");
-    if (verificarDecisao) {
-        verificarDecisao.addEventListener("click", function () {
-            const resposta = document.querySelector('input[name="jsDecisaoEmprestimo"]:checked');
-            if (resposta && resposta.value === "a") concluirJS("decida");
-        });
+    // DECIDA: as três situações precisam estar corretas.
+    function conferirDecida() {
+        const q1 = document.querySelector('input[name="jsDecisaoEmprestimo"]:checked');
+        const q2 = document.querySelector('input[name="jsDecisaoPrazo"]:checked');
+        const q3 = document.querySelector('input[name="jsDecisaoVista"]:checked');
+        if (q1 && q1.value === "a" && q2 && q2.value === "4" && q3 && q3.value === "vista") concluirJS("decida");
     }
+    ["jsVerificarDecisao","jsVerificarDecisaoPrazo","jsVerificarDecisaoVista"].forEach(function(id){
+        const b=document.getElementById(id); if(b) b.addEventListener("click", conferirDecida);
+    });
 })();

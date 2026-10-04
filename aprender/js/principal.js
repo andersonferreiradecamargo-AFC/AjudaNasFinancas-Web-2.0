@@ -1,65 +1,47 @@
 // ==================================================
-// ACORDEÃO PRINCIPAL
+// ACORDEÃO PRINCIPAL — ETAPAS INTERNAS DOS MÓDULOS
+// Todas começam recolhidas. Dentro de cada módulo, no máximo
+// uma etapa (APRENDA, FAÇA, INTERPRETE ou DECIDA) fica aberta.
+// A etapa aberta também pode ser fechada.
 // ==================================================
 
-const botoesAcordeao =
-    document.querySelectorAll(".acordeao-titulo");
+const botoesAcordeao = document.querySelectorAll(".acordeao-titulo");
 
-const primeiraEtapa =
-    document.querySelector(".acordeao");
-
-if (primeiraEtapa) {
-
-    primeiraEtapa.classList.add("aberto");
-
-    const primeiroConteudo =
-        primeiraEtapa.querySelector(".acordeao-conteudo");
-
-    const primeiraSeta =
-        primeiraEtapa.querySelector(".seta");
-
-    primeiroConteudo.style.display = "block";
-    primeiraSeta.textContent = "▲";
-}
+// Estado inicial: todas as etapas internas recolhidas.
+document.querySelectorAll(".acordeao").forEach(function (etapa) {
+    etapa.classList.remove("aberto");
+    const conteudo = etapa.querySelector(":scope > .acordeao-conteudo");
+    const seta = etapa.querySelector(":scope > .acordeao-titulo .seta");
+    if (conteudo) conteudo.style.display = "none";
+    if (seta) seta.textContent = "▼";
+});
 
 botoesAcordeao.forEach(function (botao) {
-
     botao.addEventListener("click", function () {
+        const etapaAtual = botao.parentElement;
+        const moduloAtual = etapaAtual.closest("section.modulo");
+        const conteudoAtual = etapaAtual.querySelector(":scope > .acordeao-conteudo");
+        const setaAtual = botao.querySelector(".seta");
+        const estavaAberto = etapaAtual.classList.contains("aberto");
 
-        const etapaAtual =
-            botao.parentElement;
-
-        const conteudoAtual =
-            etapaAtual.querySelector(".acordeao-conteudo");
-
-        const setaAtual =
-            botao.querySelector(".seta");
-
-        const estavaAberto =
-            etapaAtual.classList.contains("aberto");
-
-        document
-            .querySelectorAll(".acordeao")
-            .forEach(function (etapa) {
-
+        // Fecha somente as etapas irmãs do mesmo módulo.
+        // Assim a regra se repete de forma independente em cada módulo.
+        if (moduloAtual) {
+            moduloAtual.querySelectorAll(":scope > .modulo-corpo > .acordeao").forEach(function (etapa) {
                 etapa.classList.remove("aberto");
-
-                const conteudo =
-                    etapa.querySelector(".acordeao-conteudo");
-
-                const seta =
-                    etapa.querySelector(".seta");
-
-                conteudo.style.display = "none";
-                seta.textContent = "▼";
+                const conteudo = etapa.querySelector(":scope > .acordeao-conteudo");
+                const seta = etapa.querySelector(":scope > .acordeao-titulo .seta");
+                if (conteudo) conteudo.style.display = "none";
+                if (seta) seta.textContent = "▼";
             });
+        }
 
+        // Se clicou em uma etapa que estava fechada, abre-a.
+        // Se clicou na que já estava aberta, todas permanecem fechadas.
         if (!estavaAberto) {
-
             etapaAtual.classList.add("aberto");
-
-            conteudoAtual.style.display = "block";
-            setaAtual.textContent = "▲";
+            if (conteudoAtual) conteudoAtual.style.display = "block";
+            if (setaAtual) setaAtual.textContent = "▲";
         }
     });
 });

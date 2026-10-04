@@ -1,6 +1,6 @@
 // ==================================================
 // ACORDEÃO DOS MÓDULOS — AMBIENTE DE APRENDIZAGEM
-// Mantém somente um módulo aberto por vez.
+// Permite fechar todos os módulos; ao abrir um, os demais são recolhidos.
 // ==================================================
 (function () {
     "use strict";
@@ -54,7 +54,7 @@
         const botao = document.createElement("button");
         botao.type = "button";
         botao.className = "modulo-acordeao-titulo";
-        botao.setAttribute("aria-expanded", indice === 0 ? "true" : "false");
+        botao.setAttribute("aria-expanded", "false");
 
         const numero = String(indice + 1).padStart(2, "0");
         const nomeModulo = titulo.textContent.trim().replace(/^Módulo\s+\d+\s*[—-]\s*/i, "");
@@ -66,18 +66,28 @@
                 <strong>${nomeModulo}</strong>
                 <small>${descricao}</small>
             </span>
-            <span class="modulo-seta" aria-hidden="true">${indice === 0 ? "▲" : "▼"}</span>
+            <span class="modulo-seta" aria-hidden="true">▼</span>
         `;
         botao.setAttribute("aria-label", `Módulo ${indice + 1} — ${nomeModulo}`);
         titulo.replaceWith(botao);
 
-        const abrir = indice === 0;
-        modulo.classList.toggle("modulo-aberto", abrir);
-        corpo.hidden = !abrir;
+        const abrir = false;
+        modulo.classList.remove("modulo-aberto");
+        corpo.hidden = true;
 
         botao.addEventListener("click", function () {
             const jaAberto = modulo.classList.contains("modulo-aberto");
-            if (jaAberto) return;
+
+            // Se o módulo atual já estiver aberto, permite fechá-lo.
+            // Assim, nenhum módulo precisa ficar obrigatoriamente aberto.
+            if (jaAberto) {
+                modulo.classList.remove("modulo-aberto");
+                corpo.hidden = true;
+                botao.setAttribute("aria-expanded", "false");
+                const setaAtual = botao.querySelector(".modulo-seta");
+                if (setaAtual) setaAtual.textContent = "▼";
+                return;
+            }
 
             modulos.forEach(function (outro) {
                 outro.classList.remove("modulo-aberto");
