@@ -2252,3 +2252,53 @@ section.modulo.modulo-aberto > .modulo-corpo:not([hidden]) {
         margin-top: 10px;
     }
 }
+
+/* ========================================
+   PADRÃO TIPOGRÁFICO DOS TEXTOS DIDÁTICOS
+   Parágrafos explicativos alinhados para melhorar a apresentação.
+   Perguntas, alternativas, fórmulas, controles e textos curtos mantêm
+   alinhamento natural para preservar a leitura.
+======================================== */
+.subtopico-conteudo > p,
+.exemplo > p,
+.situacao-interpretacao > p,
+.situacao-decisao > p,
+.feedback-interpretacao > p,
+.feedback-decisao > p,
+.resultado > p,
+.linha-tempo-explicacao {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.65;
+    hyphens: auto;
+}
+
+/* Textos funcionais e respostas não devem ser esticados pelo justificado. */
+.alternativa,
+.campo,
+.conta-exemplo,
+.dica-interacao-juros,
+.visual-porcentagem-cabecalho,
+.visual-porcentagem-campo,
+.js-grafico-cabecalho,
+.js-periodo-selecionado,
+.mensagem-conclusao,
+.modulo-subtitulo {
+    text-align: left;
+}
+
+/* Em telas estreitas o alinhamento à esquerda evita espaços exagerados
+   entre palavras, comuns em parágrafos justificados no celular. */
+@media (max-width: 600px) {
+    .subtopico-conteudo > p,
+    .exemplo > p,
+    .situacao-interpretacao > p,
+    .situacao-decisao > p,
+    .feedback-interpretacao > p,
+    .feedback-decisao > p,
+    .resultado > p,
+    .linha-tempo-explicacao {
+        text-align: left;
+        line-height: 1.6;
+    }
+}
