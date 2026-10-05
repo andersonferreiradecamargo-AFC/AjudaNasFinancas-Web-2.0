@@ -38,11 +38,11 @@
   width:18px; height:18px; min-height:0; flex:0 0 18px; margin:2px 0 0; padding:0;
 }
 #juros-compostos .alternativa span { flex:1; min-width:0; }
-#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo) {
+#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo):not(.modulo-acordeao-titulo) {
   min-height:42px; padding:10px 18px; border:0; border-radius:8px; font:inherit; font-weight:700;
   cursor:pointer; transition:filter .15s ease, transform .05s ease;
 }
-#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo):active { transform:translateY(1px); }
+#juros-compostos button:not(.acordeao-titulo):not(.subtopico-titulo):not(.modulo-acordeao-titulo):active { transform:translateY(1px); }
 #jcEtapaFaca .jc-acoes-faca button, #jcEtapaFaca .jc-mostrar-tabela { background:#1478c9; color:#fff; }
 #jcEtapaFaca #jcLimparFaca { background:#e5edf5; color:#222; }
 #jcEtapaInterprete button:not(.acordeao-titulo):not(.subtopico-titulo) { background:#238b45; color:#fff; }
