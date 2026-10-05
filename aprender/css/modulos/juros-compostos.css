@@ -96,3 +96,33 @@
 #jcEtapaFaca .jc-tabela-detalhada tbody tr { cursor:pointer; }
 #jcEtapaFaca .jc-tabela-detalhada tbody tr.selecionada { background:#cfead8; outline:2px solid #35a765; outline-offset:-2px; }
 @media(max-width:700px){ #jcEtapaFaca .jc-grafico-detalhado-area { min-height:180px; padding:12px 8px; } #jcEtapaFaca .jc-grafico-detalhado { min-height:150px; } #jcEtapaFaca .jc-periodo-valores { grid-template-columns:1fr; } #jcEtapaFaca .jc-grafico-texto { font-size:22px; } }
+
+
+/* Cabeçalho do Módulo 3: mantém exatamente o padrão visual dos demais módulos. */
+#juros-compostos > .modulo-acordeao-titulo {
+  min-height:78px;
+  padding:0 18px 0 0;
+  border:1px solid #2d78b7;
+  border-left:0;
+  border-radius:14px;
+  overflow:hidden;
+  background:linear-gradient(90deg,#e5f2ff 0%,#d9eafa 100%);
+}
+#juros-compostos > .modulo-acordeao-titulo > .modulo-numero {
+  align-self:stretch;
+  flex:0 0 78px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 2px 0 0;
+  padding:0;
+  min-height:0;
+  border:0;
+  border-radius:0;
+  background:linear-gradient(180deg,#126db3 0%,#07558f 100%);
+  color:#fff;
+}
+@media(max-width:600px){
+  #juros-compostos > .modulo-acordeao-titulo { min-height:70px; padding:0 12px 0 0; }
+  #juros-compostos > .modulo-acordeao-titulo > .modulo-numero { flex-basis:62px; }
+}
