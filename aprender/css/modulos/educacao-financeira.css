@@ -1,0 +1,10 @@
+/* Módulo 4 — estilos isolados, mantendo o tema visual existente */
+#educacao-financeira .subtopico-conteudo h4 {margin:1.15rem 0 .3rem; color:#174e65; font-size:1.05rem}
+#educacao-financeira .subtopico-conteudo p {line-height:1.65}
+#educacao-financeira .ef-reflexao,#educacao-financeira .ef-simulacao,#educacao-financeira .ef-cuidado,#educacao-financeira .ef-futuro {padding:1rem; margin:1rem 0; border-radius:12px; background:#e8f5f1; border:1px solid #a7d7c8; color:#183c38}
+#educacao-financeira .ef-reflexao p {margin-bottom:0}
+#educacao-financeira .ef-simulacao label {display:block; margin:.65rem 0; line-height:1.5}
+#educacao-financeira .ef-simulacao input[type=number] {display:block; width:100%; max-width:360px; padding:.7rem; margin:.3rem 0; border:1px solid #8aa9a5; border-radius:8px; background:#fff; color:#142f35; font:inherit}
+#educacao-financeira .ef-simulacao input[type=checkbox] {width:1.1rem; height:1.1rem; vertical-align:middle; accent-color:#137e65}
+#educacao-financeira .ef-simulacao small {display:block;line-height:1.5}
+@media(max-width:600px){#educacao-financeira .ef-simulacao,#educacao-financeira .ef-reflexao {padding:.8rem}#educacao-financeira .ef-simulacao input[type=number]{max-width:100%}}
