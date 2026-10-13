@@ -8,3 +8,99 @@
 #educacao-financeira .ef-simulacao input[type=checkbox] {width:1.1rem; height:1.1rem; vertical-align:middle; accent-color:#137e65}
 #educacao-financeira .ef-simulacao small {display:block;line-height:1.5}
 @media(max-width:600px){#educacao-financeira .ef-simulacao,#educacao-financeira .ef-reflexao {padding:.8rem}#educacao-financeira .ef-simulacao input[type=number]{max-width:100%}}
+
+/* FAÇA: orçamento interativo */
+.ef-orcamento{max-width:900px;margin:auto}.ef-orcamento h4{margin:1.3rem 0 .55rem}.ef-resumo-fixo,.ef-painel-saldo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}.ef-resumo-fixo span,.ef-painel-saldo>div{background:#eaf2fa;color:#173b5b;border-radius:10px;padding:.8rem;display:flex;flex-direction:column;gap:.4rem}.ef-painel-saldo strong{font-size:1.15rem}.ef-categorias{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}.ef-categoria{padding:.9rem .5rem;border:2px solid #a9bdd0;border-radius:12px;background:#f5f9fd;color:#173b5b;cursor:pointer;font-weight:700}.ef-categoria.selecionada{border-color:#147f6a;background:#ddf4eb}.ef-categoria:disabled{opacity:.5;cursor:not-allowed}.ef-item-gasto{margin:1rem 0;padding:.7rem;border-radius:10px;background:#f1f6fb}.ef-linha-valor{display:flex;justify-content:space-between;align-items:center;gap:1rem}.ef-linha-valor label{font-weight:600}.ef-linha-valor input{width:135px;max-width:45%;padding:.6rem;border:1px solid #7997b3;border-radius:8px;background:white;color:#152f46;font-size:1rem}.ef-orcamento input[type=range]{width:100%;accent-color:#147f6a;margin:.7rem 0}.ef-orcamento .ef-invalido{outline:2px solid #b91c1c}.ef-negativo{color:#b91c1c!important}.ef-barra-orcamento{height:13px;background:#d9e2ec;border-radius:20px;overflow:hidden;display:flex}.ef-barra-orcamento #ef-barra-gastos{background:#397fca}.ef-barra-orcamento #ef-barra-guardado{background:#209d75}.ef-acoes{display:flex;flex-wrap:wrap;gap:.6rem;margin:1rem 0}.ef-acoes button{padding:.75rem 1rem;border:0;border-radius:9px;background:#176d9a;color:white;font-weight:700;cursor:pointer}.ef-acoes button+button{background:#415a70}.ef-resultado,.ef-historico{border:1px solid #a6bdcf;border-radius:12px;padding:1rem;margin-top:1rem;background:#f5f9fc;color:#173b5b}.ef-resultado[hidden],.ef-historico[hidden]{display:none}.ef-nota{font-size:.9rem;color:inherit;opacity:.85}@media(max-width:600px){.ef-categorias{grid-template-columns:repeat(2,minmax(0,1fr))}.ef-resumo-fixo,.ef-painel-saldo{grid-template-columns:1fr}.ef-linha-valor{align-items:flex-start;flex-direction:column}.ef-linha-valor input{max-width:100%;width:100%}}
+
+/* FAÇA Educação Financeira — harmonização com o tema azul do portal */
+#educacao-financeira #efEtapaFAÇA .acordeao-titulo{
+  background:linear-gradient(90deg,#acd4ff 0%,#c9e3ff 100%);
+  color:#07548b;
+}
+#educacao-financeira #efEtapaFAÇA .acordeao-conteudo{
+  background:#c9e3ff;
+  color:#102f49;
+}
+#educacao-financeira .ef-resumo-fixo span,
+#educacao-financeira .ef-painel-saldo>div{
+  background:#f5faff;
+  border:1px solid #a9cbea;
+  color:#123d62;
+}
+#educacao-financeira .ef-categoria{
+  background:#f4f9ff;
+  border-color:#a0c2e5;
+  color:#124e80;
+}
+#educacao-financeira .ef-categoria.selecionada{
+  background:#d6eaff;
+  border-color:#126aa7;
+  color:#074c7e;
+}
+#educacao-financeira .ef-categoria:focus-visible,
+#educacao-financeira .ef-acoes button:focus-visible{
+  outline:3px solid #124e80;
+  outline-offset:2px;
+}
+#educacao-financeira .ef-item-gasto{
+  background:#f5faff;
+  border:1px solid #bad4ed;
+}
+#educacao-financeira .ef-linha-valor input{
+  border-color:#739fc5;
+}
+#educacao-financeira .ef-orcamento input[type=range]{
+  accent-color:#176d9a;
+}
+#educacao-financeira .ef-acoes button{
+  background:#195a7d;
+}
+#educacao-financeira .ef-acoes button+button{
+  background:#315e7d;
+}
+#educacao-financeira .ef-resultado,
+#educacao-financeira .ef-historico{
+  background:#f2f8ff;
+  border-color:#94bee0;
+}
+
+/* FAÇA — paleta Azul Névoa (opção A), harmonizada com Juros Simples */
+#educacao-financeira #efEtapaFAÇA .acordeao-conteudo {
+  background:#CCE3F9;
+  color:#103F69;
+}
+#educacao-financeira .ef-resumo-fixo span,
+#educacao-financeira .ef-painel-saldo>div,
+#educacao-financeira .ef-item-gasto {
+  background:#DDEBF8;
+  border:1px solid #99BEDD;
+  color:#103F69;
+}
+#educacao-financeira .ef-categoria {
+  background:#DDEBF8;
+  border:2px solid #99BEDD;
+  color:#174C76;
+}
+#educacao-financeira .ef-categoria.selecionada {
+  background:#B9DAF5;
+  border-color:#126AA7;
+  color:#073F6D;
+}
+#educacao-financeira .ef-categoria:disabled {
+  opacity:.7;
+}
+#educacao-financeira .ef-resultado,
+#educacao-financeira .ef-historico {
+  background:#DDEBF8;
+  border:1px solid #99BEDD;
+  color:#103F69;
+}
+#educacao-financeira .ef-linha-valor input {
+  background:#fff;
+  border:1px solid #7EA9CE;
+  color:#103F69;
+}
+#educacao-financeira .ef-linha-valor input:focus-visible {
+  outline:2px solid #126AA7;
+  outline-offset:2px;
+}
