@@ -104,3 +104,88 @@
   outline:2px solid #126AA7;
   outline-offset:2px;
 }
+
+/* INTERPRETE — Educação Financeira, isolado do FAÇA */
+#educacao-financeira #efEtapaINTERPRETE .acordeao-conteudo{background:#c5efcf;color:#16472c}
+#educacao-financeira .ef-interprete{max-width:900px;margin:0 auto;line-height:1.6}
+#educacao-financeira .ef-i-resumo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem;margin:1rem 0}
+#educacao-financeira .ef-i-resumo>div{background:#d9f2df;border:1px solid #6dbb83;border-radius:11px;padding:.85rem;display:flex;flex-direction:column;gap:.3rem}
+#educacao-financeira .ef-i-resumo strong{font-size:1.25rem}
+#educacao-financeira .ef-i-negativo{color:#a71e32}
+#educacao-financeira .ef-i-grafico{background:#e8f7ec;border:1px solid #6dbb83;border-radius:12px;padding:1rem;margin:.7rem 0}
+#educacao-financeira .ef-i-barra{display:grid;grid-template-columns:115px minmax(0,1fr) 75px;gap:.6rem;align-items:center;margin:.7rem 0}
+#educacao-financeira .ef-i-barra span{font-weight:600}
+#educacao-financeira .ef-i-barra strong{text-align:right;white-space:nowrap}
+#educacao-financeira .ef-i-trilho{height:19px;border-radius:5px;background:#b6dfc2;overflow:hidden}
+#educacao-financeira .ef-i-trilho>div{height:100%;background:#23864a;border-radius:5px}
+#educacao-financeira .ef-i-nota{font-size:.92rem}
+#educacao-financeira .ef-i-questao{background:#d9f2df;border:1px solid #6dbb83;border-radius:12px;padding:1rem;margin:1rem 0}
+#educacao-financeira .ef-i-questao fieldset{border:0;padding:0;margin:0;min-width:0}
+#educacao-financeira .ef-i-questao legend{font-weight:700;padding:0;margin-bottom:.6rem}
+#educacao-financeira .ef-i-opcao{display:flex;gap:.65rem;align-items:flex-start;background:#edf9f0;border:1px solid #78bd8d;border-radius:9px;padding:.7rem;margin:.45rem 0;cursor:pointer}
+#educacao-financeira .ef-i-opcao input{margin-top:.32rem;accent-color:#187c40;flex-shrink:0}
+#educacao-financeira .ef-i-feedback{background:#f1faf3;border-left:4px solid #21864a;padding:.75rem;border-radius:5px;margin-top:.65rem}
+#educacao-financeira .ef-i-feedback.correto{border-left-color:#18835d}
+#educacao-financeira .ef-i-feedback[hidden],#educacao-financeira .ef-i-conclusao[hidden]{display:none}
+#educacao-financeira .ef-i-conclusao{background:#dcefe7;border:1px solid #84baa5;padding:.9rem;border-radius:10px}
+#educacao-financeira .ef-i-opcao:focus-within{outline:2px solid #187c40;outline-offset:2px}
+@media(max-width:600px){#educacao-financeira .ef-i-resumo{grid-template-columns:1fr}#educacao-financeira .ef-i-barra{grid-template-columns:1fr auto;gap:.25rem .6rem}#educacao-financeira .ef-i-trilho{grid-column:1 / -1;grid-row:2}#educacao-financeira .ef-i-barra strong{grid-column:2;grid-row:1}#educacao-financeira .ef-i-grafico{padding:.7rem}}
+
+/* INTERPRETE — contraste e estados de interação, sem alterar as outras etapas */
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:hover{background:#d1efd9;border-color:#348e54}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:has(input:checked){background:#b9e6c6;border:2px solid #237e45;padding:calc(.7rem - 1px)}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback{color:#16472c;background:#e7f6eb;border-color:#25824a}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback.correto{background:#d1f0dc;border-left-color:#16733c}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-conclusao{background:#d1efdb;border-color:#63ae7a;color:#16472c}
+
+/* INTERPRETE Educação Financeira — harmonização com os demais INTERPRETE.
+   Mesmo fundo verde nos cartões, questões e alternativas; sem branco interno. */
+#educacao-financeira #efEtapaINTERPRETE .ef-i-resumo>div,
+#educacao-financeira #efEtapaINTERPRETE .ef-i-grafico,
+#educacao-financeira #efEtapaINTERPRETE .ef-i-questao,
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao {background:#c5efcf;color:#16472c;border-color:#62c17a}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:hover{background:#b8e9c4;border-color:#348e54}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:has(input:checked){background:#a5e6b5;border:1px solid #238047;padding:.7rem}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-verificar{background:#2f9b5d;color:#fff;border:none;border-radius:8px;padding:11px 18px;margin-right:8px;margin-top:8px;font-size:.98rem;font-family:inherit;font-weight:800;cursor:pointer}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-verificar:hover{background:#25834e}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-verificar:focus-visible{outline:3px solid #16472c;outline-offset:3px}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback{background:#c5efcf;border:1px solid #62c17a;border-left:4px solid #238047}
+
+/* INTERPRETE — opções sem efeito esbranquiçado (padrão aprovado) */
+#educacao-financeira #efEtapaINTERPRETE .ef-i-questao,
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao {
+  background-color:#c5efcf;
+  color:#16472c;
+}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao {
+  border:1px solid #58ad72;
+}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:hover {
+  background-color:#b9e9c5;
+}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-opcao:has(input:checked) {
+  background-color:#a6dfb7;
+  border-color:#237e45;
+}
+
+/* INTERPRETE Educação Financeira — perguntas em acordeão, como Juros Simples/Compostos */
+#educacao-financeira #efEtapaINTERPRETE details.ef-i-questao {
+  padding:0; overflow:hidden; border:1px solid #62c17a; border-radius:11px;
+  margin:.65rem 0; background:#c5efcf;
+}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-titulo {
+  display:list-item; list-style:none; cursor:pointer; padding:.8rem 1rem;
+  font-weight:700; background:#bceac8; color:#103f2a;
+  min-height:48px; box-sizing:border-box;
+}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-titulo::-webkit-details-marker {display:none}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-titulo::after {content:'▼'; float:right; margin-left:.7rem; font-size:.8rem}
+#educacao-financeira #efEtapaINTERPRETE details[open]>.ef-i-titulo::after {content:'▲'}
+#educacao-financeira #efEtapaINTERPRETE details[open]>.ef-i-titulo {border-bottom:1px solid #62c17a}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-titulo:focus-visible {outline:3px solid #187c40;outline-offset:-3px}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-corpo {padding:1rem}
+@media(max-width:600px){
+ #educacao-financeira #efEtapaINTERPRETE .ef-i-titulo {padding:.85rem .75rem}
+ #educacao-financeira #efEtapaINTERPRETE .ef-i-corpo {padding:.7rem}
+ #educacao-financeira #efEtapaINTERPRETE .ef-i-opcao {min-height:44px;box-sizing:border-box}
+}
