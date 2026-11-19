@@ -1,0 +1,123 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:#152d45;background:#eff5fa;line-height:1.55}.top{background:linear-gradient(125deg,#0752a2,#072c66);color:white;padding:18px 20px 27px;text-align:center}.top-inner{max-width:950px;margin:auto}.back{display:block;color:#d9eeff;text-align:left;font-weight:650;text-decoration:none;font-size:.9rem}.brand{font-size:clamp(2.6rem,7vw,4.3rem);line-height:1;font-weight:1000;letter-spacing:2px;color:#ffdd46;text-shadow:3px 4px #073067;margin-top:9px}.brand span{font-size:.6em}.top p{font-size:1.2rem;margin:3px 0 10px;font-weight:700}.test{display:inline-block;background:#ffffff22;padding:3px 12px;border-radius:20px;font-size:.75rem}.shell{max-width:950px;margin:22px auto;padding:0 14px 36px}.panel{background:white;border-radius:19px;padding:clamp(17px,4vw,28px);box-shadow:0 5px 20px #153d6714;margin:15px 0;border:1px solid #d8e5f0}.panel h2{margin:0 0 8px;color:#074e96;font-size:1.5rem}.panel h3{margin:0 0 10px;color:#164c7a}.muted{color:#506679}.hero{background:linear-gradient(135deg,#fff7d3,#e9f4ff);border:2px solid #f5d874}.pill{display:inline-block;background:#d8edff;color:#07539d;border-radius:30px;padding:4px 12px;font-weight:800;font-size:.84rem}.step{display:flex;gap:5px;margin:14px 0}.step i{height:9px;background:#d8e4ed;flex:1;border-radius:9px}.step i.done{background:#159d73}.step i.active{background:#f6b91a}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.stat{border-radius:14px;background:#eff7ff;padding:12px;border:1px solid #d9e8f7}.stat b{display:block;font-size:1.25rem;color:#075197}.stat small{color:#4a6378}.stat.green{background:#ecf8f0}.stat.green b{color:#166b47}.stat.yellow{background:#fff8e3}.stat.yellow b{color:#845500}.stat.purple{background:#f4efff}.stat.purple b{color:#65419c}.options{display:grid;gap:10px;margin:15px 0}.option{display:block;padding:14px;border:2px solid #d5e5f2;border-radius:13px;cursor:pointer;background:#fbfdff}.option:has(input:checked){border-color:#0877c9;background:#eaf5ff}.option input{accent-color:#096bb2;margin-right:9px}.option strong{display:block;margin-left:24px}.option small{display:block;margin-left:24px;color:#536a7b}.btn{border:0;border-radius:12px;background:#0875c4;color:white;font-weight:800;padding:12px 20px;cursor:pointer;font-size:1rem}.btn:hover{background:#07568f}.btn.alt{background:#e7f1f9;color:#155180}.btn.green{background:#13835e}.btn:disabled{background:#a7b8c6;cursor:not-allowed}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.row{display:flex;justify-content:space-between;gap:15px;align-items:center}.field{display:grid;gap:5px;font-weight:700}.field input,.field select{font:inherit;width:100%;padding:10px;border:2px solid #b9d2e5;border-radius:10px;background:white;color:#142f45}.alloc{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.notice{background:#fff4d6;border-left:5px solid #e4a81d;padding:12px 15px;border-radius:10px}.success{background:#e6f6ed;border-left:5px solid #15945c;padding:12px 15px;border-radius:10px}.danger{background:#ffefed;border-left:5px solid #cb5749;padding:12px 15px;border-radius:10px}.small{font-size:.9rem}details{margin-top:14px;border:1px solid #cddfeb;border-radius:12px;padding:11px 14px}summary{cursor:pointer;font-weight:800;color:#07569c}ul{padding-left:22px}footer{text-align:center;color:#62798b;padding:20px;font-size:.85rem}.score{font-size:3.5rem;font-weight:1000;color:#0868b2;line-height:1.1}.bar{height:12px;background:#e1eaf2;border-radius:20px;overflow:hidden}.bar span{display:block;height:100%;background:#18956f;border-radius:20px}.illustration{width:100%;max-height:290px;object-fit:cover;border-radius:15px;margin:10px 0}.story{font-size:1.08rem}.divider{border-top:1px solid #dce8f1;margin:15px 0}.help{color:#42617a}.check{color:#16794e;font-weight:800}@media(max-width:600px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.alloc{grid-template-columns:1fr}.stat b{font-size:1.04rem}.shell{margin-top:10px}.row{align-items:flex-start}.brand{letter-spacing:0}}
+/* DECIDA 0.3 — ilustrações integradas à interface responsiva */
+.top{background:linear-gradient(125deg,#0752a2,#082d6d 70%);border-bottom:6px solid #f6c839}
+.brand{font-size:clamp(3rem,7vw,4.6rem);color:#ffda3b;text-shadow:3px 4px #05275e}
+.hero{background:linear-gradient(120deg,#fff8db 0%,#f0f8ff 100%)}
+.cena{position:relative;margin:-14px -14px 19px;overflow:hidden;border-radius:15px 15px 12px 12px;background:#f8eec7}
+.cena img{display:block;width:100%;height:clamp(175px,27vw,275px);object-fit:cover;object-position:center 38%}
+.cena figcaption{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,#0a335cb8);color:white;font-weight:700;padding:22px 15px 9px;font-size:.84rem}
+.visual-hero h2{color:#0751a2}
+.panel{border-color:#d0e3f2;box-shadow:0 6px 23px #16416a16}
+.stat{border-width:2px}.stat.green{border-color:#b7dfc4}.stat.yellow{border-color:#f4df9d}.stat.purple{border-color:#dfc6f1}
+.btn.green{background:linear-gradient(135deg,#119668,#08724d);box-shadow:0 3px 0 #075c42}
+.option{transition:background .12s,border-color .12s}.option:hover{background:#eef7ff;border-color:#78b8e9}
+.resultado-trajetoria{border-radius:14px;padding:12px 16px;margin:14px 0;background:#e5f7ed;border:1px solid #b7dfc5}
+.resultado-trajetoria.reflexao{background:#fff4d8;border-color:#e4d39a}
+.resultado-trajetoria.atencao{background:#fce9df;border-color:#f0c6b4}
+.resultado-trajetoria p{margin:5px 0 0}
+@media(max-width:600px){.cena{margin:-7px -7px 15px}.cena img{height:175px}.cena figcaption{font-size:.75rem}.panel{padding:16px}}
+
+.credit-box{background:#f0f7ff;border:1px solid #a8cde8;border-radius:14px;padding:16px;margin:20px 0}.credit-box h3{color:#0b5797;margin:0 0 7px}.credit-box .alloc{margin-top:12px}@media(max-width:600px){.credit-box .alloc{grid-template-columns:1fr!important}}
+
+/* V0.7 - personagens e orientador */
+.avatares{display:flex;gap:12px;flex-wrap:wrap}.avatar-opcao{display:flex;align-items:center;flex-direction:column;gap:7px;padding:10px;border:2px solid #cbd5d1;border-radius:15px;cursor:pointer;min-width:118px;background:#fff}.avatar-opcao:has(input:checked){border-color:#187653;background:#e7f6ee;box-shadow:0 0 0 2px #18765333}.avatar-opcao input{accent-color:#187653}.avatar-opcao img{width:94px;height:94px;object-fit:contain}.orientador{display:flex;align-items:center;gap:13px;padding:13px;margin:14px 0;background:#eaf5f2;border-left:4px solid #257b65;border-radius:12px}.orientador img{width:76px;height:76px;flex-shrink:0}.orientador p{margin:5px 0 0;line-height:1.45}@media(max-width:480px){.orientador{align-items:flex-start}.orientador img{width:58px;height:58px}.avatares{justify-content:center}}
+
+/* V0.8: ilustrações responsivas sem distorção e aviso de endividamento */
+.cena img{object-fit:contain;background:#f8eec7;height:auto;max-height:310px}.cena{max-width:760px;margin-left:auto;margin-right:auto}.avatares img{object-fit:contain}.orientador img{object-fit:contain}@media(max-width:600px){.cena img{height:auto;max-height:235px}}
+
+/* V0.9: personagens visíveis e imagens adaptáveis */
+.avatares{display:grid;grid-template-columns:repeat(2,minmax(115px,1fr));gap:14px;width:100%;max-width:440px}
+.avatar-opcao{min-width:0;min-height:170px;justify-content:center;transition:border-color .15s ease}
+.avatar-opcao img{width:110px;height:110px;max-width:100%;object-fit:contain}
+.orientador{gap:16px;max-width:100%;overflow:hidden}
+.orientador div{min-width:0;flex:1}
+.orientador img{object-fit:contain;border-radius:10px;background:#fff}
+.cena img{width:100%;height:auto;object-fit:contain;display:block}
+@media(max-width:420px){.avatares{gap:8px}.avatar-opcao{padding:8px;min-height:150px}.avatar-opcao img{width:86px;height:86px}.orientador{gap:10px}}
+
+/* v1.0 — organização inspirada nas telas de referência enviadas */
+body{background:#f8f4ed;color:#112e50}.top{background:linear-gradient(125deg,#07346b,#07519a);border-bottom:5px solid #f6c839}.shell{max-width:1100px}.panel{background:#fffdfa;border:1px solid #e9e1d7;box-shadow:0 6px 22px #493e2b12}.panel h2{color:#073b91;font-weight:850}.panel h3{color:#095c48}.visual-hero{background:linear-gradient(130deg,#fff7e7,#edf8ff)}.cena{max-width:100%;background:#fff7e9}.cena img{max-height:355px;object-fit:cover}.inicio-escolhas{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:start}.inicio-personagens h3{margin-bottom:12px}.avatar-opcao{background:linear-gradient(#eaf5ff,#fff);border:2px solid #cbd5e4;min-height:220px}.avatar-opcao:has(input:checked){border-color:#1481ed;background:#e6f4ff;box-shadow:0 0 0 2px #1481ed33}.avatar-opcao img{width:100%;max-width:170px;height:155px;object-fit:cover;object-position:center top;border-radius:12px}.avatar-opcao input{accent-color:#087be6}.orientador{background:linear-gradient(105deg,#e0f3ff,#edfaff);border-left:0;border-radius:18px}.orientador img{width:92px;height:100px;object-fit:cover;object-position:top center;background:#bde6ff}.inicio-orientador{margin-top:15px}.stat{background:#eef6ff}.stat b{color:#053b88}.btn.green{background:linear-gradient(135deg,#24a267,#057341);font-size:1.07rem}.panel details[open]{background:#f5faff}.panel details li{margin:8px 0}.panel .success{background:#e8f7ef}.resultado-trajetoria{font-size:1.03rem}@media(max-width:650px){.inicio-escolhas{grid-template-columns:1fr}.avatar-opcao{min-height:175px}.avatar-opcao img{height:125px}.cena img{max-height:250px;object-fit:contain}.orientador img{width:70px;height:78px}}
+
+/* v1.2 — tela final compacta e responsiva */
+.fim-painel{background:linear-gradient(125deg,#f7fbff,#eaf6ff);padding-bottom:20px}
+.fim-intro{margin:2px 0 14px;color:#385572}
+.fim-resumo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:12px}
+.fim-placar,.fim-reflexao{border:1px solid #cde8fa;border-radius:17px;padding:16px;background:#fff;min-width:0}
+.fim-placar{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.fim-placar img{width:96px;height:108px;object-fit:cover;object-position:top;border-radius:12px;background:#d5eeff;flex-shrink:0}
+.fim-legenda{font-size:1rem;font-weight:850;color:#073b83}
+.fim-numero{font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.2;color:#0865b8;font-weight:900;white-space:nowrap}
+.fim-numero small{font-size:.35em}
+.fim-status{display:inline-block;background:#d9f6e3;color:#075b3e;border-radius:20px;padding:4px 9px;font-weight:750;font-size:.78rem}
+.fim-reflexao{background:#e8f7ff}.fim-reflexao strong{color:#073b83}.fim-reflexao p{margin:6px 0 0}
+.fim-proximos{background:#fff3d7;border:1px solid #f1d899;border-radius:15px;padding:12px 16px;margin:12px 0}.fim-proximos p{margin:4px 0 0}
+.fim-subtitulo{margin:17px 0 9px!important;color:#073b83!important}
+.fim-criterios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.fim-criterio{margin:0!important;padding:0!important;background:#fff;border:1px solid #bcdff1!important;overflow:hidden}
+.fim-criterio summary{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:11px;font-size:.88rem;list-style:none}
+.fim-criterio summary::-webkit-details-marker{display:none}
+.fim-criterio summary strong{white-space:nowrap;color:#075eaa}.fim-criterio summary small{font-size:.75em;color:#647d94}
+.fim-criterio-corpo{padding:0 11px 10px}.fim-criterio-corpo p{font-size:.8rem;margin:6px 0 0}
+.fim-metodo{margin-top:12px}.fim-nota{font-size:.78rem;color:#4f6680;margin:12px 0 0}
+@media(max-width:650px){.fim-painel{padding:12px}.fim-painel .cena{margin:0 0 10px}.fim-painel h2{font-size:1.22rem}.fim-intro{font-size:.85rem}.fim-resumo{grid-template-columns:1fr;gap:8px}.fim-placar,.fim-reflexao{padding:10px 12px}.fim-placar img{width:76px;height:82px}.fim-numero{font-size:2.6rem}.fim-reflexao{font-size:.88rem}.fim-proximos{padding:10px 12px;font-size:.88rem}.fim-criterios{grid-template-columns:1fr;gap:6px}.fim-criterio summary{padding:9px 11px}.fim-subtitulo{font-size:1.05rem}.fim-painel .cena img{max-height:160px}}
+
+/* DECIDA 1.5: despesas consultáveis no próprio cartão */
+.despesas-stat{min-width:0}.despesas-abertas summary{cursor:pointer;list-style:none;line-height:1.45}.despesas-abertas summary::-webkit-details-marker{display:none}.despesas-abertas summary strong{display:block;font-size:1.15rem;margin:.3rem 0}.despesas-abertas summary .small{display:block;font-size:.76rem;opacity:.8}.lista-despesas{margin-top:12px;padding-top:8px;border-top:1px solid #ddd;font-size:.84rem}.lista-despesas>div{display:flex;justify-content:space-between;gap:12px;padding:6px 0}.lista-despesas strong{white-space:nowrap}.lista-despesas .total-despesas{border-top:1px solid #ccc;margin-top:5px;padding-top:10px;font-weight:700}
+
+/* v1.6.2: todas as mensagens do orientador no mesmo cartão */
+.orientador-conteudo{min-width:0;flex:1}
+.orientador-linha{margin-top:11px;padding-top:10px;border-top:1px solid #b9d9e8;line-height:1.5;overflow-wrap:anywhere}
+.orientador-linha strong{color:#074e83}
+@media(max-width:480px){.orientador{gap:10px}.orientador-linha{margin-top:9px;padding-top:9px}}
+
+/* V1.7: alternativas mais compactas, preservando área de toque */
+.options{gap:7px;margin:10px 0}.option{padding:9px 12px;min-height:65px}.option strong,.option small{margin-left:23px}.option small{line-height:1.35}.option input{margin-right:7px}
+
+/* v1.8 — resultados integrados, leitura compacta */
+.fechamento-unificado{padding-bottom:18px}.fechamento-unificado .orientador{margin:8px 0 0;padding:11px 13px;border-radius:14px 14px 0 0}.resultado-unico{background:linear-gradient(110deg,#e0f3ff,#edfaff);border-radius:15px;overflow:hidden}.resultado-financas{padding:0 14px 12px}.resultado-financas h3{font-size:1rem;margin:8px 0}.resultado-financas .grid{gap:8px}.resultado-financas .stat{padding:9px 11px}.resultado-financas .stat b{font-size:1.05rem}.resultado-financas details{margin-top:10px;background:#ffffffa8}.fechamento-unificado .actions{margin-top:12px}.fim-reflexao .fim-proximos{margin:12px 0 0;padding:10px 12px;border-radius:10px}.fim-reflexao .fim-proximos p{margin:4px 0 0}.fim-painel .fim-subtitulo{margin-top:13px}@media(max-width:600px){.resultado-financas{padding:0 9px 10px}.resultado-financas .stat{padding:8px}.resultado-financas .stat b{font-size:.93rem}.fechamento-unificado .orientador{padding:10px}.fim-reflexao .fim-proximos{padding:8px}}
+
+/* V1.12: mostrar integralmente a arte de conquista, sem cortar o texto */
+.cena img[src*="familia-conquista"]{height:auto;max-height:none;object-fit:contain;object-position:center}
+
+/* V1.13 teste: compactação sem cortar personagens ou texto embutido */
+.contas-abertura{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.contas-abertura img{width:150px;max-height:100px;object-fit:cover;border-radius:12px;flex-shrink:0}
+.contas-abertura h2{margin:0 0 4px}.contas-abertura p{margin:0}
+.contas-painel .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.contas-painel .stat{padding:10px}.contas-painel .stat b{font-size:1.1rem}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.fechamento-unificado .cena,.fim-painel .cena{max-width:680px;margin:0 auto 10px;border-radius:12px}
+.fechamento-unificado .cena img,.fim-painel .cena img,.cena img[src*="familia-conquista"]{display:block;width:100%;height:auto;max-height:175px;object-fit:contain;object-position:center}
+.fechamento-unificado h2,.fim-painel h2{margin:6px 0 9px}
+.fechamento-unificado .orientador{padding:8px 11px;margin:4px 0 0;gap:10px}
+.fechamento-unificado .orientador img{width:60px;height:66px}
+.fechamento-unificado .orientador-linha{margin-top:5px;padding-top:5px;line-height:1.3}
+.fechamento-unificado .orientador p{line-height:1.3}
+.fim-painel .fim-placar,.fim-painel .fim-reflexao{padding:10px 12px}
+.fim-painel .fim-criterio summary{padding:8px 10px}
+.fim-painel .fim-intro{margin:2px 0 8px}
+.fim-painel .fim-proximos{margin-top:7px}
+@media(max-width:650px){.contas-abertura img{width:92px;max-height:80px}.contas-painel .grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fechamento-unificado .cena img,.fim-painel .cena img,.cena img[src*="familia-conquista"]{max-height:130px}.fim-painel .fim-criterios{grid-template-columns:1fr}}
+
+/* V1.14: família contextual e telas de resultado aprovadas, responsivas */
+.fechamento-novo,.fim-painel{background:linear-gradient(135deg,#f7fbff,#edf8ff)}
+.historia-contextual{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);align-items:center;gap:18px;background:#f0f8ff;border:1px solid #cde6fa;border-radius:16px;padding:14px 18px;margin-bottom:10px}
+.historia-texto h2{color:#083e8c;margin:7px 0;font-size:clamp(1.18rem,2.2vw,1.65rem)}.historia-texto p{margin:5px 0;line-height:1.45}
+.historia-etiqueta{display:inline-block;padding:5px 11px;border-radius:30px;background:#c5e3ff;color:#063b8b;font-weight:850;font-size:.8rem}
+.familia-contextual{margin:0;min-width:0;display:flex;justify-content:center;align-items:center}
+.familia-contextual img{display:block;width:100%;max-width:355px;max-height:188px;object-fit:contain;border-radius:13px}
+.orientacao-compacta .orientador{display:flex;align-items:center;margin:8px 0 12px;padding:9px 12px;background:#fff7df;border:1px solid #f2dfa5;border-left:0;border-radius:13px;gap:13px}
+.orientacao-compacta .orientador img{width:76px;height:82px;object-fit:contain;flex-shrink:0;background:transparent}
+.orientacao-compacta .orientador p{margin:3px 0}.orientacao-compacta .orientador-linha{margin-top:5px;padding-top:5px}
+.fechamento-novo h3{margin:8px 0;color:#073b83}
+.resumo-compacto{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.resumo-card{border:1px solid #b9dff7;background:#eaf6ff;border-radius:13px;padding:11px;min-width:0}
+.resumo-card:nth-child(2){background:#eaf9f3;border-color:#b7e8d4}.resumo-card:nth-child(3){background:#fff1f1;border-color:#f4d0d0}.resumo-card:nth-child(4){background:#fff8e5;border-color:#f1dda3}
+.resumo-card span{display:block;color:#063b82;font-size:.82rem;font-weight:750}.resumo-card strong{display:block;color:#063b82;font-size:clamp(.85rem,1.4vw,1.08rem);margin-top:5px;overflow-wrap:anywhere}
+.movimentos-compactos{margin-top:10px}.resultado-acoes{display:flex;justify-content:flex-end;margin-top:12px}
+.fim-painel>.historia-contextual{margin-bottom:12px}.fim-painel .fim-criterios{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:650px){.historia-contextual{grid-template-columns:1fr;gap:8px;padding:11px}.historia-texto{order:0}.familia-contextual{order:1}.familia-contextual img{width:100%;max-width:310px;max-height:150px}.orientacao-compacta .orientador{align-items:center;gap:9px;padding:8px}.orientacao-compacta .orientador img{width:65px;height:72px}.orientacao-compacta .orientador-conteudo{font-size:.85rem}.resumo-compacto{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.resumo-card{padding:9px}.resumo-card span{font-size:.75rem}.resumo-card strong{font-size:.93rem}.fim-painel .fim-criterios{grid-template-columns:1fr}}
+
+/* Laboratório: decisão compacta integrada visualmente ao orçamento */
+.contas-compactas{margin-top:18px;padding:14px;border:1px solid #c7dded;border-radius:14px;background:#f6fbff}
+.contas-compactas h3{margin:0 0 6px}.contas-compactas .options{display:grid;gap:8px;margin:10px 0}.contas-compactas .option{padding:10px 12px}.contas-compactas details{margin:8px 0 14px}.contas-compactas .btn{margin-top:8px}

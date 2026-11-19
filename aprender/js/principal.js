@@ -1,3 +1,15 @@
+// Reenquadra a opção escolhida após o recolhimento de conteúdos anteriores.
+// Não depende da altura da imagem do bônus nem da posição anterior da página.
+function enquadrarTitulo(botao) {
+    requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+            if (!botao.isConnected) return;
+            const topo = botao.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({ top: Math.max(0, topo - 90), behavior: "auto" });
+        });
+    });
+}
+
 // ==================================================
 // ACORDEÃO PRINCIPAL — ETAPAS INTERNAS DOS MÓDULOS
 // Todas começam recolhidas. Dentro de cada módulo, no máximo
@@ -43,6 +55,7 @@ botoesAcordeao.forEach(function (botao) {
             if (conteudoAtual) conteudoAtual.style.display = "block";
             if (setaAtual) setaAtual.textContent = "▲";
         }
+        enquadrarTitulo(botao);
     });
 });
 
@@ -77,6 +90,7 @@ botoesSubtopico.forEach(function (botao) {
             botao.querySelector(
                 ".subtopico-seta"
             );
+
 
         const estavaAberto =
             subtopicoAtual.classList.contains(
@@ -114,6 +128,7 @@ botoesSubtopico.forEach(function (botao) {
             conteudoAtual.style.display = "block";
             setaAtual.textContent = "▲";
         }
+        enquadrarTitulo(botao);
     });
 });
 

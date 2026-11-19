@@ -1,0 +1,46 @@
+"use strict";
+// Eventos da versão 0.1: um por mês. Cada alternativa descreve consequências verificáveis.
+// Os preços e situações são fictícios, para fins pedagógicos.
+const EVENTOS = [
+ {titulo:"Manutenção inesperada no carro da família",contextoPedagogico:{finalidade:"mobilidade_familiar",natureza:"manutencao",urgencia:"desconhecida",necessidadeContextual:"depende_do_uso_do_carro",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},icone:"🚗",texto:"O carro da família precisa de uma manutenção inesperada de R$ 250. Compare as formas de pagamento e os compromissos dos próximos meses.",
+  opcoes:[
+   {id:"consertar",titulo:"Pagar à vista",desc:"Pagar R$ 250 agora.",custo:250,fonte:"misto",tipoGasto:"essencial",notas:{decisoes:{consequencias:1},adaptacao:{imprevistos:1}}},
+   {id:"parcelar-sem-juros",titulo:"Parcelar sem juros",desc:"2 × R$ 125 = R$ 250; vencimentos nos meses 2 e 3.",parcelas:{valor:125,inicio:2,quantidade:2,descricao:"Manutenção do carro sem juros"},tipoGasto:"essencial",notas:{decisoes:{consequencias:1},adaptacao:{imprevistos:1}}},
+   {id:"parcelar-juros",titulo:"Parcelar com juros",desc:"2 × R$ 140 = R$ 280; R$ 30 adicionais, vencimentos nos meses 2 e 3.",parcelas:{valor:140,inicio:2,quantidade:2,descricao:"Manutenção do carro com juros"},tipoGasto:"essencial",acrescimo:30,notas:{decisoes:{consequencias:1},adaptacao:{imprevistos:1}}},
+   {id:"adiar",titulo:"Adiar para o próximo mês",desc:"Não pagar agora; os R$ 250 continuam devidos no mês 2, sem juros automáticos.",futura:{mes:2,valor:250,descricao:"Manutenção do carro adiada (sem juros automáticos)"},tipoGasto:"essencial",notas:{adaptacao:{imprevistos:.75}}}
+  ]},
+ {titulo:"Um notebook para estudar",contextoPedagogico:{finalidade:"estudo",natureza:"equipamento_educacional",urgencia:"desconhecida",necessidadeContextual:"alternativas_escola_biblioteca",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},finalidade:"estudo",justificativaNecessidade:"Apoiar atividades escolares e estudo; benefício educacional declarado no acontecimento, sem comprovar urgência ou necessidade de compra.",icone:"💻",texto:"Um notebook de R$ 1.800 ajudaria nas atividades escolares, mas a família também tem outras prioridades.",
+  opcoes:[
+   {id:"alternativas",titulo:"Pesquisar alternativas",desc:"Utilizar equipamentos da escola ou biblioteca enquanto procura opções usadas. Sem compra agora.",notas:{decisoes:{viabilidade:1,consequencias:1,oportunidades:1},recursos:{equilibrio:1}}},
+   {id:"comprar",titulo:"Comprar à vista",desc:"Pagar R$ 1.800 com os recursos disponíveis, se houver saldo suficiente.",custo:1800,fonte:"misto",notas:{decisoes:{viabilidade:.5,consequencias:1},recursos:{equilibrio:.5}}},
+   {id:"parcelar-sem-juros",titulo:"Comprar em 6 parcelas sem juros",desc:"6 × R$ 300 = R$ 1.800, mesmo preço à vista. Compromete os próximos seis meses.",parcelas:{valor:300,inicio:3,quantidade:6,descricao:"Notebook sem juros"},tipoGasto:"planejavel",notas:{decisoes:{viabilidade:1,consequencias:1,dividas:1},recursos:{custos:1}}},
+   {id:"parcelar",titulo:"Comprar em 6 parcelas com juros",desc:"6 × R$ 340 = R$ 2.040; são R$ 240 a mais que à vista (13,33% de acréscimo total).",parcelas:{valor:340,inicio:3,quantidade:6,descricao:"Notebook com juros"},tipoGasto:"planejavel",acrescimo:240,notas:{decisoes:{viabilidade:.65,consequencias:.65,dividas:.65},recursos:{custos:.65}}}
+  ]},
+ {titulo:"A geladeira parou de funcionar",contextoPedagogico:{finalidade:"conservacao_de_alimentos",natureza:"necessidade_domestica",urgencia:"alta",necessidadeContextual:"reparo_ou_solucao_temporaria",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},icone:"🧊",texto:"Um técnico avaliou que o reparo completo custa R$ 510. O eletrodoméstico é essencial para a família.",
+  opcoes:[
+   {id:"reparar",tipoGasto:"essencial",titulo:"Fazer o reparo completo",desc:"Pagar R$ 510 com o dinheiro livre e a reserva.",custo:510,fonte:"misto",notas:{decisoes:{viabilidade:1,consequencias:1},recursos:{dinheiroGuardado:1,essenciais:1},adaptacao:{imprevistos:1}}},
+   {id:"parcelar",titulo:"Parcelar o reparo",desc:"3 × R$ 170 = R$ 510, sem juros e sem acréscimo em relação ao pagamento à vista; vencimentos nos meses 4 a 6.",parcelas:{valor:170,inicio:4,quantidade:3,descricao:"Geladeira"},tipoGasto:"essencial",notas:{decisoes:{viabilidade:1,consequencias:1,dividas:1},recursos:{essenciais:1,custos:1},adaptacao:{imprevistos:1}}},
+   {id:"parcelar-juros",titulo:"Parcelar o reparo com juros",desc:"3 × R$ 190 = R$ 570; são R$ 60 a mais que à vista. Vencimentos nos meses 4 a 6.",parcelas:{valor:190,inicio:4,quantidade:3,descricao:"Geladeira com juros"},tipoGasto:"essencial",acrescimo:60,notas:{decisoes:{viabilidade:.85,consequencias:.85,dividas:.85},recursos:{essenciais:1,custos:.85},adaptacao:{imprevistos:1}}},
+   {id:"adiar",tipoGasto:"essencial",titulo:"Adiar o reparo",desc:"A família precisará encontrar uma solução temporária para armazenar alimentos.",notas:{recursos:{essenciais:.5},adaptacao:{imprevistos:.5}}}
+  ]},
+ {titulo:"Uma oportunidade de curso técnico",contextoPedagogico:{finalidade:"formacao",natureza:"oportunidade_educacional",urgencia:"prazo_da_oportunidade",necessidadeContextual:"depende_da_situacao",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},icone:"📚",texto:"Um curso pode ampliar conhecimentos. Compare as formas de pagamento, os encargos e a possibilidade de não realizar o curso agora.",
+  opcoes:[
+   {id:"avista",tipoGasto:"planejavel",titulo:"Pagar R$ 450 à vista",desc:"Se houver dinheiro disponível sem comprometer contas essenciais.",custo:450,fonte:"misto",notas:{decisoes:{viabilidade:1,consequencias:1,oportunidades:1}}},
+   {id:"parcelar",tipoGasto:"planejavel",titulo:"Fazer em 3 parcelas de R$ 150",desc:"Vencimentos nos meses 5, 6 e 7. A última parcela continuará após o jogo.",parcelas:{valor:150,inicio:5,quantidade:3,descricao:"Curso técnico"},notas:{planejamento:{compromissos:1},decisoes:{viabilidade:1,consequencias:1,dividas:1,oportunidades:1},adaptacao:{futuro:1}}},
+   {id:"parcelar-juros",tipoGasto:"planejavel",titulo:"Financiar em 3 parcelas com juros",desc:"3 × R$ 175 = R$ 525 (R$ 75 a mais que à vista); vencimentos nos meses 5, 6 e 7, inclusive após o jogo.",parcelas:{valor:175,inicio:5,quantidade:3,descricao:"Curso técnico com juros"},acrescimo:75,notas:{decisoes:{viabilidade:.5,consequencias:.5,dividas:.35},recursos:{custos:.35},adaptacao:{futuro:.5}}},
+   {id:"esperar",titulo:"Não fazer o curso agora; pesquisar outras turmas",desc:"Sem obrigação financeira agora; a oportunidade pode não estar disponível depois.",notas:{decisoes:{viabilidade:1,consequencias:1,oportunidades:1},recursos:{equilibrio:1}}}
+  ]},
+ {titulo:"A conta de luz veio mais alta",contextoPedagogico:{finalidade:"energia_eletrica",natureza:"conta_essencial",urgencia:"vencimento",necessidadeContextual:"diferenca_da_conta",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},icone:"💡",texto:"Neste mês a conta de energia veio R$ 80 acima do valor habitual. A diferença precisa ser paga.",
+  opcoes:[
+   {id:"pagar",titulo:"Pagar a diferença de R$ 80",desc:"Usar o dinheiro livre e, se necessário, a reserva.",custo:80,fonte:"misto",notas:{recursos:{essenciais:1,dinheiroGuardado:1},adaptacao:{imprevistos:1}}},
+   {id:"reorganizar",titulo:"Reorganizar e pagar",desc:"Usar recursos disponíveis para quitar a conta e rever hábitos de consumo.",custo:80,fonte:"misto",notas:{recursos:{essenciais:1},adaptacao:{imprevistos:1,reorganizacao:1}}},
+   {id:"atrasar",titulo:"Deixar para o próximo mês",desc:"A diferença de R$ 80 será cobrada com encargo didático de 5% (R$ 4).",futura:{mes:6,valor:84,descricao:"Energia atrasada (inclui R$ 4 de encargo)"},notas:{recursos:{essenciais:0,custos:0},adaptacao:{imprevistos:.5}}}
+  ]},
+ {titulo:"Uma viagem escolar especial",contextoPedagogico:{finalidade:"atividade_educativa",natureza:"viagem_escolar",urgencia:"evento_com_data",necessidadeContextual:"participacao_opcional_contextual",fonte:"enunciado",avaliacao:"contextual_nao_automatica"},icone:"🚌",texto:"A escola organizou uma viagem educativa para a filha. O custo é R$ 350. A família precisa escolher como proceder.",
+  opcoes:[
+   {id:"pagar",titulo:"Pagar R$ 350",desc:"A viagem fica confirmada. O pagamento sai do dinheiro livre e, se necessário, da reserva.",custo:350,fonte:"misto",notas:{decisoes:{viabilidade:1,consequencias:1},recursos:{equilibrio:1},adaptacao:{futuro:1}}},
+   {id:"desconto",titulo:"Solicitar desconto à escola",desc:"Pedir redução para R$ 280. O pedido pode ser aceito ou recusado; ainda não há pagamento.",especial:"desconto",notas:{decisoes:{consequencias:1,oportunidades:1},adaptacao:{reorganizacao:1}}},
+   {id:"parcelar-juros",tipoGasto:"planejavel",titulo:"Financiar a viagem com juros",desc:"3 × R$ 130 = R$ 390 (R$ 40 a mais que à vista); parcelas nos meses 7, 8 e 9, após o jogo.",parcelas:{valor:130,inicio:7,quantidade:3,descricao:"Viagem escolar financiada"},acrescimo:40,notas:{decisoes:{viabilidade:.5,consequencias:.5,dividas:.5},recursos:{custos:.5},adaptacao:{futuro:.5}}},
+   {id:"nao",titulo:"Não participar desta vez",desc:"Preservar os recursos e buscar outra experiência educativa no futuro.",notas:{decisoes:{viabilidade:1,consequencias:1},recursos:{equilibrio:1},adaptacao:{futuro:1}}}
+  ]}
+];

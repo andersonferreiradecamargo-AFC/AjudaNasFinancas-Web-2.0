@@ -30,6 +30,16 @@
         main.appendChild(secao);
     });
 
+    function enquadrarModulo(botao) {
+        requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+                if (!botao.isConnected) return;
+                const topo = botao.getBoundingClientRect().top + window.scrollY;
+                window.scrollTo({ top: Math.max(0, topo - 90), behavior: "auto" });
+            });
+        });
+    }
+
     const modulos = Array.from(main.querySelectorAll("section.modulo"));
 
     modulos.forEach(function (modulo, indice) {
@@ -78,6 +88,7 @@
         botao.addEventListener("click", function () {
             const jaAberto = modulo.classList.contains("modulo-aberto");
 
+
             // Se o módulo atual já estiver aberto, permite fechá-lo.
             // Assim, nenhum módulo precisa ficar obrigatoriamente aberto.
             if (jaAberto) {
@@ -86,6 +97,7 @@
                 botao.setAttribute("aria-expanded", "false");
                 const setaAtual = botao.querySelector(".modulo-seta");
                 if (setaAtual) setaAtual.textContent = "▼";
+                enquadrarModulo(botao);
                 return;
             }
 
@@ -106,6 +118,7 @@
             botao.setAttribute("aria-expanded", "true");
             const seta = botao.querySelector(".modulo-seta");
             if (seta) seta.textContent = "▲";
+            enquadrarModulo(botao);
         });
     });
 })();

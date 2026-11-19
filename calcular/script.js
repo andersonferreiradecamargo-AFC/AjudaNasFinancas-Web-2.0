@@ -1,4 +1,4 @@
-﻿const capital = document.getElementById("capital");
+const capital = document.getElementById("capital");
 const taxa = document.getElementById("taxa");
 const tempo = document.getElementById("tempo");
 const juros = document.getElementById("juros");
@@ -181,8 +181,8 @@ memoria.montante =
             memoria.juros = j;
             memoria.montante = m;
 
-            juros.value = arredondar(j);
-            montante.value = arredondar(m);
+            juros.value = arredondar(j).toFixed(2);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -205,7 +205,7 @@ memoria.montante =
 
             memoria.montante = m;
 
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -226,7 +226,7 @@ memoria.montante =
 
             memoria.juros = j;
 
-            juros.value = arredondar(j);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -250,8 +250,8 @@ memoria.montante =
             memoria.capital = c;
             memoria.montante = m;
 
-            capital.value = arredondar(c);
-            montante.value = arredondar(m);
+            capital.value = arredondar(c).toFixed(2);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -276,7 +276,7 @@ memoria.montante =
             memoria.montante = m;
 
             taxa.value = arredondar(i * 100);
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -301,7 +301,7 @@ memoria.montante =
             memoria.montante = m;
 
             tempo.value = arredondar(t);
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -341,8 +341,8 @@ memoria.montante =
             memoria.montante = m;
             memoria.juros = j;
 
-            montante.value = arredondar(m);
-            juros.value = arredondar(j);
+            montante.value = arredondar(m).toFixed(2);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -363,7 +363,7 @@ memoria.montante =
 
             memoria.juros = j;
 
-            juros.value = arredondar(j);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -392,8 +392,8 @@ memoria.montante =
             memoria.capital = c;
             memoria.montante = m;
 
-            capital.value = arredondar(c);
-            montante.value = arredondar(m);
+            capital.value = arredondar(c).toFixed(2);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -420,8 +420,8 @@ memoria.montante =
             memoria.capital = c;
             memoria.juros = j;
 
-            capital.value = arredondar(c);
-            juros.value = arredondar(j);
+            capital.value = arredondar(c).toFixed(2);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -448,7 +448,7 @@ memoria.montante =
             memoria.juros = j;
 
             taxa.value = arredondar(i * 100);
-            juros.value = arredondar(j);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -476,7 +476,7 @@ memoria.montante =
             memoria.juros = j;
 
             tempo.value = arredondar(t);
-            juros.value = arredondar(j);
+            juros.value = arredondar(j).toFixed(2);
 
             return;
         }
@@ -501,7 +501,7 @@ memoria.montante =
 
             memoria.montante = m;
 
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
 
             return;
         }
@@ -527,7 +527,7 @@ memoria.montante =
             memoria.montante = m;
             memoria.taxa = i;
 
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
             taxa.value = arredondar(i * 100);
 
             return;
@@ -555,7 +555,7 @@ memoria.montante =
             memoria.montante = m;
             memoria.tempo = t;
 
-            montante.value = arredondar(m);
+            montante.value = arredondar(m).toFixed(2);
             tempo.value = arredondar(t);
 
             return;

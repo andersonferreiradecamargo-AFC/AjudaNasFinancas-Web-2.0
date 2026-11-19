@@ -189,3 +189,58 @@
  #educacao-financeira #efEtapaINTERPRETE .ef-i-corpo {padding:.7rem}
  #educacao-financeira #efEtapaINTERPRETE .ef-i-opcao {min-height:44px;box-sizing:border-box}
 }
+
+/* DECIDA — identidade visual lilás dos demais módulos DECIDA */
+#educacao-financeira #efEtapaDECIDA .ef-atividades-decida{max-width:none;margin:0 0 1.5rem}
+#educacao-financeira #efEtapaDECIDA details.ef-i-questao{padding:0;margin:.65rem 0;overflow:hidden;background:#ead9fb;border:1px solid #c79df4;border-radius:11px;color:#161126}
+#educacao-financeira #efEtapaDECIDA .ef-i-titulo{display:list-item;list-style:none;cursor:pointer;padding:.8rem 1rem;min-height:48px;box-sizing:border-box;background:#ead9fb;color:#161126;font-weight:700}
+#educacao-financeira #efEtapaDECIDA .ef-i-titulo::-webkit-details-marker{display:none}
+#educacao-financeira #efEtapaDECIDA .ef-i-titulo::after{content:'▼';float:right;margin-left:.7rem;font-size:.8rem}
+#educacao-financeira #efEtapaDECIDA details[open]>.ef-i-titulo::after{content:'▲'}
+#educacao-financeira #efEtapaDECIDA details[open]>.ef-i-titulo{border-bottom:1px solid #c79df4}
+#educacao-financeira #efEtapaDECIDA .ef-i-corpo{padding:1rem}
+#educacao-financeira #efEtapaDECIDA .ef-i-opcao{display:flex;align-items:flex-start;gap:10px;min-height:44px;box-sizing:border-box;background:#f0e3fd;border:1px solid #c79df4;border-radius:8px;padding:.7rem;margin:.45rem 0;color:#161126}
+#educacao-financeira #efEtapaDECIDA .ef-i-opcao:hover{background:#e6d1fa}
+#educacao-financeira #efEtapaDECIDA .ef-i-opcao:has(input:checked){background:#e1c9f8;border-color:#b588e4}
+#educacao-financeira #efEtapaDECIDA .ef-i-opcao input{accent-color:#7a45a6;margin-top:2px;flex:0 0 auto}
+#educacao-financeira #efEtapaDECIDA .ef-i-verificar{background:#7a45a6;color:white;border:0;border-radius:8px;padding:11px 18px;margin-top:8px;font:inherit;font-weight:700;cursor:pointer;min-height:42px}
+#educacao-financeira #efEtapaDECIDA .ef-i-verificar:hover{background:#67358e}
+#educacao-financeira #efEtapaDECIDA .ef-i-feedback{background:#f5eefd;color:#161126;border:1px solid #c79df4;border-radius:8px;padding:12px 15px;margin-top:14px}
+#educacao-financeira #efEtapaDECIDA .ef-i-feedback.correto{background:#f5eefd;border-color:#c79df4}
+#educacao-financeira #efEtapaDECIDA .ef-i-titulo:focus-visible,#educacao-financeira #efEtapaDECIDA .ef-i-opcao:focus-within{outline:3px solid #7a45a6;outline-offset:2px}
+#educacao-financeira #efEtapaDECIDA #ef-d-reiniciar{background:#7a45a6;color:#fff;border:0;border-radius:8px;padding:11px 18px;font-weight:700;cursor:pointer}
+@media(max-width:600px){#educacao-financeira #efEtapaDECIDA .ef-i-corpo{padding:.7rem}}
+
+/* Feedback das cinco situações DECIDA: mesmo padrão visual de acerto e revisão dos demais exercícios. */
+#educacao-financeira #efEtapaDECIDA .ef-d-feedback-titulo{display:flex;align-items:center;gap:9px;margin-bottom:5px;font-weight:700}
+#educacao-financeira #efEtapaDECIDA .ef-d-feedback-icone{display:inline-flex;align-items:center;justify-content:center;font-size:23px;font-weight:700;line-height:1;color:#d5262b;min-width:21px}
+#educacao-financeira #efEtapaDECIDA .ef-i-feedback.correto .ef-d-feedback-icone{color:#07823b}
+#educacao-financeira #efEtapaDECIDA .ef-i-feedback.incorreto .ef-d-feedback-icone{color:#d5262b}
+
+/* Feedback consistente entre INTERPRETE e DECIDA */
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback{background:#e7f6eb;border:1px solid #62c17a;border-radius:8px;padding:12px 15px;color:#16472c}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback.correto{background:#d1f0dc;border-color:#62c17a}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback.incorreto{background:#f4f8f4;border-color:#62c17a}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-feedback-titulo{display:flex;align-items:center;gap:9px;margin-bottom:5px;font-weight:700}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-feedback-icone{display:inline-flex;align-items:center;justify-content:center;font-size:23px;font-weight:700;line-height:1;min-width:21px;color:#d5262b}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback.correto .ef-d-feedback-icone{color:#07823b}
+#educacao-financeira #efEtapaINTERPRETE .ef-i-feedback.incorreto .ef-d-feedback-icone{color:#d5262b}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-progresso{border-color:#62c17a;background:#e7f6eb}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-progresso-trilho>div{background:#26985b}
+#educacao-financeira #efEtapaINTERPRETE #ef-i-progresso-preenchimento{height:100%;width:0%;border-radius:99px;background:#26985b;transition:width .25s ease}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-progresso-trilho{background:#b8dcc5}
+#educacao-financeira #efEtapaINTERPRETE .ef-d-progresso small{color:#245b3d}
+
+/* Bônus visual independente das quatro etapas e do progresso. */
+.ef-bonus-secao{max-width:1100px;margin:2rem auto;padding:1.2rem;background:#f5faf8;border:1px solid #bad9cc;border-radius:18px;color:#173d32}
+.ef-bonus-secao h2{margin:0 0 .5rem}
+.ef-bonus-secao>p{margin:.5rem 0 1rem}
+.ef-bonus-imagem{position:relative;width:100%;overflow:hidden;border-radius:14px;line-height:0;box-shadow:0 8px 26px rgba(15,45,63,.15)}
+.ef-bonus-imagem img{display:block;width:100%;height:auto}
+.ef-bonus-botao{position:absolute;left:37%;top:79.5%;width:41%;height:15%;border-radius:40px;display:block;cursor:pointer;z-index:1}
+.ef-bonus-botao span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ef-bonus-botao:focus-visible{outline:4px solid #fff;outline-offset:-5px;box-shadow:0 0 0 7px #13693d}
+.ef-bonus-ajuda{font-size:.94rem;text-align:center}
+.ef-bonus-ajuda a{font-weight:700;color:#116b44}
+.ef-bonus-ajuda span{color:#54685f}
+@media(max-width:600px){.ef-bonus-secao{padding:.75rem;margin:1.25rem .25rem}.ef-bonus-secao h2{font-size:1.2rem}.ef-bonus-botao{left:36%;top:79%;width:42%;height:16%}}

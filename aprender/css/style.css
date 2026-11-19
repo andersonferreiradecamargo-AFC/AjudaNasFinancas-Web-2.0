@@ -6,7 +6,8 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+    overflow-anchor: none;
 }
 
 body {
@@ -2308,3 +2309,23 @@ section.modulo.modulo-aberto > .modulo-corpo:not([hidden]) {
         line-height: 1.6;
     }
 }
+
+/* Progresso próprio da etapa DECIDA — Educação Financeira */
+.ef-d-progresso{border:1px solid #cba8f3;border-radius:12px;padding:14px 16px;margin:16px 0;background:#f4ebff;color:#302044}
+.ef-d-progresso-cabecalho{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:9px}
+.ef-d-progresso-trilho{height:10px;background:#ddd1ea;border-radius:99px;overflow:hidden}
+#ef-d-progresso-preenchimento{height:100%;width:0%;background:#7b42ae;border-radius:99px;transition:width .25s ease}
+.ef-d-progresso small{display:block;margin-top:7px;color:#55456a}
+.ef-d-progresso.concluido #ef-d-progresso-preenchimento{background:#26845c}
+
+/* Evita que o navegador escolha a imagem do bonus como ancora ao recolher conteudo. */
+html, body, main, .modulo, .acordeao, .subtopico { overflow-anchor: none; }
+
+/* Navegação: enquadramento imediato do título selecionado. */
+html { scroll-behavior: auto !important; }
+
+/* Reserva de rolagem para enquadrar os módulos mesmo ao recolher conteúdo longo. */
+
+
+/* Evita ajuste automático de rolagem quando um acordeão recolhe conteúdo. */
+body, main, section.modulo { overflow-anchor: none; }
